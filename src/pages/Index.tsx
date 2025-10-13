@@ -56,8 +56,7 @@ const Index = () => {
     setRoteiro(null);
 
     try {
-      // Replace with your n8n webhook URL
-      const webhookUrl = "YOUR_N8N_WEBHOOK_URL";
+      const webhookUrl = "https://bot-pousada-n8n-n8n.rv3uyd.easypanel.host/webhook-test/analizer";
       
       const response = await fetch(webhookUrl, {
         method: "POST",
