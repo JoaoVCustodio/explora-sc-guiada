@@ -84,7 +84,7 @@ export const MapView = ({ locais }: MapViewProps) => {
   }, [locais]);
 
   return (
-    <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-card animate-fade-in border-2 border-primary/20">
+    <div className="w-full h-[600px] rounded-2xl overflow-hidden shadow-xl animate-fade-in border border-border/50 hover:shadow-2xl transition-smooth">
       <div ref={mapRef} className="w-full h-full" />
     </div>
   );

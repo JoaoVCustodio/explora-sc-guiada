@@ -6,8 +6,11 @@ import { LoadingAnimation } from "@/components/LoadingAnimation";
 import { RoteiroCard } from "@/components/RoteiroCard";
 import { LocalCard } from "@/components/LocalCard";
 import { MapView } from "@/components/MapView";
+import { Hero } from "@/components/Hero";
+import { QuickSuggestions } from "@/components/QuickSuggestions";
+import { StatsBar } from "@/components/StatsBar";
 import { toast } from "sonner";
-import { Sparkles } from "lucide-react";
+import { Sparkles, RotateCcw } from "lucide-react";
 
 const regions = [
   { name: "Grande Florianópolis", emoji: "🏖️" },
@@ -44,6 +47,10 @@ const Index = () => {
         ? prev.filter((r) => r !== regionName)
         : [...prev, regionName]
     );
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setUserInput((prev) => (prev ? `${prev}, ${suggestion}` : suggestion));
   };
 
   const handleGenerateRoteiro = async () => {
@@ -112,58 +119,83 @@ const Index = () => {
     }
   };
 
+  const handleNewRoteiro = () => {
+    setRoteiro(null);
+    setUserInput("");
+    setSelectedRegions([]);
+  };
+
   return (
     <div className="min-h-screen gradient-hero">
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Header */}
-        <header className="text-center mb-16 animate-fade-in">
-          <h1 className="text-2xl md:text-3xl font-light mb-2 text-foreground tracking-tight">
-            Explora SC
-          </h1>
-          <p className="text-xs text-muted-foreground">
-            Roteiros personalizados em Santa Catarina
-          </p>
-        </header>
+      <div className="container mx-auto px-4 py-8 md:py-12 max-w-7xl">
+        {/* Hero Section */}
+        {!roteiro && !isLoading && <Hero />}
 
         {/* Main Input Section */}
-        {!roteiro && (
-          <div className="space-y-6 animate-scale-in max-w-3xl mx-auto">
-            <div className="bg-card rounded-lg p-6 border border-border/50">
-              <Textarea
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-                placeholder="Descreva como gostaria de viajar por Santa Catarina..."
-                className="min-h-[120px] text-sm border-0 focus:border-0 focus-visible:ring-1 transition-smooth resize-none bg-transparent"
-              />
+        {!roteiro && !isLoading && (
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {/* Input Card with Glassmorphism */}
+            <div className="glass rounded-2xl p-6 md:p-8 shadow-xl animate-scale-in">
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-3">
+                    Conte-nos sobre suas preferências de viagem
+                  </label>
+                  <Textarea
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    placeholder="Ex: Quero conhecer praias tranquilas, fazer trilhas leves e experimentar a gastronomia local..."
+                    className="min-h-[140px] resize-none border-2 focus-visible:ring-2 focus-visible:ring-primary transition-smooth"
+                    maxLength={500}
+                  />
+                  <div className="flex justify-between items-center mt-2">
+                    <p className="text-xs text-muted-foreground">
+                      {userInput.length}/500 caracteres
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quick Suggestions */}
+                <QuickSuggestions onSuggestionClick={handleSuggestionClick} />
+              </div>
             </div>
 
             {/* Region Selection */}
-            <div className="space-y-3">
-              <h2 className="text-xs font-normal text-muted-foreground text-center uppercase tracking-wide">
-                Regiões
-              </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {regions.map((region) => (
-                  <RegionButton
+            <div className="space-y-6">
+              <div className="text-center space-y-2">
+                <h2 className="text-2xl font-semibold">Escolha as regiões</h2>
+                <p className="text-muted-foreground">
+                  Selecione uma ou mais regiões que você gostaria de explorar
+                </p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {regions.map((region, index) => (
+                  <div
                     key={region.name}
-                    region={region.name}
-                    emoji={region.emoji}
-                    isActive={selectedRegions.includes(region.name)}
-                    onClick={() => toggleRegion(region.name)}
-                  />
+                    className="animate-slide-up"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <RegionButton
+                      region={region.name}
+                      emoji={region.emoji}
+                      isActive={selectedRegions.includes(region.name)}
+                      onClick={() => toggleRegion(region.name)}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Generate Button */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-4">
               <Button
                 onClick={handleGenerateRoteiro}
-                size="sm"
-                className="text-xs px-6 py-2 bg-primary hover:bg-primary/90 transition-smooth"
+                size="lg"
+                className="text-base px-8 py-6 gradient-primary hover:shadow-elegant transition-smooth hover-scale font-semibold"
                 disabled={isLoading}
               >
-                Gerar Roteiro
+                <Sparkles className="w-5 h-5 mr-2" />
+                Gerar Roteiro Personalizado
               </Button>
             </div>
           </div>
@@ -174,51 +206,66 @@ const Index = () => {
 
         {/* Results Section */}
         {roteiro && !isLoading && (
-          <div className="space-y-8">
+          <div className="space-y-12 animate-fade-in">
+            {/* Header with Action */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-semibold mb-2">Seu Roteiro Personalizado</h2>
+                <p className="text-muted-foreground">
+                  Criado especialmente para você com inteligência artificial
+                </p>
+              </div>
+              <Button
+                onClick={handleNewRoteiro}
+                variant="outline"
+                size="lg"
+                className="hover-lift"
+              >
+                <RotateCcw className="w-4 h-4 mr-2" />
+                Novo Roteiro
+              </Button>
+            </div>
+
+            {/* Stats Bar */}
+            <StatsBar locaisCount={roteiro.locais.length} />
+
             {/* Main Roteiro Card */}
             <RoteiroCard titulo={roteiro.titulo} descricao={roteiro.descricao} />
 
-            {/* Locais Cards */}
-            <div>
-              <h2 className="text-sm font-normal mb-4 text-muted-foreground uppercase tracking-wide">
-                Locais
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Locais Grid */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2">Locais do Roteiro</h3>
+                <p className="text-muted-foreground">
+                  Explore cada destino e veja no mapa interativo
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {roteiro.locais.map((local, index) => (
                   <LocalCard
                     key={index}
+                    index={index}
                     nome={local.nome}
                     descricao={local.descricao}
                     onLocationClick={() => {
-                      toast.info(`${local.nome}`);
+                      toast.info(`📍 ${local.nome}`, {
+                        description: "Veja a localização no mapa abaixo"
+                      });
                     }}
                   />
                 ))}
               </div>
             </div>
 
-            {/* Map */}
-            <div>
-              <h2 className="text-sm font-normal mb-4 text-muted-foreground uppercase tracking-wide">
-                Mapa
-              </h2>
+            {/* Map Section */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2">Mapa Interativo</h3>
+                <p className="text-muted-foreground">
+                  Visualize todos os locais e a rota sugerida
+                </p>
+              </div>
               <MapView locais={roteiro.locais} />
-            </div>
-
-            {/* New Search Button */}
-            <div className="flex justify-center pt-6">
-              <Button
-                onClick={() => {
-                  setRoteiro(null);
-                  setUserInput("");
-                  setSelectedRegions([]);
-                }}
-                variant="ghost"
-                size="sm"
-                className="text-xs text-muted-foreground hover:text-foreground transition-smooth"
-              >
-                Novo Roteiro
-              </Button>
             </div>
           </div>
         )}
