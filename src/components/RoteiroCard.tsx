@@ -7,12 +7,12 @@ interface RoteiroCardProps {
 
 export const RoteiroCard = ({ titulo, descricao }: RoteiroCardProps) => {
   return (
-    <Card className="shadow-card border-2 border-primary/20 animate-scale-in">
-      <CardHeader className="gradient-primary text-primary-foreground rounded-t-lg">
-        <CardTitle className="text-2xl">🎯 {titulo}</CardTitle>
+    <Card className="border border-border/50 animate-scale-in mb-8">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-base font-normal">{titulo}</CardTitle>
       </CardHeader>
-      <CardContent className="pt-6">
-        <CardDescription className="text-base text-foreground">
+      <CardContent className="pt-0">
+        <CardDescription className="text-xs text-muted-foreground leading-relaxed">
           {descricao}
         </CardDescription>
       </CardContent>

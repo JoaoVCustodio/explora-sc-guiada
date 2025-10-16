@@ -12,13 +12,13 @@ export const RegionButton = ({ region, emoji, isActive, onClick }: RegionButtonP
   return (
     <Button
       onClick={onClick}
-      variant={isActive ? "default" : "outline"}
+      variant={isActive ? "default" : "ghost"}
+      size="sm"
       className={cn(
-        "transition-smooth hover:scale-105",
-        isActive && "gradient-primary shadow-elegant"
+        "transition-smooth text-xs h-7 px-3",
+        isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
       )}
     >
-      <span className="mr-2">{emoji}</span>
       {region}
     </Button>
   );

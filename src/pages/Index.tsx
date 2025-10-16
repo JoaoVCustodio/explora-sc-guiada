@@ -116,33 +116,33 @@ const Index = () => {
     <div className="min-h-screen gradient-hero">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* Header */}
-        <header className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Explora SC ✨
+        <header className="text-center mb-16 animate-fade-in">
+          <h1 className="text-2xl md:text-3xl font-light mb-2 text-foreground tracking-tight">
+            Explora SC
           </h1>
-          <p className="text-xl text-muted-foreground">
-            Descubra roteiros personalizados e explore Santa Catarina como nunca antes
+          <p className="text-xs text-muted-foreground">
+            Roteiros personalizados em Santa Catarina
           </p>
         </header>
 
         {/* Main Input Section */}
         {!roteiro && (
-          <div className="space-y-8 animate-scale-in">
-            <div className="bg-card shadow-elegant rounded-2xl p-8 border border-primary/10">
+          <div className="space-y-6 animate-scale-in max-w-3xl mx-auto">
+            <div className="bg-card rounded-lg p-6 border border-border/50">
               <Textarea
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 placeholder="Descreva como gostaria de viajar por Santa Catarina..."
-                className="min-h-[150px] text-lg border-2 border-input focus:border-primary transition-smooth resize-none"
+                className="min-h-[120px] text-sm border-0 focus:border-0 focus-visible:ring-1 transition-smooth resize-none bg-transparent"
               />
             </div>
 
             {/* Region Selection */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-center">
-                Selecione as regiões de interesse 🗺️
+            <div className="space-y-3">
+              <h2 className="text-xs font-normal text-muted-foreground text-center uppercase tracking-wide">
+                Regiões
               </h2>
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {regions.map((region) => (
                   <RegionButton
                     key={region.name}
@@ -156,15 +156,14 @@ const Index = () => {
             </div>
 
             {/* Generate Button */}
-            <div className="flex justify-center">
+            <div className="flex justify-center pt-2">
               <Button
                 onClick={handleGenerateRoteiro}
-                size="lg"
-                className="gradient-primary text-lg px-12 py-6 shadow-elegant hover:scale-105 transition-smooth"
+                size="sm"
+                className="text-xs px-6 py-2 bg-primary hover:bg-primary/90 transition-smooth"
                 disabled={isLoading}
               >
-                <Sparkles className="w-5 h-5 mr-2" />
-                Gerar Roteiro Personalizado
+                Gerar Roteiro
               </Button>
             </div>
           </div>
@@ -181,17 +180,17 @@ const Index = () => {
 
             {/* Locais Cards */}
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-center">
-                Lugares para Visitar 📍
+              <h2 className="text-sm font-normal mb-4 text-muted-foreground uppercase tracking-wide">
+                Locais
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {roteiro.locais.map((local, index) => (
                   <LocalCard
                     key={index}
                     nome={local.nome}
                     descricao={local.descricao}
                     onLocationClick={() => {
-                      toast.info(`📍 ${local.nome}`);
+                      toast.info(`${local.nome}`);
                     }}
                   />
                 ))}
@@ -200,25 +199,25 @@ const Index = () => {
 
             {/* Map */}
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-center">
-                Mapa do Roteiro 🗺️
+              <h2 className="text-sm font-normal mb-4 text-muted-foreground uppercase tracking-wide">
+                Mapa
               </h2>
               <MapView locais={roteiro.locais} />
             </div>
 
             {/* New Search Button */}
-            <div className="flex justify-center pt-8">
+            <div className="flex justify-center pt-6">
               <Button
                 onClick={() => {
                   setRoteiro(null);
                   setUserInput("");
                   setSelectedRegions([]);
                 }}
-                variant="outline"
-                size="lg"
-                className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
+                variant="ghost"
+                size="sm"
+                className="text-xs text-muted-foreground hover:text-foreground transition-smooth"
               >
-                Criar Novo Roteiro
+                Novo Roteiro
               </Button>
             </div>
           </div>

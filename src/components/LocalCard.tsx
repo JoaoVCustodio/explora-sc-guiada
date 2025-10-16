@@ -10,17 +10,17 @@ interface LocalCardProps {
 export const LocalCard = ({ nome, descricao, onLocationClick }: LocalCardProps) => {
   return (
     <Card 
-      className="shadow-card hover:shadow-elegant transition-smooth hover:scale-105 cursor-pointer animate-slide-up"
+      className="border border-border/50 hover:border-border transition-smooth cursor-pointer animate-slide-up group"
       onClick={onLocationClick}
     >
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <MapPin className="w-5 h-5 text-primary" />
+      <CardHeader className="pb-2">
+        <CardTitle className="flex items-center gap-2 text-sm font-normal group-hover:text-primary transition-smooth">
+          <MapPin className="w-3 h-3 text-muted-foreground" />
           {nome}
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <CardDescription className="text-foreground/80">
+      <CardContent className="pt-0">
+        <CardDescription className="text-xs text-muted-foreground leading-relaxed">
           {descricao}
         </CardDescription>
       </CardContent>
