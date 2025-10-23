@@ -134,78 +134,70 @@ const Index = () => {
       
       {/* Conteúdo centralizado - Tela Inicial */}
       {!roteiro && !isLoading && (
-        <div className="min-h-screen flex items-center justify-center px-4">
-          <div className="w-full max-w-3xl space-y-8 animate-fade-in">
+        <div className="min-h-screen flex items-center justify-center px-4 py-4">
+          <div className="w-full max-w-2xl space-y-4 animate-fade-in">
             {/* Hero minimalista */}
             <Hero />
             
             {/* Input Card com Glassmorphism */}
-            <div className="glass-advanced rounded-3xl p-6 md:p-8 shadow-2xl">
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="preferences" className="block text-base font-medium mb-3">
-                    Conte-nos sobre suas preferências de viagem
-                  </label>
-                  <Textarea
-                    id="preferences"
-                    value={userInput}
-                    onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Ex: Quero conhecer praias tranquilas, fazer trilhas leves, experimentar a gastronomia local..."
-                    className="min-h-[140px] text-base resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
-                    maxLength={500}
-                  />
-                  <div className="flex items-center justify-between mt-2">
-                    <p className="text-xs text-muted-foreground">
-                      {userInput.length}/500 caracteres
-                    </p>
-                  </div>
-                </div>
+            <div className="glass-advanced rounded-2xl p-4 shadow-2xl">
+              <div className="space-y-3">
+                <Textarea
+                  id="preferences"
+                  value={userInput}
+                  onChange={(e) => setUserInput(e.target.value)}
+                  placeholder="Descreva suas preferências de viagem..."
+                  className="min-h-[80px] text-sm resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
+                  maxLength={300}
+                />
+                <p className="text-[10px] text-muted-foreground text-right">
+                  {userInput.length}/300
+                </p>
 
                 {/* Quick Suggestions */}
                 <QuickSuggestions onSuggestionClick={handleSuggestionClick} />
                 
                 {/* Region Selection - Compact List */}
-                <div className="space-y-3 pt-2">
-                  <Label className="text-base font-medium">
-                    Selecione as regiões de interesse
+                <div className="space-y-2">
+                  <Label className="text-xs font-medium text-muted-foreground">
+                    Selecione as regiões
                   </Label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-2">
                     {regions.map((region) => (
                       <div
                         key={region.name}
-                        className="flex items-center space-x-3 p-3 rounded-xl bg-background/50 hover:bg-background/80 transition-colors cursor-pointer border border-border/50 hover:border-primary/50"
+                        className="flex items-center space-x-2 p-2 rounded-lg bg-background/50 hover:bg-background/70 transition-colors cursor-pointer border border-transparent hover:border-primary/30"
                         onClick={() => toggleRegion(region.name)}
                       >
                         <Checkbox
                           id={region.name}
                           checked={selectedRegions.includes(region.name)}
                           onCheckedChange={() => toggleRegion(region.name)}
+                          className="h-3.5 w-3.5"
                         />
                         <Label
                           htmlFor={region.name}
-                          className="flex items-center gap-2 cursor-pointer text-sm font-normal flex-1"
+                          className="flex items-center gap-1.5 cursor-pointer text-xs flex-1"
                         >
-                          <span className="text-xl">{region.emoji}</span>
-                          <span>{region.name}</span>
+                          <span className="text-base">{region.emoji}</span>
+                          <span className="leading-tight">{region.name}</span>
                         </Label>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Generate Button */}
-            <div className="flex justify-center">
-              <Button
-                size="xl"
-                onClick={handleGenerateRoteiro}
-                disabled={!userInput.trim() || selectedRegions.length === 0}
-                className="gradient-primary text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
-              >
-                <Sparkles className="w-5 h-5 mr-2 animate-spin-slow" />
-                Gerar Roteiro Personalizado
-              </Button>
+                {/* Generate Button - Dentro do card */}
+                <Button
+                  size="lg"
+                  onClick={handleGenerateRoteiro}
+                  disabled={!userInput.trim() || selectedRegions.length === 0}
+                  className="w-full gradient-primary text-white text-sm"
+                >
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  Gerar Roteiro
+                </Button>
+              </div>
             </div>
           </div>
         </div>
