@@ -15,15 +15,15 @@ export const QuickSuggestions = ({ onSuggestionClick }: QuickSuggestionsProps) =
   return (
     <div className="space-y-3">
       <p className="text-sm text-muted-foreground font-medium">Sugestões rápidas</p>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2.5">
         {suggestions.map((suggestion, index) => (
           <button
             key={index}
             onClick={() => onSuggestionClick(suggestion.text)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted hover:bg-muted/80 text-sm font-medium transition-smooth hover-lift hover:shadow-md"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary hover:bg-primary/5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             style={{ animationDelay: `${index * 50}ms` }}
           >
-            <span>{suggestion.emoji}</span>
+            <span className="text-base">{suggestion.emoji}</span>
             <span>{suggestion.text}</span>
           </button>
         ))}

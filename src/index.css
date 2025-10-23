@@ -273,6 +273,71 @@
     border: 1px solid var(--glass-border);
   }
   
+  .glass-advanced {
+    @apply bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-700/20;
+  }
+  
+  /* Animated background */
+  .animated-bg {
+    background: linear-gradient(
+      -45deg,
+      hsl(210 100% 97%),
+      hsl(200 90% 96%),
+      hsl(190 85% 97%),
+      hsl(180 80% 98%)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 20s ease infinite;
+  }
+  
+  .dark .animated-bg {
+    background: linear-gradient(
+      -45deg,
+      hsl(222 47% 11%),
+      hsl(215 40% 15%),
+      hsl(210 45% 13%),
+      hsl(220 42% 12%)
+    );
+    background-size: 400% 400%;
+  }
+  
+  /* Floating orbs */
+  .floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float-orb 20s ease-in-out infinite;
+  }
+  
+  .floating-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: hsl(200 90% 70%);
+    top: -100px;
+    right: -100px;
+    animation-delay: 0s;
+  }
+  
+  .floating-orb-2 {
+    width: 350px;
+    height: 350px;
+    background: hsl(180 85% 65%);
+    bottom: -150px;
+    left: -100px;
+    animation-delay: 5s;
+  }
+  
+  .floating-orb-3 {
+    width: 300px;
+    height: 300px;
+    background: hsl(190 80% 75%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 10s;
+  }
+  
   /* Transitions */
   .transition-smooth {
     transition: var(--transition-smooth);

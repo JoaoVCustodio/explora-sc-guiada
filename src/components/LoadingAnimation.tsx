@@ -1,59 +1,43 @@
+import { Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Sparkles, Map, Search } from "lucide-react";
 
-const loadingSteps = [
-  { icon: Sparkles, text: "Analisando suas preferências", color: "text-primary" },
-  { icon: Search, text: "Encontrando os melhores locais", color: "text-secondary" },
-  { icon: Map, text: "Criando seu roteiro personalizado", color: "text-accent" },
+const loadingMessages = [
+  "Analisando suas preferências...",
+  "Explorando destinos em Santa Catarina...",
+  "Criando roteiro personalizado...",
+  "Finalizando seu roteiro perfeito...",
 ];
 
 export const LoadingAnimation = () => {
-  const [stepIndex, setStepIndex] = useState(0);
+  const [messageIndex, setMessageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStepIndex((prev) => (prev + 1) % loadingSteps.length);
+      setMessageIndex((prev) => (prev + 1) % loadingMessages.length);
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const currentStep = loadingSteps[stepIndex];
-  const Icon = currentStep.icon;
-
   return (
-    <div className="flex flex-col items-center justify-center gap-6 py-20 animate-fade-in">
-      {/* Animated Icon */}
-      <div className="relative">
-        <div className="w-20 h-20 rounded-2xl gradient-primary flex items-center justify-center animate-pulse-glow">
-          <Icon className="w-10 h-10 text-white animate-pulse" />
-        </div>
-        {/* Orbiting dots */}
-        <div className="absolute inset-0 animate-spin-slow">
-          <div className="absolute top-0 left-1/2 w-2 h-2 bg-primary rounded-full -translate-x-1/2" />
-        </div>
-        <div className="absolute inset-0 animate-spin-slow" style={{ animationDelay: "0.5s" }}>
-          <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-secondary rounded-full -translate-x-1/2" />
+    <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8 animate-fade-in">
+      {/* Orbiting Circles */}
+      <div className="relative w-24 h-24">
+        <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
+        <div className="absolute inset-2 rounded-full bg-primary/40 animate-pulse" />
+        <div className="absolute inset-4 rounded-full bg-primary flex items-center justify-center animate-bounce">
+          <Sparkles className="w-8 h-8 text-white" />
         </div>
       </div>
-      
-      {/* Progress Text */}
-      <div className="text-center space-y-2">
-        <p className="text-lg font-medium animate-pulse">
-          {currentStep.text}
-        </p>
-        <div className="flex justify-center gap-1.5">
-          {loadingSteps.map((_, index) => (
-            <div
-              key={index}
-              className={`h-1 rounded-full transition-all duration-300 ${
-                index === stepIndex 
-                  ? "w-8 bg-primary" 
-                  : "w-1.5 bg-muted"
-              }`}
-            />
-          ))}
-        </div>
+
+      {/* Animated Message */}
+      <p className="text-lg font-medium text-muted-foreground animate-fade-in-out">
+        {loadingMessages[messageIndex]}
+      </p>
+
+      {/* Progress Bar */}
+      <div className="w-64 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="h-full bg-gradient-to-r from-primary to-secondary animate-progress" />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { MapView } from "@/components/MapView";
 import { Hero } from "@/components/Hero";
 import { QuickSuggestions } from "@/components/QuickSuggestions";
 import { StatsBar } from "@/components/StatsBar";
+import { BackgroundOrbs } from "@/components/BackgroundOrbs";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
 
@@ -126,30 +127,34 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen gradient-hero">
-      <div className="container mx-auto px-4 py-8 md:py-12 max-w-7xl">
+    <div className="min-h-screen animated-bg relative overflow-hidden">
+      {/* Animated Background Orbs */}
+      <BackgroundOrbs />
+      
+      <div className="container mx-auto px-4 py-8 md:py-12 max-w-7xl relative z-10">
         {/* Hero Section */}
         {!roteiro && !isLoading && <Hero />}
 
         {/* Main Input Section */}
         {!roteiro && !isLoading && (
-          <div className="space-y-8 max-w-4xl mx-auto">
+          <div className="space-y-8">
             {/* Input Card with Glassmorphism */}
-            <div className="glass rounded-2xl p-6 md:p-8 shadow-xl animate-scale-in">
+            <div className="glass-advanced rounded-3xl p-8 shadow-2xl max-w-3xl mx-auto animate-scale-in">
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-3">
+                  <label htmlFor="preferences" className="block text-base font-medium mb-4">
                     Conte-nos sobre suas preferências de viagem
                   </label>
                   <Textarea
+                    id="preferences"
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Ex: Quero conhecer praias tranquilas, fazer trilhas leves e experimentar a gastronomia local..."
-                    className="min-h-[140px] resize-none border-2 focus-visible:ring-2 focus-visible:ring-primary transition-smooth"
+                    placeholder="Ex: Quero conhecer praias tranquilas, fazer trilhas leves, experimentar a gastronomia local..."
+                    className="min-h-[160px] text-base resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
                     maxLength={500}
                   />
-                  <div className="flex justify-between items-center mt-2">
-                    <p className="text-xs text-muted-foreground">
+                  <div className="flex items-center justify-between mt-3">
+                    <p className="text-sm text-muted-foreground">
                       {userInput.length}/500 caracteres
                     </p>
                   </div>
@@ -161,14 +166,14 @@ const Index = () => {
             </div>
 
             {/* Region Selection */}
-            <div className="space-y-6">
+            <div className="space-y-6 max-w-4xl mx-auto">
               <div className="text-center space-y-2">
-                <h2 className="text-2xl font-semibold">Escolha as regiões</h2>
+                <h2 className="text-2xl font-bold">Selecione as regiões de interesse</h2>
                 <p className="text-muted-foreground">
-                  Selecione uma ou mais regiões que você gostaria de explorar
+                  Escolha uma ou mais regiões que deseja explorar
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {regions.map((region, index) => (
                   <div
                     key={region.name}
@@ -187,14 +192,14 @@ const Index = () => {
             </div>
 
             {/* Generate Button */}
-            <div className="flex justify-center pt-4">
+            <div className="flex justify-center pt-6">
               <Button
+                size="xl"
                 onClick={handleGenerateRoteiro}
-                size="lg"
-                className="text-base px-8 py-6 gradient-primary hover:shadow-elegant transition-smooth hover-scale font-semibold"
-                disabled={isLoading}
+                disabled={!userInput.trim() || selectedRegions.length === 0}
+                className="gradient-primary text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
               >
-                <Sparkles className="w-5 h-5 mr-2" />
+                <Sparkles className="w-5 h-5 mr-2 animate-spin-slow" />
                 Gerar Roteiro Personalizado
               </Button>
             </div>
@@ -242,17 +247,25 @@ const Index = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {roteiro.locais.map((local, index) => (
-                  <LocalCard
+                  <div
                     key={index}
-                    index={index}
-                    nome={local.nome}
-                    descricao={local.descricao}
-                    onLocationClick={() => {
-                      toast.info(`📍 ${local.nome}`, {
-                        description: "Veja a localização no mapa abaixo"
-                      });
+                    className="animate-slide-up"
+                    style={{ 
+                      animationDelay: `${index * 100}ms`,
+                      animationFillMode: 'both'
                     }}
-                  />
+                  >
+                    <LocalCard
+                      index={index + 1}
+                      nome={local.nome}
+                      descricao={local.descricao}
+                      onLocationClick={() => {
+                        toast.info(`📍 ${local.nome}`, {
+                          description: "Veja a localização no mapa abaixo"
+                        });
+                      }}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

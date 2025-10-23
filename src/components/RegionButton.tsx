@@ -13,36 +13,35 @@ export const RegionButton = ({ region, emoji, isActive, onClick }: RegionButtonP
     <button
       onClick={onClick}
       className={cn(
-        "relative group flex flex-col items-center gap-3 p-6 rounded-2xl border-2 transition-smooth hover-lift",
+        "relative flex flex-col items-center gap-4 p-8 rounded-3xl bg-white dark:bg-gray-900 transition-all duration-300",
+        "hover:shadow-xl hover:-translate-y-1",
         isActive 
-          ? "border-primary bg-primary/5 shadow-lg" 
-          : "border-border bg-card hover:border-border/60 hover:shadow-md"
+          ? "border-2 border-primary shadow-lg ring-4 ring-primary/10" 
+          : "border border-gray-200 dark:border-gray-700 shadow-sm"
       )}
     >
-      {/* Check Badge */}
+      {/* Check Badge - Top Right */}
       {isActive && (
-        <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full gradient-primary flex items-center justify-center shadow-md animate-scale-in">
+        <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary flex items-center justify-center animate-scale-in">
           <Check className="w-4 h-4 text-white" />
         </div>
       )}
       
-      {/* Emoji */}
+      {/* Giant Emoji */}
       <div className={cn(
-        "text-4xl transition-transform",
-        isActive ? "scale-110" : "group-hover:scale-110"
+        "text-6xl transition-transform duration-300",
+        isActive ? "scale-110" : "group-hover:scale-105"
       )}>
         {emoji}
       </div>
       
       {/* Region Name */}
-      <div className="text-center">
-        <p className={cn(
-          "font-semibold transition-smooth",
-          isActive ? "text-primary" : "text-foreground"
-        )}>
-          {region}
-        </p>
-      </div>
+      <p className={cn(
+        "text-lg font-medium transition-colors",
+        isActive ? "text-primary" : "text-gray-900 dark:text-gray-100"
+      )}>
+        {region}
+      </p>
     </button>
   );
 };
