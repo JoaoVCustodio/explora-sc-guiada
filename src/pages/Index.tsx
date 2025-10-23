@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { RegionButton } from "@/components/RegionButton";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { LoadingAnimation } from "@/components/LoadingAnimation";
 import { RoteiroCard } from "@/components/RoteiroCard";
 import { LocalCard } from "@/components/LocalCard";
@@ -9,7 +10,7 @@ import { MapView } from "@/components/MapView";
 import { Hero } from "@/components/Hero";
 import { QuickSuggestions } from "@/components/QuickSuggestions";
 import { StatsBar } from "@/components/StatsBar";
-import { BackgroundOrbs } from "@/components/BackgroundOrbs";
+import { TourismBackground } from "@/components/TourismBackground";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
 
@@ -128,21 +129,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen animated-bg relative overflow-hidden">
-      {/* Animated Background Orbs */}
-      <BackgroundOrbs />
+      {/* Tourism Animated Background */}
+      <TourismBackground />
       
-      <div className="container mx-auto px-4 py-8 md:py-12 max-w-7xl relative z-10">
-        {/* Hero Section */}
-        {!roteiro && !isLoading && <Hero />}
-
-        {/* Main Input Section */}
-        {!roteiro && !isLoading && (
-          <div className="space-y-8">
-            {/* Input Card with Glassmorphism */}
-            <div className="glass-advanced rounded-3xl p-8 shadow-2xl max-w-3xl mx-auto animate-scale-in">
+      {/* Conteúdo centralizado - Tela Inicial */}
+      {!roteiro && !isLoading && (
+        <div className="min-h-screen flex items-center justify-center px-4">
+          <div className="w-full max-w-3xl space-y-8 animate-fade-in">
+            {/* Hero minimalista */}
+            <Hero />
+            
+            {/* Input Card com Glassmorphism */}
+            <div className="glass-advanced rounded-3xl p-6 md:p-8 shadow-2xl">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="preferences" className="block text-base font-medium mb-4">
+                  <label htmlFor="preferences" className="block text-base font-medium mb-3">
                     Conte-nos sobre suas preferências de viagem
                   </label>
                   <Textarea
@@ -150,11 +151,11 @@ const Index = () => {
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     placeholder="Ex: Quero conhecer praias tranquilas, fazer trilhas leves, experimentar a gastronomia local..."
-                    className="min-h-[160px] text-base resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
+                    className="min-h-[140px] text-base resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
                     maxLength={500}
                   />
-                  <div className="flex items-center justify-between mt-3">
-                    <p className="text-sm text-muted-foreground">
+                  <div className="flex items-center justify-between mt-2">
+                    <p className="text-xs text-muted-foreground">
                       {userInput.length}/500 caracteres
                     </p>
                   </div>
@@ -162,37 +163,40 @@ const Index = () => {
 
                 {/* Quick Suggestions */}
                 <QuickSuggestions onSuggestionClick={handleSuggestionClick} />
-              </div>
-            </div>
-
-            {/* Region Selection */}
-            <div className="space-y-6 max-w-4xl mx-auto">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold">Selecione as regiões de interesse</h2>
-                <p className="text-muted-foreground">
-                  Escolha uma ou mais regiões que deseja explorar
-                </p>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {regions.map((region, index) => (
-                  <div
-                    key={region.name}
-                    className="animate-slide-up"
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <RegionButton
-                      region={region.name}
-                      emoji={region.emoji}
-                      isActive={selectedRegions.includes(region.name)}
-                      onClick={() => toggleRegion(region.name)}
-                    />
+                
+                {/* Region Selection - Compact List */}
+                <div className="space-y-3 pt-2">
+                  <Label className="text-base font-medium">
+                    Selecione as regiões de interesse
+                  </Label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {regions.map((region) => (
+                      <div
+                        key={region.name}
+                        className="flex items-center space-x-3 p-3 rounded-xl bg-background/50 hover:bg-background/80 transition-colors cursor-pointer border border-border/50 hover:border-primary/50"
+                        onClick={() => toggleRegion(region.name)}
+                      >
+                        <Checkbox
+                          id={region.name}
+                          checked={selectedRegions.includes(region.name)}
+                          onCheckedChange={() => toggleRegion(region.name)}
+                        />
+                        <Label
+                          htmlFor={region.name}
+                          className="flex items-center gap-2 cursor-pointer text-sm font-normal flex-1"
+                        >
+                          <span className="text-xl">{region.emoji}</span>
+                          <span>{region.name}</span>
+                        </Label>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
             {/* Generate Button */}
-            <div className="flex justify-center pt-6">
+            <div className="flex justify-center">
               <Button
                 size="xl"
                 onClick={handleGenerateRoteiro}
@@ -204,13 +208,19 @@ const Index = () => {
               </Button>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Loading State */}
-        {isLoading && <LoadingAnimation />}
+      {/* Loading State - Centralizado */}
+      {isLoading && (
+        <div className="min-h-screen flex items-center justify-center">
+          <LoadingAnimation />
+        </div>
+      )}
 
-        {/* Results Section */}
-        {roteiro && !isLoading && (
+      {/* Results Section - Layout normal */}
+      {roteiro && !isLoading && (
+        <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
           <div className="space-y-12 animate-fade-in">
             {/* Header with Action */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -281,8 +291,8 @@ const Index = () => {
               <MapView locais={roteiro.locais} />
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
