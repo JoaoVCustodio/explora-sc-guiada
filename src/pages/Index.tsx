@@ -6,7 +6,6 @@ import { LoadingAnimation } from "@/components/LoadingAnimation";
 import { RoteiroCard } from "@/components/RoteiroCard";
 import { LocalCard } from "@/components/LocalCard";
 import { MapView } from "@/components/MapView";
-import { QuickSuggestions } from "@/components/QuickSuggestions";
 import { StatsBar } from "@/components/StatsBar";
 import { TourismBackground } from "@/components/TourismBackground";
 import { InterestsMultiSelect } from "@/components/InterestsMultiSelect";
@@ -33,10 +32,6 @@ const Index = () => {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [roteiro, setRoteiro] = useState<Roteiro | null>(null);
-
-  const handleSuggestionClick = (suggestion: string) => {
-    setUserInput((prev) => (prev ? `${prev}, ${suggestion}` : suggestion));
-  };
 
   const handleGenerateRoteiro = async () => {
     if (selectedRegions.length === 0) {
@@ -156,12 +151,9 @@ const Index = () => {
                     {userInput.length}/300
                   </p>
                 </div>
-
-                {/* Quick Suggestions */}
-                <QuickSuggestions onSuggestionClick={handleSuggestionClick} />
                 
                 {/* Interesses Multi-Select */}
-                <InterestsMultiSelect 
+                <InterestsMultiSelect
                   selected={selectedInterests}
                   onSelectionChange={setSelectedInterests}
                 />
