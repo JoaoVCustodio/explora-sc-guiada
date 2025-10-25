@@ -1,28 +1,18 @@
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { LoadingAnimation } from "@/components/LoadingAnimation";
 import { RoteiroCard } from "@/components/RoteiroCard";
 import { LocalCard } from "@/components/LocalCard";
 import { MapView } from "@/components/MapView";
-import { Hero } from "@/components/Hero";
 import { QuickSuggestions } from "@/components/QuickSuggestions";
 import { StatsBar } from "@/components/StatsBar";
 import { TourismBackground } from "@/components/TourismBackground";
+import { InterestsMultiSelect } from "@/components/InterestsMultiSelect";
+import { RegionsMultiSelect } from "@/components/RegionsMultiSelect";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
-
-const regions = [
-  { name: "Grande Florianópolis", emoji: "🏖️" },
-  { name: "Serra Catarinense", emoji: "🏔️" },
-  { name: "Litoral Norte", emoji: "🌊" },
-  { name: "Vale Europeu", emoji: "🏘️" },
-  { name: "Oeste Catarinense", emoji: "🌾" },
-  { name: "Sul Catarinense", emoji: "🦞" },
-  { name: "Planalto Norte", emoji: "🌲" },
-];
 
 interface Local {
   nome: string;
@@ -39,25 +29,18 @@ interface Roteiro {
 
 const Index = () => {
   const [userInput, setUserInput] = useState("");
+  const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [roteiro, setRoteiro] = useState<Roteiro | null>(null);
-
-  const toggleRegion = (regionName: string) => {
-    setSelectedRegions((prev) =>
-      prev.includes(regionName)
-        ? prev.filter((r) => r !== regionName)
-        : [...prev, regionName]
-    );
-  };
 
   const handleSuggestionClick = (suggestion: string) => {
     setUserInput((prev) => (prev ? `${prev}, ${suggestion}` : suggestion));
   };
 
   const handleGenerateRoteiro = async () => {
-    if (!userInput.trim() && selectedRegions.length === 0) {
-      toast.error("Por favor, descreva suas preferências ou selecione ao menos uma região!");
+    if (selectedRegions.length === 0) {
+      toast.error("Por favor, selecione ao menos uma região!");
       return;
     }
 
@@ -74,6 +57,7 @@ const Index = () => {
         },
         body: JSON.stringify({
           texto: userInput,
+          interesses: selectedInterests,
           regioes: selectedRegions,
         }),
       });
@@ -124,93 +108,95 @@ const Index = () => {
   const handleNewRoteiro = () => {
     setRoteiro(null);
     setUserInput("");
+    setSelectedInterests([]);
     setSelectedRegions([]);
   };
 
   return (
-    <div className="min-h-screen animated-bg relative overflow-hidden">
-      {/* Tourism Animated Background */}
-      <TourismBackground />
-      
-      {/* Conteúdo centralizado - Tela Inicial */}
+    <>
+      {/* Background animado com z-index correto */}
+      <div className="fixed inset-0 z-0">
+        <TourismBackground />
+      </div>
+
+      {/* Tela Inicial com Header Fixo */}
       {!roteiro && !isLoading && (
-        <div className="min-h-screen flex items-center justify-center px-4 py-4">
-          <div className="w-full max-w-2xl space-y-4 animate-fade-in">
-            {/* Hero minimalista */}
-            <Hero />
-            
-            {/* Input Card com Glassmorphism */}
-            <div className="glass-advanced rounded-2xl p-4 shadow-2xl">
-              <div className="space-y-3">
-                <Textarea
-                  id="preferences"
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  placeholder="Descreva suas preferências de viagem..."
-                  className="min-h-[80px] text-sm resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
-                  maxLength={300}
-                />
-                <p className="text-[10px] text-muted-foreground text-right">
-                  {userInput.length}/300
+        <div className="h-screen flex flex-col overflow-hidden">
+          {/* Header Fixo */}
+          <header className="h-15 border-b bg-background/80 backdrop-blur-sm relative z-20 flex-shrink-0">
+            <div className="container flex items-center h-full px-6">
+              <div>
+                <h1 className="text-xl font-bold gradient-text">Explora SC</h1>
+                <p className="text-[10px] text-muted-foreground">
+                  Roteiros personalizados por IA em Santa Catarina
                 </p>
+              </div>
+            </div>
+          </header>
+
+          {/* Main Content Centralizado */}
+          <main className="flex-1 flex items-center justify-center p-6 overflow-auto relative z-10">
+            <div className="w-full max-w-[600px] animate-fade-in">
+              <div className="glass-advanced rounded-2xl p-8 shadow-2xl space-y-5">
+                
+                {/* Campo de Texto */}
+                <div className="space-y-2">
+                  <Label htmlFor="preferences" className="text-sm font-medium">
+                    ✍️ Descreva suas preferências (opcional)
+                  </Label>
+                  <Textarea
+                    id="preferences"
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    placeholder="Ex: Gosto de praias tranquilas, trilhas leves e boa gastronomia..."
+                    className="min-h-[80px] text-sm resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
+                    maxLength={300}
+                  />
+                  <p className="text-[10px] text-muted-foreground text-right">
+                    {userInput.length}/300
+                  </p>
+                </div>
 
                 {/* Quick Suggestions */}
                 <QuickSuggestions onSuggestionClick={handleSuggestionClick} />
                 
-                {/* Region Selection - Compact List */}
-                <div className="space-y-2">
-                  <Label className="text-xs font-medium text-muted-foreground">
-                    Selecione as regiões
-                  </Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    {regions.map((region) => (
-                      <div
-                        key={region.name}
-                        className="flex items-center space-x-2 p-2 rounded-lg bg-background/50 hover:bg-background/70 transition-colors cursor-pointer border border-transparent hover:border-primary/30"
-                        onClick={() => toggleRegion(region.name)}
-                      >
-                        <Checkbox
-                          id={region.name}
-                          checked={selectedRegions.includes(region.name)}
-                          onCheckedChange={() => toggleRegion(region.name)}
-                          className="h-3.5 w-3.5"
-                        />
-                        <Label
-                          htmlFor={region.name}
-                          className="flex items-center gap-1.5 cursor-pointer text-xs flex-1"
-                        >
-                          <span className="text-base">{region.emoji}</span>
-                          <span className="leading-tight">{region.name}</span>
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Generate Button - Dentro do card */}
+                {/* Interesses Multi-Select */}
+                <InterestsMultiSelect 
+                  selected={selectedInterests}
+                  onSelectionChange={setSelectedInterests}
+                />
+                
+                {/* Regiões Multi-Select */}
+                <RegionsMultiSelect 
+                  selected={selectedRegions}
+                  onSelectionChange={setSelectedRegions}
+                />
+                
+                {/* Botão de Gerar Roteiro */}
                 <Button
                   size="lg"
                   onClick={handleGenerateRoteiro}
-                  disabled={!userInput.trim() || selectedRegions.length === 0}
-                  className="w-full gradient-primary text-white text-sm"
+                  disabled={selectedRegions.length === 0}
+                  className="w-full gradient-primary text-white shadow-lg hover:shadow-xl transition-all"
                 >
-                  <Sparkles className="w-4 h-4 mr-2" />
+                  <Sparkles className="w-5 h-5 mr-2" />
                   Gerar Roteiro
                 </Button>
+                
               </div>
             </div>
-          </div>
+          </main>
         </div>
       )}
 
-      {/* Loading State - Centralizado */}
+      {/* Loading State */}
       {isLoading && (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center relative z-10">
           <LoadingAnimation />
         </div>
       )}
 
-      {/* Results Section - Layout normal */}
+      {/* Results Section - INTOCADA */}
       {roteiro && !isLoading && (
         <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
           <div className="space-y-12 animate-fade-in">
@@ -285,7 +271,7 @@ const Index = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

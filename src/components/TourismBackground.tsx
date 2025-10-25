@@ -5,17 +5,17 @@ export const TourismBackground = () => {
       <div className="absolute inset-0 animated-bg" />
       
       {/* Ondas animadas no rodapé */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 opacity-20">
+      <div className="absolute bottom-0 left-0 right-0 h-32 opacity-40">
         <svg className="wave-animation w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path 
             d="M0,50 C150,80 350,0 600,50 C850,100 1050,20 1200,50 L1200,120 L0,120 Z" 
             fill="hsl(var(--primary))"
-            opacity="0.3"
+            opacity="0.5"
           />
           <path 
             d="M0,70 C200,100 400,30 600,70 C800,110 1000,40 1200,70 L1200,120 L0,120 Z" 
             fill="hsl(var(--primary))"
-            opacity="0.2"
+            opacity="0.3"
           />
         </svg>
       </div>
@@ -46,9 +46,9 @@ export const TourismBackground = () => {
       </div>
       
       {/* Orbs coloridos */}
-      <div className="floating-orb floating-orb-1" />
-      <div className="floating-orb floating-orb-2" />
-      <div className="floating-orb floating-orb-3" />
+      <div className="floating-orb floating-orb-1" style={{ opacity: 0.4 }} />
+      <div className="floating-orb floating-orb-2" style={{ opacity: 0.35 }} />
+      <div className="floating-orb floating-orb-3" style={{ opacity: 0.3 }} />
     </div>
   );
 };

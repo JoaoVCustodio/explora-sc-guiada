@@ -274,7 +274,8 @@
   }
   
   .glass-advanced {
-    @apply bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-700/20;
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/30 dark:border-gray-700/30;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   }
   
   /* Animated background */
@@ -306,7 +307,6 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(60px);
-    opacity: 0.3;
     animation: float-orb 20s ease-in-out infinite;
     pointer-events: none;
   }
@@ -342,10 +342,10 @@
   }
   
   /* Tourism icons floating animation */
-  .tourism-icon {
-    position: absolute;
-    font-size: 2.5rem;
-    opacity: 0.12;
+.tourism-icon {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.25;
     animation: float-tourism 25s ease-in-out infinite;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
   }
@@ -461,11 +461,11 @@
   }
   
   /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .tourism-icon {
-      font-size: 2rem;
-      opacity: 0.1;
-    }
+@media (max-width: 768px) {
+  .tourism-icon {
+    font-size: 2.5rem;
+    opacity: 0.2;
+  }
   }
   
   /* Transitions */
@@ -500,5 +500,41 @@
   
   .hover-glow:hover {
     @apply shadow-glow;
+  }
+  
+  /* Garantir z-index alto para dropdowns */
+  [data-radix-popper-content-wrapper] {
+    z-index: 100 !important;
+  }
+
+  /* Melhorar contraste do Command Group */
+  .command-group {
+    background: hsl(var(--background));
+  }
+
+  /* Garantir animação do gradiente */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Keyframe para float-orb */
+  @keyframes float-orb {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
   }
 }
