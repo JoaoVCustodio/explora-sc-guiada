@@ -7,7 +7,7 @@ import { RoteiroCard } from "@/components/RoteiroCard";
 import { LocalCard } from "@/components/LocalCard";
 import { MapView } from "@/components/MapView";
 import { StatsBar } from "@/components/StatsBar";
-import { TourismBackground } from "@/components/TourismBackground";
+import { InteractiveTourismBackground } from "@/components/InteractiveTourismBackground";
 import { InterestsMultiSelect } from "@/components/InterestsMultiSelect";
 import { RegionsMultiSelect } from "@/components/RegionsMultiSelect";
 import { toast } from "sonner";
@@ -111,7 +111,7 @@ const Index = () => {
     <>
       {/* Background animado com z-index correto */}
       <div className="fixed inset-0 z-0">
-        <TourismBackground />
+        <InteractiveTourismBackground />
       </div>
 
       {/* Tela Inicial com Header Fixo */}
@@ -144,7 +144,7 @@ const Index = () => {
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     placeholder="Ex: Gosto de praias tranquilas, trilhas leves e boa gastronomia..."
-                    className="min-h-[80px] text-sm resize-none border-0 bg-background/50 focus-visible:ring-2 focus-visible:ring-primary"
+                    className="min-h-[80px] text-sm resize-none border border-border/40 bg-white/80 dark:bg-gray-900/80 focus-visible:ring-2 focus-visible:ring-primary shadow-sm"
                     maxLength={300}
                   />
                   <p className="text-[10px] text-muted-foreground text-right">

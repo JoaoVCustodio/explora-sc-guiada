@@ -308,6 +308,7 @@
     border-radius: 50%;
     filter: blur(60px);
     animation: float-orb 20s ease-in-out infinite;
+    transition: transform 0.15s ease-out;
     pointer-events: none;
   }
   
@@ -348,6 +349,8 @@
   opacity: 0.25;
     animation: float-tourism 25s ease-in-out infinite;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: transform 0.1s ease-out;
+    pointer-events: none;
   }
   
   @keyframes float-tourism {
