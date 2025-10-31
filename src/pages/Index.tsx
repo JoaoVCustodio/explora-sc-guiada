@@ -10,6 +10,7 @@ import { StatsBar } from "@/components/StatsBar";
 import { InteractiveTourismBackground } from "@/components/InteractiveTourismBackground";
 import { InterestsMultiSelect } from "@/components/InterestsMultiSelect";
 import { RegionsMultiSelect } from "@/components/RegionsMultiSelect";
+import { Header } from "@/components/Header";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
 
@@ -118,16 +119,7 @@ const Index = () => {
       {!roteiro && !isLoading && (
         <div className="h-screen flex flex-col overflow-hidden">
           {/* Header Fixo */}
-          <header className="h-15 border-b bg-background/80 backdrop-blur-sm relative z-20 flex-shrink-0">
-            <div className="container flex items-center h-full px-6">
-              <div>
-                <h1 className="text-xl font-bold gradient-text">Explora SC</h1>
-                <p className="text-[10px] text-muted-foreground">
-                  Roteiros personalizados por IA em Santa Catarina
-                </p>
-              </div>
-            </div>
-          </header>
+          <Header />
 
           {/* Main Content Centralizado */}
           <main className="flex-1 flex items-center justify-center p-6 overflow-auto relative z-10">
@@ -188,10 +180,12 @@ const Index = () => {
         </div>
       )}
 
-      {/* Results Section - INTOCADA */}
+      {/* Results Section */}
       {roteiro && !isLoading && (
-        <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
-          <div className="space-y-12 animate-fade-in">
+        <>
+          <Header />
+          <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10 pt-24">
+            <div className="space-y-12 animate-fade-in">
             {/* Header with Action */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
@@ -260,8 +254,9 @@ const Index = () => {
               </div>
               <MapView locais={roteiro.locais} />
             </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
