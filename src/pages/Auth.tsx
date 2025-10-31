@@ -48,12 +48,6 @@ export default function Auth() {
     resolver: zodResolver(signUpSchema),
   });
 
-  // Redirect if already authenticated
-  if (user) {
-    navigate('/');
-    return null;
-  }
-
   const onSignIn = async (data: SignInForm) => {
     setIsLoadingSignIn(true);
     await signIn(data.email, data.password);
