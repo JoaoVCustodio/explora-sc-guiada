@@ -70,26 +70,26 @@ const Index = () => {
       
       // Mock response for demonstration
       const mockRoteiro: Roteiro = {
-        titulo: "Roteiro de 3 dias em Florianópolis",
-        descricao: "Uma jornada inesquecível pelas praias paradisíacas, trilhas deslumbrantes e a rica gastronomia local da Ilha da Magia.",
+        titulo: "Roteiro de 1 Dia em Florianópolis",
+        descricao: "Descubra três tesouros da Ilha da Magia em um dia completo: surf na Joaquina, cultura na Lagoa e conservação no Projeto TAMAR.",
         locais: [
           {
             nome: "Praia da Joaquina",
             descricao: "Famosa pelas ondas perfeitas para surf e o espetacular pôr do sol. Um paraíso para esportistas e amantes da natureza.",
-            latitude: -27.6422,
-            longitude: -48.4366,
+            latitude: -27.62930311235559,
+            longitude: -48.44920127793145,
           },
           {
             nome: "Lagoa da Conceição",
             descricao: "Centro gastronômico e cultural vibrante, cercado por belezas naturais. Ideal para praticar esportes aquáticos e desfrutar da vida noturna.",
-            latitude: -27.5822,
-            longitude: -48.4525,
+            latitude: -27.600891065198354,
+            longitude: -48.46420798442846,
           },
           {
             nome: "Projeto TAMAR",
             descricao: "Centro de preservação das tartarugas marinhas. Uma experiência educativa e inspiradora sobre conservação ambiental.",
-            latitude: -27.5969,
-            longitude: -48.5495,
+            latitude: -27.572119665696214,
+            longitude: -48.427816509220435,
           },
         ],
       };
