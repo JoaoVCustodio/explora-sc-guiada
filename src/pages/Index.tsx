@@ -106,7 +106,7 @@ const Index = () => {
     setRoteiro(null);
 
     try {
-      const webhookUrl = "https://bot-pousada-n8n-n8n.rv3uyd.easypanel.host/webhook-test/analizer";
+      const webhookUrl = "https://bot-pousada-n8n-n8n.rv3uyd.easypanel.host/webhook/analizer";
       
       const response = await fetch(webhookUrl, {
         method: "POST",
