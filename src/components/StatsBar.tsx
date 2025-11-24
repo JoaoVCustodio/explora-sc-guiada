@@ -2,9 +2,12 @@ import { MapPin, Clock, TrendingUp } from "lucide-react";
 
 interface StatsBarProps {
   locaisCount: number;
+  tempoEstimado?: string;
 }
 
-export const StatsBar = ({ locaisCount }: StatsBarProps) => {
+export const StatsBar = ({ locaisCount, tempoEstimado }: StatsBarProps) => {
+  // Se tempoEstimado vier do webhook, usa ele; senão calcula
+  const duracao = tempoEstimado || `${locaisCount * 3}h`;
   return (
     <div className="flex flex-wrap items-center justify-center gap-6 py-6 px-6 rounded-xl glass animate-scale-in">
       <div className="flex items-center gap-3">
@@ -24,7 +27,7 @@ export const StatsBar = ({ locaisCount }: StatsBarProps) => {
           <Clock className="w-5 h-5 text-secondary" />
         </div>
         <div>
-          <p className="text-2xl font-semibold">{locaisCount * 3}h</p>
+          <p className="text-2xl font-semibold">{duracao}</p>
           <p className="text-sm text-muted-foreground">Duração</p>
         </div>
       </div>

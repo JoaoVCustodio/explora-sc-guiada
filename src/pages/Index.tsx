@@ -14,6 +14,27 @@ import { Header } from "@/components/Header";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
 
+// Interface da resposta RAW do webhook
+interface WebhookResponse {
+  output: string; // JSON string que precisa ser parseado
+}
+
+// Interface do conteúdo dentro de "output" (após primeiro parse)
+interface WebhookOutput {
+  titulo: string;
+  descricao_geral: string;
+  quantidade_locais: number;
+  tempo_estimado: string;
+  locais: {
+    nome: string;
+    descricao_curta: string;
+    latitude: number;
+    longitude: number;
+  }[];
+  fonte: string;
+}
+
+// Interface usada internamente no app
 interface Local {
   nome: string;
   descricao: string;
@@ -25,7 +46,48 @@ interface Roteiro {
   titulo: string;
   descricao: string;
   locais: Local[];
+  tempo_estimado?: string;
+  quantidade_locais?: number;
+  fonte?: string;
 }
+
+/**
+ * Transforma a resposta do webhook no formato esperado pela aplicação
+ */
+const transformWebhookResponse = (webhookData: WebhookResponse): Roteiro => {
+  // Primeiro parse: extrai o campo "output"
+  const outputString = webhookData.output;
+  
+  // Segundo parse: converte a string JSON em objeto
+  const parsedOutput: WebhookOutput = JSON.parse(outputString);
+  
+  // Validação de campos obrigatórios
+  if (!parsedOutput.titulo || !parsedOutput.locais) {
+    throw new Error("Resposta do webhook inválida: campos obrigatórios ausentes");
+  }
+  
+  // Validação de coordenadas
+  parsedOutput.locais.forEach((local, index) => {
+    if (!local.latitude || !local.longitude) {
+      console.error(`Local ${index + 1} sem coordenadas válidas:`, local);
+    }
+  });
+  
+  // Mapeia para o formato interno
+  return {
+    titulo: parsedOutput.titulo,
+    descricao: parsedOutput.descricao_geral,
+    tempo_estimado: parsedOutput.tempo_estimado,
+    quantidade_locais: parsedOutput.quantidade_locais,
+    fonte: parsedOutput.fonte,
+    locais: parsedOutput.locais.map(local => ({
+      nome: local.nome,
+      descricao: local.descricao_curta,
+      latitude: local.latitude,
+      longitude: local.longitude,
+    })),
+  };
+};
 
 const Index = () => {
   const [userInput, setUserInput] = useState("");
@@ -62,16 +124,45 @@ const Index = () => {
         throw new Error("Erro ao gerar roteiro");
       }
 
-      const data = await response.json();
-      setRoteiro(data);
+      const webhookData: WebhookResponse = await response.json();
+
+      console.log("📥 Resposta raw do webhook:", webhookData);
+
+      // Transforma a resposta do webhook
+      const roteiroTransformado = transformWebhookResponse(webhookData);
+
+      console.log("✅ Roteiro transformado:", roteiroTransformado);
+
+      // Validação: verifica se quantidade de locais bate
+      if (roteiroTransformado.locais.length !== roteiroTransformado.quantidade_locais) {
+        console.warn(
+          `Aviso: quantidade_locais (${roteiroTransformado.quantidade_locais}) ` +
+          `diferente do array locais (${roteiroTransformado.locais.length})`
+        );
+      }
+
+      setRoteiro(roteiroTransformado);
       toast.success("Roteiro gerado com sucesso! 🎉");
+      console.log("📍 Fonte dos dados:", roteiroTransformado.fonte);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Erro ao gerar roteiro:", error);
       
-      // Mock response for demonstration
+      // Verifica se é erro de parse JSON
+      if (error instanceof SyntaxError) {
+        toast.error("Erro ao processar resposta do servidor. Formato inválido.");
+      } else if (error instanceof TypeError) {
+        toast.error("Erro de conexão com o servidor.");
+      } else {
+        toast.error("Erro ao gerar roteiro. Tente novamente.");
+      }
+      
+      // Mock response para demonstração
       const mockRoteiro: Roteiro = {
         titulo: "Roteiro de 1 Dia em Florianópolis",
         descricao: "Descubra três tesouros da Ilha da Magia em um dia completo: surf na Joaquina, cultura na Lagoa e conservação no Projeto TAMAR.",
+        tempo_estimado: "9h",
+        quantidade_locais: 3,
+        fonte: "mock_data",
         locais: [
           {
             nome: "Praia da Joaquina",
@@ -206,7 +297,10 @@ const Index = () => {
             </div>
 
             {/* Stats Bar */}
-            <StatsBar locaisCount={roteiro.locais.length} />
+            <StatsBar 
+              locaisCount={roteiro.locais.length}
+              tempoEstimado={roteiro.tempo_estimado}
+            />
 
             {/* Main Roteiro Card */}
             <RoteiroCard titulo={roteiro.titulo} descricao={roteiro.descricao} />
