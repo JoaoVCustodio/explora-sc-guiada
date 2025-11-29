@@ -13,13 +13,13 @@ import { RegionsMultiSelect } from "@/components/RegionsMultiSelect";
 import { Header } from "@/components/Header";
 import { toast } from "sonner";
 import { Sparkles, RotateCcw } from "lucide-react";
-
-// Interface da resposta RAW do webhook
+// Interface flexível para a resposta do webhook
 interface WebhookResponse {
-  output: string; // JSON string que precisa ser parseado
+  output?: string | object; // Pode vir como string, objeto ou dentro de "output"
+  [key: string]: any; // Permite outras propriedades caso venha direto
 }
 
-// Interface do conteúdo dentro de "output" (após primeiro parse)
+// Interface do conteúdo esperado do roteiro
 interface WebhookOutput {
   titulo: string;
   descricao_geral: string;
@@ -52,27 +52,89 @@ interface Roteiro {
 }
 
 /**
- * Transforma a resposta do webhook no formato esperado pela aplicação
+ * Função auxiliar para fazer parse recursivo de strings JSON
+ * Ajuda quando o n8n retorna string dentro de string ou formatos mistos
  */
-const transformWebhookResponse = (webhookData: WebhookResponse): Roteiro => {
-  // Primeiro parse: extrai o campo "output"
-  const outputString = webhookData.output;
-  
-  // Segundo parse: converte a string JSON em objeto
-  const parsedOutput: WebhookOutput = JSON.parse(outputString);
-  
+const parseRecursive = (data: any): any => {
+  if (typeof data === 'object' && data !== null) {
+    return data;
+  }
+
+  if (typeof data === 'string') {
+    try {
+      const parsed = JSON.parse(data);
+      // Se o resultado do parse ainda for string, tenta de novo (recursão)
+      if (typeof parsed === 'string') {
+        return parseRecursive(parsed);
+      }
+      return parsed;
+    } catch (e) {
+      // Se não der pra fazer parse, retorna a string original (pode ser um campo simples)
+      return data;
+    }
+  }
+
+  return data;
+};
+
+/**
+ * Transforma a resposta do webhook no formato esperado pela aplicação
+ * Tenta lidar com diferentes formatos de resposta de forma recursiva
+ */
+const transformWebhookResponse = (webhookData: any): Roteiro => {
+  console.log("🔄 Iniciando transformação do webhook:", webhookData);
+
+  // Tratamento para quando o n8n retorna um array (ex: [{ output: ... }])
+  if (Array.isArray(webhookData)) {
+    console.log("ℹ️ Detectado formato de array, usando primeiro item");
+    webhookData = webhookData[0];
+  }
+
+  let parsedOutput: WebhookOutput | null = null;
+
+  // Tentativa 1: Verificar se existe o campo "output" e tentar parsear ele
+  if (webhookData && webhookData.output) {
+    console.log("ℹ️ Tentando parsear campo 'output'...");
+    const outputParsed = parseRecursive(webhookData.output);
+
+    // Verifica se o resultado tem cara de ser o nosso objeto (tem titulo e locais)
+    if (outputParsed && outputParsed.titulo && outputParsed.locais) {
+      parsedOutput = outputParsed;
+    }
+  }
+
+  // Tentativa 2: Se não deu certo acima, tenta parsear o webhookData inteiro
+  if (!parsedOutput) {
+    console.log("ℹ️ Tentando parsear o payload inteiro...");
+    const fullParsed = parseRecursive(webhookData);
+
+    if (fullParsed && fullParsed.titulo && fullParsed.locais) {
+      parsedOutput = fullParsed;
+    }
+  }
+
+  console.log("📄 Dados finais parseados:", parsedOutput);
+
+  if (!parsedOutput) {
+    throw new Error("Não foi possível encontrar um roteiro válido na resposta do webhook");
+  }
+
   // Validação de campos obrigatórios
   if (!parsedOutput.titulo || !parsedOutput.locais) {
-    throw new Error("Resposta do webhook inválida: campos obrigatórios ausentes");
+    throw new Error("Resposta do webhook inválida: campos obrigatórios 'titulo' ou 'locais' ausentes");
   }
-  
+
   // Validação de coordenadas
-  parsedOutput.locais.forEach((local, index) => {
-    if (!local.latitude || !local.longitude) {
-      console.error(`Local ${index + 1} sem coordenadas válidas:`, local);
-    }
-  });
-  
+  if (Array.isArray(parsedOutput.locais)) {
+    parsedOutput.locais.forEach((local, index) => {
+      if (!local.latitude || !local.longitude) {
+        console.error(`Local ${index + 1} sem coordenadas válidas:`, local);
+      }
+    });
+  } else {
+    throw new Error("Campo 'locais' não é um array");
+  }
+
   // Mapeia para o formato interno
   return {
     titulo: parsedOutput.titulo,
@@ -107,7 +169,7 @@ const Index = () => {
 
     try {
       const webhookUrl = "https://bot-pousada-n8n-n8n.rv3uyd.easypanel.host/webhook/analizer";
-      
+
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
@@ -146,7 +208,7 @@ const Index = () => {
       console.log("📍 Fonte dos dados:", roteiroTransformado.fonte);
     } catch (error) {
       console.error("Erro ao gerar roteiro:", error);
-      
+
       // Verifica se é erro de parse JSON
       if (error instanceof SyntaxError) {
         toast.error("Erro ao processar resposta do servidor. Formato inválido.");
@@ -155,7 +217,7 @@ const Index = () => {
       } else {
         toast.error("Erro ao gerar roteiro. Tente novamente.");
       }
-      
+
       // Mock response para demonstração
       const mockRoteiro: Roteiro = {
         titulo: "Roteiro de 1 Dia em Florianópolis",
@@ -184,7 +246,7 @@ const Index = () => {
           },
         ],
       };
-      
+
       setRoteiro(mockRoteiro);
       toast.info("Usando roteiro de demonstração. Configure o webhook n8n para usar dados reais.");
     } finally {
@@ -216,7 +278,7 @@ const Index = () => {
           <main className="flex-1 flex items-center justify-center p-6 overflow-auto relative z-10">
             <div className="w-full max-w-[600px] animate-fade-in">
               <div className="glass-advanced rounded-2xl p-8 shadow-2xl space-y-5">
-                
+
                 {/* Campo de Texto */}
                 <div className="space-y-2">
                   <Label htmlFor="preferences" className="text-sm font-medium">
@@ -234,19 +296,19 @@ const Index = () => {
                     {userInput.length}/300
                   </p>
                 </div>
-                
+
                 {/* Interesses Multi-Select */}
                 <InterestsMultiSelect
                   selected={selectedInterests}
                   onSelectionChange={setSelectedInterests}
                 />
-                
+
                 {/* Regiões Multi-Select */}
-                <RegionsMultiSelect 
+                <RegionsMultiSelect
                   selected={selectedRegions}
                   onSelectionChange={setSelectedRegions}
                 />
-                
+
                 {/* Botão de Gerar Roteiro */}
                 <Button
                   size="lg"
@@ -257,7 +319,7 @@ const Index = () => {
                   <Sparkles className="w-5 h-5 mr-2" />
                   Gerar Roteiro
                 </Button>
-                
+
               </div>
             </div>
           </main>
@@ -277,77 +339,77 @@ const Index = () => {
           <Header />
           <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10 pt-24">
             <div className="space-y-12 animate-fade-in">
-            {/* Header with Action */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h2 className="text-3xl font-semibold mb-2">Seu Roteiro Personalizado</h2>
-                <p className="text-muted-foreground">
-                  Criado especialmente para você com inteligência artificial
-                </p>
+              {/* Header with Action */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <h2 className="text-3xl font-semibold mb-2">Seu Roteiro Personalizado</h2>
+                  <p className="text-muted-foreground">
+                    Criado especialmente para você com inteligência artificial
+                  </p>
+                </div>
+                <Button
+                  onClick={handleNewRoteiro}
+                  variant="outline"
+                  size="lg"
+                  className="hover-lift"
+                >
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Novo Roteiro
+                </Button>
               </div>
-              <Button
-                onClick={handleNewRoteiro}
-                variant="outline"
-                size="lg"
-                className="hover-lift"
-              >
-                <RotateCcw className="w-4 h-4 mr-2" />
-                Novo Roteiro
-              </Button>
-            </div>
 
-            {/* Stats Bar */}
-            <StatsBar 
-              locaisCount={roteiro.locais.length}
-              tempoEstimado={roteiro.tempo_estimado}
-            />
+              {/* Stats Bar */}
+              <StatsBar
+                locaisCount={roteiro.locais.length}
+                tempoEstimado={roteiro.tempo_estimado}
+              />
 
-            {/* Main Roteiro Card */}
-            <RoteiroCard titulo={roteiro.titulo} descricao={roteiro.descricao} />
+              {/* Main Roteiro Card */}
+              <RoteiroCard titulo={roteiro.titulo} descricao={roteiro.descricao} />
 
-            {/* Locais Grid */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">Locais do Roteiro</h3>
-                <p className="text-muted-foreground">
-                  Explore cada destino e veja no mapa interativo
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {roteiro.locais.map((local, index) => (
-                  <div
-                    key={index}
-                    className="animate-slide-up"
-                    style={{ 
-                      animationDelay: `${index * 100}ms`,
-                      animationFillMode: 'both'
-                    }}
-                  >
-                    <LocalCard
-                      index={index + 1}
-                      nome={local.nome}
-                      descricao={local.descricao}
-                      onLocationClick={() => {
-                        toast.info(`📍 ${local.nome}`, {
-                          description: "Veja a localização no mapa abaixo"
-                        });
+              {/* Locais Grid */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Locais do Roteiro</h3>
+                  <p className="text-muted-foreground">
+                    Explore cada destino e veja no mapa interativo
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {roteiro.locais.map((local, index) => (
+                    <div
+                      key={index}
+                      className="animate-slide-up"
+                      style={{
+                        animationDelay: `${index * 100}ms`,
+                        animationFillMode: 'both'
                       }}
-                    />
-                  </div>
-                ))}
+                    >
+                      <LocalCard
+                        index={index + 1}
+                        nome={local.nome}
+                        descricao={local.descricao}
+                        onLocationClick={() => {
+                          toast.info(`📍 ${local.nome}`, {
+                            description: "Veja a localização no mapa abaixo"
+                          });
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Map Section */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">Mapa Interativo</h3>
-                <p className="text-muted-foreground">
-                  Visualize todos os locais e a rota sugerida
-                </p>
+              {/* Map Section */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Mapa Interativo</h3>
+                  <p className="text-muted-foreground">
+                    Visualize todos os locais e a rota sugerida
+                  </p>
+                </div>
+                <MapView locais={roteiro.locais} />
               </div>
-              <MapView locais={roteiro.locais} />
-            </div>
             </div>
           </div>
         </>
