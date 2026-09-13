@@ -4,6 +4,24 @@ const MAX_BODY_CHARACTERS = 10_000;
 const MAX_RESPONSE_CHARACTERS = 250_000;
 const UPSTREAM_TIMEOUT_MS = 30_000;
 
+const ALLOWED_REGIONS = new Set([
+  "Grande Florianópolis",
+  "Serra Catarinense",
+  "Litoral Norte",
+  "Vale Europeu",
+  "Oeste Catarinense",
+  "Sul Catarinense",
+  "Planalto Norte",
+]);
+const ALLOWED_INTERESTS = new Set([
+  "praias",
+  "montanhas",
+  "gastronomia",
+  "arte",
+  "esportes",
+  "ecoturismo",
+]);
+
 type JsonRecord = Record<string, unknown>;
 
 const jsonResponse = (body: JsonRecord, status: number, corsHeaders: HeadersInit) =>
@@ -40,10 +58,12 @@ const getCorsHeaders = (request: Request) => {
   };
 };
 
-const isStringArray = (value: unknown, maximumItems: number) =>
+const isStringArray = (value: unknown, maximumItems: number, allowedValues: ReadonlySet<string>) =>
   Array.isArray(value) &&
   value.length <= maximumItems &&
-  value.every((item) => typeof item === "string" && item.trim().length > 0 && item.length <= 80);
+  value.every((item) =>
+    typeof item === "string" && item.trim().length > 0 && item.length <= 80 && allowedValues.has(item)
+  );
 
 Deno.serve(async (request) => {
   const cors = getCorsHeaders(request);
@@ -109,8 +129,8 @@ Deno.serve(async (request) => {
   const texto = typeof body.texto === "string" ? body.texto.trim() : "";
   if (
     texto.length > 300 ||
-    !isStringArray(body.interesses, 12) ||
-    !isStringArray(body.regioes, 8) ||
+    !isStringArray(body.interesses, 12, ALLOWED_INTERESTS) ||
+    !isStringArray(body.regioes, 8, ALLOWED_REGIONS) ||
     (body.regioes as string[]).length === 0
   ) {
     return jsonResponse({ error: "Preferências ou regiões inválidas." }, 400, cors.headers);
