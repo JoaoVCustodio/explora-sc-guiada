@@ -1,36 +1,19 @@
-import { MapPin, Clock, TrendingUp } from "lucide-react";
+import { Clock3, MapPin } from "lucide-react";
 
 interface StatsBarProps {
-  locaisCount: number;
-  tempoEstimado?: string;
+  locationsCount: number;
+  estimatedTime?: string;
 }
 
-export const StatsBar = ({ locaisCount, tempoEstimado }: StatsBarProps) => {
-  // Se tempoEstimado vier do webhook, usa ele; senão calcula
-  const duracao = tempoEstimado || `${locaisCount * 3}h`;
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-6 py-6 px-6 rounded-xl glass animate-scale-in">
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-          <MapPin className="w-5 h-5 text-primary" />
-        </div>
-        <div>
-          <p className="text-2xl font-semibold">{locaisCount}</p>
-          <p className="text-sm text-muted-foreground">Locais</p>
-        </div>
-      </div>
-      
-      <div className="w-px h-12 bg-border" />
-      
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-          <Clock className="w-5 h-5 text-secondary" />
-        </div>
-        <div>
-          <p className="text-2xl font-semibold">{duracao}</p>
-          <p className="text-sm text-muted-foreground">Duração</p>
-        </div>
-      </div>
+export const StatsBar = ({ locationsCount, estimatedTime }: StatsBarProps) => (
+  <dl className="grid grid-cols-2 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+    <div className="flex items-center gap-3 border-r border-border p-4 sm:p-5">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><MapPin className="h-5 w-5" aria-hidden="true" /></span>
+      <div><dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Locais</dt><dd className="text-xl font-bold tabular-nums">{locationsCount}</dd></div>
     </div>
-  );
-};
+    <div className="flex items-center gap-3 p-4 sm:p-5">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary/20 text-amber-700"><Clock3 className="h-5 w-5" aria-hidden="true" /></span>
+      <div><dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Duração</dt><dd className="text-xl font-bold tabular-nums">{estimatedTime || "A definir"}</dd></div>
+    </div>
+  </dl>
+);

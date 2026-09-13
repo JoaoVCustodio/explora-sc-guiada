@@ -1,36 +1,20 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 interface RoteiroCardProps {
-  titulo: string;
-  descricao: string;
+  title: string;
+  description: string;
 }
 
-export const RoteiroCard = ({ titulo, descricao }: RoteiroCardProps) => {
-  return (
-    <Card className="relative overflow-hidden border-0 shadow-lg hover-lift animate-scale-in mb-8">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 gradient-card opacity-50" />
-      
-      {/* Content */}
-      <div className="relative">
-        <CardHeader className="pb-4 space-y-3">
-          <div className="inline-flex items-center gap-2 text-primary">
-            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            <span className="text-xs font-semibold uppercase tracking-wider">Seu Roteiro</span>
-          </div>
-          <CardTitle className="text-2xl font-semibold leading-tight">
-            {titulo}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pt-0">
-          <CardDescription className="text-base text-muted-foreground leading-relaxed">
-            {descricao}
-          </CardDescription>
-        </CardContent>
-      </div>
-    </Card>
-  );
-};
+export const RoteiroCard = ({ title, description }: RoteiroCardProps) => (
+  <Card className="overflow-hidden border-primary/20 bg-card shadow-md">
+    <div className="h-1.5 bg-gradient-to-r from-primary via-cyan-500 to-secondary" />
+    <CardHeader className="pb-3">
+      <p className="eyebrow flex items-center gap-2"><Sparkles className="h-4 w-4" aria-hidden="true" /> Roteiro criado para você</p>
+      <h2 className="text-balance text-2xl font-bold leading-tight sm:text-3xl">{title}</h2>
+    </CardHeader>
+    <CardContent>
+      <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">{description}</p>
+    </CardContent>
+  </Card>
+);

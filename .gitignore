@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Environment files (commit only the documented example)
+.env
+.env.*
+!.env.example
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Supabase CLI local project state
+supabase/.temp/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

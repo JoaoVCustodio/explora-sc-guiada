@@ -1,44 +1,45 @@
-import { Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Compass, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const loadingMessages = [
   "Analisando suas preferências...",
   "Explorando destinos em Santa Catarina...",
-  "Criando roteiro personalizado...",
-  "Finalizando seu roteiro perfeito...",
+  "Organizando os locais do roteiro...",
 ];
 
-export const LoadingAnimation = () => {
+interface LoadingAnimationProps {
+  compact?: boolean;
+  message?: string;
+  onCancel?: () => void;
+}
+
+export const LoadingAnimation = ({ compact = false, message, onCancel }: LoadingAnimationProps) => {
   const [messageIndex, setMessageIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setMessageIndex((prev) => (prev + 1) % loadingMessages.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
+    if (message) return;
+    const intervalId = setInterval(
+      () => setMessageIndex((currentIndex) => (currentIndex + 1) % loadingMessages.length),
+      3_500,
+    );
+    return () => clearInterval(intervalId);
+  }, [message]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8 animate-fade-in">
-      {/* Orbiting Circles */}
-      <div className="relative w-24 h-24">
-        <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
-        <div className="absolute inset-2 rounded-full bg-primary/40 animate-pulse" />
-        <div className="absolute inset-4 rounded-full bg-primary flex items-center justify-center animate-bounce">
-          <Sparkles className="w-8 h-8 text-white" />
-        </div>
-      </div>
-
-      {/* Animated Message */}
-      <p className="text-lg font-medium text-muted-foreground animate-fade-in-out">
-        {loadingMessages[messageIndex]}
-      </p>
-
-      {/* Progress Bar */}
-      <div className="w-64 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div className="h-full bg-gradient-to-r from-primary to-secondary animate-progress" />
-      </div>
+    <div className={cn("flex flex-col items-center justify-center px-4 text-center", compact ? "min-h-dvh" : "min-h-[70dvh]")}>
+      <span className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg">
+        <span className="absolute inset-0 animate-ping rounded-2xl bg-primary/20" aria-hidden="true" />
+        <Compass className="relative h-8 w-8 animate-spin-slow" aria-hidden="true" />
+      </span>
+      <p className="mt-6 text-lg font-bold text-foreground" role="status" aria-live="polite">{message || loadingMessages[messageIndex]}</p>
+      {!message && <p className="mt-2 max-w-sm text-sm text-muted-foreground">Isso costuma levar alguns segundos. Você pode cancelar sem perder suas escolhas.</p>}
+      {onCancel && (
+        <Button type="button" variant="outline" className="mt-6 min-h-11" onClick={onCancel}>
+          <X className="h-4 w-4" aria-hidden="true" /> Cancelar
+        </Button>
+      )}
     </div>
   );
 };

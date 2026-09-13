@@ -1,50 +1,46 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Navigation } from "lucide-react";
+import { MapPinOff, Navigation } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface LocalCardProps {
-  nome: string;
-  descricao: string;
+  name: string;
+  description: string;
+  hasCoordinates: boolean;
+  isActive: boolean;
   onLocationClick: () => void;
-  index?: number;
+  position: number;
 }
 
-export const LocalCard = ({ nome, descricao, onLocationClick, index }: LocalCardProps) => {
-  return (
-    <Card 
-      className="group relative overflow-hidden border-0 shadow-md hover:shadow-xl cursor-pointer transition-smooth hover-lift animate-slide-up bg-card"
-      onClick={onLocationClick}
-      style={{ animationDelay: `${(index || 0) * 100}ms` }}
-    >
-      {/* Number Badge */}
-      {index !== undefined && (
-        <div className="absolute top-4 right-4 w-8 h-8 rounded-full gradient-primary flex items-center justify-center shadow-md z-10">
-          <span className="text-white font-semibold text-sm">{index + 1}</span>
+export const LocalCard = ({
+  name,
+  description,
+  hasCoordinates,
+  isActive,
+  onLocationClick,
+  position,
+}: LocalCardProps) => (
+  <Card className={cn("h-full overflow-hidden border-border bg-card shadow-sm transition-colors", isActive && "border-primary ring-2 ring-primary/15")}>
+    <article className="flex h-full flex-col p-5">
+      <div className="flex items-start gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+          {position}
+        </span>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-lg font-bold leading-snug text-foreground">{name}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
         </div>
-      )}
-      
-      {/* Gradient Accent */}
-      <div className="absolute inset-x-0 top-0 h-1 gradient-primary" />
-      
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-3 text-lg font-semibold group-hover:text-primary transition-smooth">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-            <MapPin className="w-5 h-5 text-primary" />
-          </div>
-          <span className="flex-1">{nome}</span>
-        </CardTitle>
-      </CardHeader>
-      
-      <CardContent className="pt-0 space-y-3">
-        <CardDescription className="text-sm text-muted-foreground leading-relaxed">
-          {descricao}
-        </CardDescription>
-        
-        {/* Action Hint */}
-        <div className="flex items-center gap-2 text-xs text-primary opacity-0 group-hover:opacity-100 transition-smooth">
-          <Navigation className="w-3 h-3" />
-          <span className="font-medium">Ver no mapa</span>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
+      </div>
+      <div className="mt-auto pt-4">
+        {hasCoordinates ? (
+          <button type="button" onClick={onLocationClick} aria-pressed={isActive} className="flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-accent px-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+            <Navigation className="h-4 w-4" aria-hidden="true" /> Ver no mapa
+          </button>
+        ) : (
+          <p className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-muted px-3 text-sm font-medium text-muted-foreground">
+            <MapPinOff className="h-4 w-4" aria-hidden="true" /> Sem coordenadas
+          </p>
+        )}
+      </div>
+    </article>
+  </Card>
+);
