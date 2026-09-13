@@ -10,6 +10,7 @@ import type { Itinerary } from "@/features/itinerary/types";
 
 const Index = () => {
   const [preferences, setPreferences] = useState("");
+  const [days, setDays] = useState(3);
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -45,6 +46,7 @@ const Index = () => {
       const generatedItinerary = await generateItinerary(
         {
           preferences,
+          days,
           interests: selectedInterests,
           regions: selectedRegions,
         },
@@ -97,6 +99,8 @@ const Index = () => {
           <ItineraryForm
             errorMessage={errorMessage}
             preferences={preferences}
+            days={days}
+            onDaysChange={setDays}
             selectedInterests={selectedInterests}
             selectedRegions={selectedRegions}
             onPreferencesChange={setPreferences}

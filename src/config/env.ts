@@ -13,11 +13,11 @@ const requireClientEnv = (name: keyof ImportMetaEnv, value: string | undefined) 
 const parseTimeout = (value: string | undefined) => {
   const parsedValue = Number(value);
 
-  if (!Number.isFinite(parsedValue)) {
-    return 35_000;
+  if (!value?.trim() || !Number.isFinite(parsedValue)) {
+    return 65_000;
   }
 
-  return Math.min(Math.max(parsedValue, 5_000), 60_000);
+  return Math.min(Math.max(parsedValue, 5_000), 65_000);
 };
 
 export const clientEnv = {

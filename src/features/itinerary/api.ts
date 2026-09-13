@@ -7,6 +7,7 @@ import type { Itinerary, ItineraryRequest } from "./types";
 const MAX_RESPONSE_CHARACTERS = 250_000;
 
 const requestSchema = z.object({
+  days: z.number().int().min(1).max(7),
   preferences: z.string().trim().max(300),
   interests: z.array(z.string().trim().min(1).max(60)).max(12),
   regions: z.array(z.string().trim().min(1).max(80)).min(1).max(8),
@@ -87,6 +88,7 @@ export const generateItinerary = async (
         texto: request.preferences,
         interesses: request.interests,
         regioes: request.regions,
+        dias: request.days,
       }),
       signal: controller.signal,
     });
@@ -123,7 +125,7 @@ export const generateItinerary = async (
     }
 
     try {
-      return normalizeItineraryResponse(payload);
+      return normalizeItineraryResponse(payload, request.days);
     } catch (error) {
       if (error instanceof ItineraryValidationError || error instanceof z.ZodError) {
         throw new ItineraryApiError("invalid-response", error.message);

@@ -17,12 +17,24 @@ const locationSchema = z.object({
   longitude: z.number().finite().min(-180).max(180).nullable(),
 });
 
+const scheduledLocationSchema = locationSchema.extend({
+  order: z.number().int().min(1),
+  period: z.enum(["manha", "tarde", "noite"]),
+  estimatedDuration: z.string().trim().min(1).max(80),
+});
+
+const daySchema = z.object({
+  day: z.number().int().min(1).max(7),
+  locations: z.array(scheduledLocationSchema).max(MAX_LOCATIONS),
+});
+
 const itinerarySchema = z.object({
   title: z.string().trim().min(1).max(180),
   description: z.string().trim().min(1).max(2_500),
-  locations: z.array(locationSchema).min(1).max(MAX_LOCATIONS),
+  locations: z.array(locationSchema).min(1).max(MAX_LOCATIONS * 7),
+  days: z.array(daySchema).min(1).max(7),
   estimatedTime: z.string().trim().min(1).max(80).optional(),
-  source: z.string().trim().min(1).max(120).optional(),
+  source: z.string().trim().min(1).max(500).optional(),
 });
 
 export class ItineraryValidationError extends Error {
@@ -125,22 +137,53 @@ const normalizeLocation = (value: unknown, index: number): ItineraryLocation => 
   });
 };
 
-export const normalizeItineraryResponse = (payload: unknown): Itinerary => {
+export const normalizeItineraryResponse = (payload: unknown, expectedDays?: number): Itinerary => {
   const unwrappedPayload = unwrapPayload(payload);
 
   if (!isRecord(unwrappedPayload)) {
     throw new ItineraryValidationError("A resposta do gerador não contém um roteiro válido.");
   }
 
-  const rawLocations = unwrappedPayload.locais ?? unwrappedPayload.locations;
-
-  if (!Array.isArray(rawLocations) || rawLocations.length === 0) {
-    throw new ItineraryValidationError("O roteiro retornado não contém locais.");
+  const rawDays = unwrappedPayload.dias ?? unwrappedPayload.days;
+  if (!Array.isArray(rawDays) || rawDays.length < 1 || rawDays.length > 7) {
+    throw new ItineraryValidationError("O roteiro deve conter entre 1 e 7 dias estruturados.");
+  }
+  if (expectedDays !== undefined && rawDays.length !== expectedDays) {
+    throw new ItineraryValidationError(`O gerador não retornou os ${expectedDays} dias solicitados.`);
   }
 
-  const locations = rawLocations
-    .slice(0, MAX_LOCATIONS)
-    .map((location, index) => normalizeLocation(location, index));
+  let expectedOrder = 1;
+  const periods = { manha: 0, tarde: 1, noite: 2 };
+  const days = rawDays.map((value, dayIndex) => {
+    const rawDay = isRecord(value) ? value : {};
+    const rawLocations = rawDay.locais ?? rawDay.locations;
+    if ((rawDay.dia ?? rawDay.day) !== dayIndex + 1 || !Array.isArray(rawLocations)) {
+      throw new ItineraryValidationError("Os dias devem estar em sequência, começando pelo Dia 1.");
+    }
+    let previousPeriod = -1;
+    return daySchema.parse({
+      day: dayIndex + 1,
+      locations: rawLocations.map((value) => {
+        const raw = isRecord(value) ? value : {};
+        const location = scheduledLocationSchema.parse({
+          ...normalizeLocation(value, expectedOrder - 1),
+          order: raw.ordem ?? raw.order,
+          period: raw.periodo ?? raw.period,
+          estimatedDuration: raw.duracao_estimada ?? raw.estimatedDuration,
+        });
+        if (location.order !== expectedOrder || periods[location.period] < previousPeriod) {
+          throw new ItineraryValidationError("A ordem dos locais e dos períodos deve ser sequencial.");
+        }
+        expectedOrder += 1;
+        previousPeriod = periods[location.period];
+        return location;
+      }),
+    });
+  });
+  const locations = days.flatMap((day) => day.locations);
+  if (locations.length === 0) {
+    throw new ItineraryValidationError("O roteiro retornado não contém locais nas bases permitidas.");
+  }
 
   return itinerarySchema.parse({
     title: normalizeText(
@@ -154,10 +197,8 @@ export const normalizeItineraryResponse = (payload: unknown): Itinerary => {
       2_500,
     ),
     locations,
-    estimatedTime: normalizeOptionalText(
-      unwrappedPayload.tempo_estimado ?? unwrappedPayload.estimated_time,
-      80,
-    ),
-    source: normalizeOptionalText(unwrappedPayload.fonte ?? unwrappedPayload.source, 120),
+    days,
+    estimatedTime: `${days.length} ${days.length === 1 ? "dia" : "dias"}`,
+    source: normalizeOptionalText(unwrappedPayload.fonte ?? unwrappedPayload.source, 500),
   });
 };

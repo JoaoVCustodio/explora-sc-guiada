@@ -2,7 +2,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 
 const MAX_BODY_CHARACTERS = 10_000;
 const MAX_RESPONSE_CHARACTERS = 250_000;
-const UPSTREAM_TIMEOUT_MS = 30_000;
+const UPSTREAM_TIMEOUT_MS = 60_000;
 
 const ALLOWED_REGIONS = new Set([
   "Grande Florianópolis",
@@ -127,6 +127,9 @@ Deno.serve(async (request) => {
   }
 
   const texto = typeof body.texto === "string" ? body.texto.trim() : "";
+  if (typeof body.dias !== "number" || !Number.isInteger(body.dias) || body.dias < 1 || body.dias > 7) {
+    return jsonResponse({ error: "A quantidade de dias deve ser um inteiro entre 1 e 7." }, 400, cors.headers);
+  }
   if (
     texto.length > 300 ||
     !isStringArray(body.interesses, 12, ALLOWED_INTERESTS) ||
@@ -153,6 +156,7 @@ Deno.serve(async (request) => {
         texto,
         interesses: body.interesses,
         regioes: body.regioes,
+        dias: body.dias,
       }),
       signal: controller.signal,
     });

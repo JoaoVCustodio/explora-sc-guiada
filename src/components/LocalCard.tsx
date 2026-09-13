@@ -9,6 +9,8 @@ interface LocalCardProps {
   isActive: boolean;
   onLocationClick: () => void;
   position: number;
+  period: "manha" | "tarde" | "noite";
+  estimatedDuration: string;
 }
 
 export const LocalCard = ({
@@ -18,6 +20,8 @@ export const LocalCard = ({
   isActive,
   onLocationClick,
   position,
+  period,
+  estimatedDuration,
 }: LocalCardProps) => (
   <Card className={cn("h-full overflow-hidden border-border bg-card shadow-sm transition-colors", isActive && "border-primary ring-2 ring-primary/15")}>
     <article className="flex h-full flex-col p-5">
@@ -26,7 +30,10 @@ export const LocalCard = ({
           {position}
         </span>
         <div className="min-w-0 flex-1">
-          <h3 className="text-lg font-bold leading-snug text-foreground">{name}</h3>
+          <h4 className="text-lg font-bold leading-snug text-foreground">{name}</h4>
+          <p className="mt-2 text-sm font-medium text-primary">
+            {{ manha: "Manhã", tarde: "Tarde", noite: "Noite" }[period]} · Duração estimada: {estimatedDuration}
+          </p>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
         </div>
       </div>

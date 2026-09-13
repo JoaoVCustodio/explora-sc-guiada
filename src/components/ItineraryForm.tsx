@@ -7,6 +7,8 @@ import { InterestsMultiSelect } from "@/components/InterestsMultiSelect";
 import { RegionsMultiSelect } from "@/components/RegionsMultiSelect";
 
 interface ItineraryFormProps {
+  days: number;
+  onDaysChange: (value: number) => void;
   errorMessage: string | null;
   preferences: string;
   selectedInterests: string[];
@@ -18,6 +20,8 @@ interface ItineraryFormProps {
 }
 
 export const ItineraryForm = ({
+  days,
+  onDaysChange,
   errorMessage,
   preferences,
   selectedInterests,
@@ -70,6 +74,19 @@ export const ItineraryForm = ({
           />
         </div>
 
+        <div className="space-y-2">
+          <Label htmlFor="trip-days">Quantidade de dias</Label>
+          <select
+            id="trip-days"
+            value={days}
+            onChange={(event) => onDaysChange(Number(event.target.value))}
+            className="h-12 w-full rounded-md border border-input bg-card px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            {[1, 2, 3, 4, 5, 6, 7].map((day) => (
+              <option key={day} value={day}>{day} {day === 1 ? "dia" : "dias"}</option>
+            ))}
+          </select>
+        </div>
         <InterestsMultiSelect selected={selectedInterests} onSelectionChange={onInterestsChange} />
         <div id="region-selector" tabIndex={-1}>
           <RegionsMultiSelect selected={selectedRegions} onSelectionChange={onRegionsChange} />
