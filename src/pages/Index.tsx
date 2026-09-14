@@ -95,7 +95,7 @@ const Index = () => {
         </main>
       ) : itinerary ? (
         <div className="relative z-10">
-          <ItineraryResults itinerary={itinerary} onEditPreferences={editPreferences}
+          <ItineraryResults itinerary={itinerary} regions={generationRequest?.regions ?? []} onEditPreferences={editPreferences}
             actions={generationRequest && <SaveItineraryButton itinerary={itinerary} request={generationRequest} />} />
         </div>
       ) : (

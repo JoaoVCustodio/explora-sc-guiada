@@ -41,7 +41,7 @@ const SavedItinerary = () => {
       <Header />
       <div className="relative z-10">
         {!loading && !error && saved ? (
-          <ItineraryResults key={saved.id} itinerary={saved.itinerary}
+          <ItineraryResults key={saved.id} itinerary={saved.itinerary} regions={saved.regions}
             backLabel="Meus roteiros" onEditPreferences={() => navigate("/meus-roteiros")}
             details={<p className="text-sm text-muted-foreground">{saved.is_public ? <>Publicado na comunidade. <Link className="text-primary underline" to={`/comunidade/${saved.id}`}>Ver publicação e avaliações</Link></> : "Roteiro privado: somente você pode vê-lo."}</p>}
             actions={<>

@@ -14,6 +14,25 @@ export type Database = {
   }
   public: {
     Tables: {
+      partners: {
+        Row: {
+          id: string
+          name: string
+          description: string
+          image_url: string | null
+          region: string
+          city: string
+          neighborhood: string | null
+          whatsapp_url: string | null
+          instagram_url: string | null
+          active: boolean
+          is_demo: boolean
+          created_at: string
+        }
+        Insert: never
+        Update: never
+        Relationships: []
+      }
       itineraries: {
         Row: {
           id: string

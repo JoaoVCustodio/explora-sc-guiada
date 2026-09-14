@@ -5,11 +5,13 @@ import { LocalCard } from "@/components/LocalCard";
 import { MapView } from "@/components/MapView";
 import { RoteiroCard } from "@/components/RoteiroCard";
 import { StatsBar } from "@/components/StatsBar";
+import { PartnersSection } from "@/components/PartnersSection";
 import { getMappableLocations, hasValidCoordinates } from "@/features/itinerary/map-utils";
 import type { Itinerary } from "@/features/itinerary/types";
 
 interface ItineraryResultsProps {
   itinerary: Itinerary;
+  regions: readonly string[];
   onEditPreferences: () => void;
   backLabel?: string;
   actions?: ReactNode;
@@ -17,7 +19,7 @@ interface ItineraryResultsProps {
   children?: ReactNode;
 }
 
-export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Ajustar preferências", actions, details, children }: ItineraryResultsProps) => {
+export const ItineraryResults = ({ itinerary, regions, onEditPreferences, backLabel = "Ajustar preferências", actions, details, children }: ItineraryResultsProps) => {
   const firstMappableIndex = useMemo(
     () => getMappableLocations(itinerary.locations)[0]?.index ?? null,
     [itinerary.locations],
@@ -94,6 +96,7 @@ export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Aj
           onMarkerSelect={(index) => selectLocation(index)}
         />
       </div>
+      <PartnersSection regions={regions} />
       {children}
     </main>
   );

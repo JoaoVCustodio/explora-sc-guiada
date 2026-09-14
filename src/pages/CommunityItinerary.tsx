@@ -35,7 +35,7 @@ const CommunityItinerary = () => {
       <TourismBackdrop /><Header />
       <div className="relative z-10">
         {!loading && !error && data ? (
-          <ItineraryResults itinerary={data.itinerary} backLabel="Comunidade" onEditPreferences={() => navigate("/comunidade")}
+          <ItineraryResults itinerary={data.itinerary} regions={data.regions} backLabel="Comunidade" onEditPreferences={() => navigate("/comunidade")}
             actions={data.user_id === user?.id && <Button asChild variant="outline" className="min-h-11"><Link to={`/meus-roteiros/${data.id}`}>Gerenciar publicação</Link></Button>}
             details={<div className="space-y-2"><p className="break-words text-muted-foreground">Por {data.author_name} · Publicado em <time dateTime={data.published_at}>{new Date(data.published_at).toLocaleDateString("pt-BR")}</time></p><RatingSummary average={data.rating_average} count={data.reviews_count} /></div>}>
             <ReviewsSection key={`${data.id}:${user?.id}:${revision}`} itinerary={data} onChanged={() => setRevision((value) => value + 1)} />
