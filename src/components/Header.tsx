@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Bookmark, Compass, Loader2, LogOut } from 'lucide-react';
+import { Bookmark, Compass, Globe, Loader2, LogOut } from 'lucide-react';
 import { toast } from 'sonner';
 
 export const Header = () => {
@@ -69,6 +69,9 @@ export const Header = () => {
             </DropdownMenuLabel>
             <DropdownMenuItem asChild className="min-h-11 cursor-pointer">
               <Link to="/meus-roteiros"><Bookmark className="mr-2 h-4 w-4" aria-hidden="true" />Meus roteiros</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild className="min-h-11 cursor-pointer">
+              <Link to="/comunidade"><Globe className="mr-2 h-4 w-4" aria-hidden="true" />Comunidade</Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem

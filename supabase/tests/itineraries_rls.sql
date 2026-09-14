@@ -14,7 +14,8 @@ BEGIN
   IF NOT (SELECT relrowsecurity FROM pg_class WHERE oid = 'public.itineraries'::regclass) THEN
     RAISE EXCEPTION 'FAIL: RLS disabled';
   END IF;
-  IF (SELECT count(*) FROM pg_policies WHERE schemaname = 'public' AND tablename = 'itineraries') <> 3 THEN
+  IF (SELECT count(*) FROM pg_policies WHERE schemaname = 'public' AND tablename = 'itineraries'
+      AND policyname IN ('itineraries_insert_own', 'itineraries_select_own', 'itineraries_delete_own')) <> 3 THEN
     RAISE EXCEPTION 'FAIL: unexpected policies';
   END IF;
 END $$;

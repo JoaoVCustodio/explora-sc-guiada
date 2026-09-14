@@ -5,6 +5,7 @@ import { TourismBackdrop } from "@/components/TourismBackdrop";
 import { ItineraryResults } from "@/components/ItineraryResults";
 import { LoadingAnimation } from "@/components/LoadingAnimation";
 import { DeleteItineraryButton } from "@/components/DeleteItineraryButton";
+import { PublicationButton } from "@/components/PublicationButton";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/auth-context";
 import { getSavedItinerary } from "@/features/itinerary/saved-api";
@@ -42,7 +43,11 @@ const SavedItinerary = () => {
         {!loading && !error && saved ? (
           <ItineraryResults key={saved.id} itinerary={saved.itinerary}
             backLabel="Meus roteiros" onEditPreferences={() => navigate("/meus-roteiros")}
-            actions={<DeleteItineraryButton id={saved.id} title={saved.title} onDeleted={() => navigate("/meus-roteiros", { replace: true })} />} />
+            details={<p className="text-sm text-muted-foreground">{saved.is_public ? <>Publicado na comunidade. <Link className="text-primary underline" to={`/comunidade/${saved.id}`}>Ver publicação e avaliações</Link></> : "Roteiro privado: somente você pode vê-lo."}</p>}
+            actions={<>
+              <PublicationButton id={saved.id} isPublic={saved.is_public} onChanged={(publication) => setSaved((current) => current ? { ...current, ...publication } : null)} />
+              <DeleteItineraryButton id={saved.id} title={saved.title} onDeleted={() => navigate("/meus-roteiros", { replace: true })} />
+            </>} />
         ) : (
           <main id="main-content" className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
             <h1 className="mb-6 text-3xl font-bold">Roteiro salvo</h1>

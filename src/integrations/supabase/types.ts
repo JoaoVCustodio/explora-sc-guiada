@@ -25,6 +25,8 @@ export type Database = {
           days_count: number
           itinerary_data: Json
           created_at: string
+          is_public: boolean
+          published_at: string | null
         }
         Insert: {
           id?: string
@@ -36,9 +38,35 @@ export type Database = {
           days_count: number
           itinerary_data: Json
           created_at?: string
+          is_public?: boolean
+          published_at?: string | null
         }
-        Update: never
+        Update: { is_public?: boolean }
         Relationships: []
+      }
+      itinerary_reviews: {
+        Row: {
+          itinerary_id: string
+          user_id: string
+          rating: number
+          comment: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          itinerary_id: string
+          user_id?: string
+          rating: number
+          comment?: string | null
+        }
+        Update: { rating?: number; comment?: string | null }
+        Relationships: [{
+          foreignKeyName: "itinerary_reviews_itinerary_id_fkey"
+          columns: ["itinerary_id"]
+          isOneToOne: false
+          referencedRelation: "itineraries"
+          referencedColumns: ["id"]
+        }]
       }
       profiles: {
         Row: {
@@ -87,9 +115,42 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      community_itineraries: {
+        Row: {
+          id: string
+          user_id: string
+          title: string
+          description: string
+          regions: string[]
+          interests: string[]
+          days_count: number
+          itinerary_data: Json
+          published_at: string
+          locations_count: number
+          author_name: string | null
+          rating_average: number | null
+          reviews_count: number
+        }
+        Relationships: []
+      }
+      community_reviews: {
+        Row: {
+          itinerary_id: string
+          user_id: string
+          rating: number
+          comment: string | null
+          created_at: string
+          updated_at: string
+          author_name: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
+      community_author_name: {
+        Args: { author_id: string }
+        Returns: string | null
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

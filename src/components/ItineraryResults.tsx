@@ -13,9 +13,11 @@ interface ItineraryResultsProps {
   onEditPreferences: () => void;
   backLabel?: string;
   actions?: ReactNode;
+  details?: ReactNode;
+  children?: ReactNode;
 }
 
-export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Ajustar preferências", actions }: ItineraryResultsProps) => {
+export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Ajustar preferências", actions, details, children }: ItineraryResultsProps) => {
   const firstMappableIndex = useMemo(
     () => getMappableLocations(itinerary.locations)[0]?.index ?? null,
     [itinerary.locations],
@@ -49,6 +51,7 @@ export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Aj
         </div>
       </div>
 
+      {details && <div className="mb-6">{details}</div>}
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <RoteiroCard title={itinerary.title} description={itinerary.description} />
         <StatsBar locationsCount={itinerary.locations.length} estimatedTime={itinerary.estimatedTime} />
@@ -91,6 +94,7 @@ export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Aj
           onMarkerSelect={(index) => selectLocation(index)}
         />
       </div>
+      {children}
     </main>
   );
 };

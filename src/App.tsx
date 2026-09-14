@@ -10,6 +10,8 @@ const Auth = lazy(() => import("./pages/Auth"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const MyItineraries = lazy(() => import("./pages/MyItineraries"));
 const SavedItinerary = lazy(() => import("./pages/SavedItinerary"));
+const Community = lazy(() => import("./pages/Community"));
+const CommunityItinerary = lazy(() => import("./pages/CommunityItinerary"));
 
 const App = () => (
   <BrowserRouter>
@@ -25,6 +27,8 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/meus-roteiros" element={<ProtectedRoute><MyItineraries /></ProtectedRoute>} />
             <Route path="/meus-roteiros/:id" element={<ProtectedRoute><SavedItinerary /></ProtectedRoute>} />
+            <Route path="/comunidade" element={<ProtectedRoute><Community /></ProtectedRoute>} />
+            <Route path="/comunidade/:id" element={<ProtectedRoute><CommunityItinerary /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </Suspense>
