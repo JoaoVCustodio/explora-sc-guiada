@@ -14,6 +14,32 @@ export type Database = {
   }
   public: {
     Tables: {
+      itineraries: {
+        Row: {
+          id: string
+          user_id: string
+          title: string
+          description: string
+          regions: string[]
+          interests: string[]
+          days_count: number
+          itinerary_data: Json
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id?: string
+          title: string
+          description: string
+          regions: string[]
+          interests: string[]
+          days_count: number
+          itinerary_data: Json
+          created_at?: string
+        }
+        Update: never
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { ArrowLeft, ListOrdered } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LocalCard } from "@/components/LocalCard";
@@ -11,9 +11,11 @@ import type { Itinerary } from "@/features/itinerary/types";
 interface ItineraryResultsProps {
   itinerary: Itinerary;
   onEditPreferences: () => void;
+  backLabel?: string;
+  actions?: ReactNode;
 }
 
-export const ItineraryResults = ({ itinerary, onEditPreferences }: ItineraryResultsProps) => {
+export const ItineraryResults = ({ itinerary, onEditPreferences, backLabel = "Ajustar preferências", actions }: ItineraryResultsProps) => {
   const firstMappableIndex = useMemo(
     () => getMappableLocations(itinerary.locations)[0]?.index ?? null,
     [itinerary.locations],
@@ -39,9 +41,12 @@ export const ItineraryResults = ({ itinerary, onEditPreferences }: ItineraryResu
           <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Pronto para explorar?</h1>
           <p className="mt-2 text-muted-foreground">Confira os locais e selecione um cartão para encontrá-lo no mapa.</p>
         </div>
-        <Button type="button" variant="outline" className="min-h-11 self-start sm:self-auto" onClick={onEditPreferences}>
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Ajustar preferências
-        </Button>
+        <div className="flex flex-wrap items-start gap-3">
+          <Button type="button" variant="outline" className="min-h-11" onClick={onEditPreferences}>
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" /> {backLabel}
+          </Button>
+          {actions}
+        </div>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">

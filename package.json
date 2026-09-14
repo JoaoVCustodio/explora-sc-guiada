@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
-    "test": "node --experimental-strip-types --test src/features/itinerary/schema.test.ts src/features/itinerary/map-utils.test.ts",
+    "test": "node --experimental-strip-types --test src/features/itinerary/schema.test.ts src/features/itinerary/map-utils.test.ts src/features/itinerary/saved-schema.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {

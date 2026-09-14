@@ -8,9 +8,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Compass, Loader2, LogOut } from 'lucide-react';
+import { Bookmark, Compass, Loader2, LogOut } from 'lucide-react';
 import { toast } from 'sonner';
 
 export const Header = () => {
@@ -66,6 +67,10 @@ export const Header = () => {
                 <p className="text-xs leading-none text-muted-foreground">{user?.email}</p>
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuItem asChild className="min-h-11 cursor-pointer">
+              <Link to="/meus-roteiros"><Bookmark className="mr-2 h-4 w-4" aria-hidden="true" />Meus roteiros</Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
             <DropdownMenuItem
               disabled={isSigningOut}
               onSelect={(event) => {
