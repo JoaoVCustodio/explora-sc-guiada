@@ -20,29 +20,29 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setSession(nextSession);
       setUser(nextSession?.user ?? null);
       setLoading(false);
+      // INITIAL_SESSION and PASSWORD_RECOVERY both arrive after URL processing.
+      // The recovery link already targets /auth?mode=reset.
     });
-
-    void supabase.auth
-      .getSession()
-      .then(({ data, error }) => {
-        if (!isMounted) return;
-        setSession(error ? null : data.session);
-        setUser(error ? null : (data.session?.user ?? null));
-      })
-      .catch(() => {
-        if (!isMounted) return;
-        setSession(null);
-        setUser(null);
-      })
-      .finally(() => {
-        if (isMounted) setLoading(false);
-      });
 
     return () => {
       isMounted = false;
       subscription.unsubscribe();
     };
   }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    const verifySession = () => {
+      void supabase.auth.getUser().then(({ error }) => {
+        if (error && (error.status === 401 || error.name === "AuthSessionMissingError")) {
+          void supabase.auth.signOut({ scope: "local" });
+        }
+      }).catch(() => undefined);
+    };
+    window.addEventListener("focus", verifySession);
+    verifySession();
+    return () => window.removeEventListener("focus", verifySession);
+  }, [user]);
 
   const value = useMemo<AuthContextValue>(
     () => ({
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             email,
             password,
             options: {
-              emailRedirectTo: `${window.location.origin}/`,
+              emailRedirectTo: `${window.location.origin}/planejar`,
               data: { full_name: fullName.trim() },
             },
           });

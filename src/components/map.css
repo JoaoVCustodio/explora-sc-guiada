@@ -1,0 +1,47 @@
+.route-map .maplibregl-map { font-family: inherit; }
+.route-marker {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border: 3px solid white; border-radius: 16px 16px 16px 5px;
+  background: hsl(var(--primary)); color: white; font-size: 14px; font-weight: 800;
+  box-shadow: 0 4px 8px #153b3933, 0 12px 24px #153b3929;
+  cursor: pointer; transition: background-color 180ms, box-shadow 180ms;
+}
+.route-marker:hover, .route-marker.is-selected {
+  background: hsl(var(--foreground)); border-color: hsl(var(--secondary));
+  box-shadow: 0 0 0 5px hsl(var(--primary) / .18), 0 10px 24px #153b3940;
+}
+.route-marker:focus-visible { outline: 3px solid hsl(var(--foreground)); outline-offset: 4px; }
+.route-map .maplibregl-popup-content {
+  padding: 16px; border-radius: 16px; background: hsl(var(--card));
+  box-shadow: 0 12px 36px #153b3929; border: 1px solid hsl(var(--border));
+}
+.route-map .maplibregl-popup-tip { border-top-color: hsl(var(--card)); }
+.route-popup { overflow-wrap: anywhere; }
+.route-popup span { display: block; font-size: 11px; letter-spacing: .08em; color: hsl(var(--primary)); font-weight: 800; }
+.route-popup strong { display: block; margin-top: 6px; font-size: 15px; line-height: 1.4; color: hsl(var(--foreground)); }
+.route-popup p { margin: 8px 0 0; font-size: 12px; color: hsl(var(--muted-foreground)); }
+.route-popup-navigation { margin-top: 10px; border-top: 1px solid hsl(var(--border)); padding-top: 4px; }
+.route-popup-navigation summary { display: flex; min-height: 40px; align-items: center; color: hsl(var(--primary)); font-size: 12px; font-weight: 700; cursor: pointer; }
+.route-popup-navigation summary:focus-visible, .route-popup-navigation a:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+.route-popup-navigation > div { display: flex; flex-wrap: wrap; gap: 4px; }
+.route-popup-navigation a { display: inline-flex; min-height: 44px; align-items: center; border-radius: 8px; padding: 0 8px; color: hsl(var(--primary)); font-size: 12px; font-weight: 700; text-decoration: underline; }
+.route-popup-navigation a:hover { background: hsl(var(--accent)); }
+.user-location-marker { position: relative; display: grid; width: 24px; height: 24px; place-items: center; border: 2px solid white; border-radius: 50%; background: hsl(212 95% 44% / .22); box-shadow: 0 0 0 7px hsl(212 95% 44% / .18), 0 2px 10px #153b3940; pointer-events: none; }
+.user-location-dot { width: 12px; height: 12px; border-radius: 50%; background: hsl(212 95% 44%); }
+.user-location-label { position: absolute; left: 30px; top: 50%; width: max-content; transform: translateY(-50%); border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--card)); padding: 4px 8px; box-shadow: 0 2px 8px #153b3929; color: hsl(var(--foreground)); font-size: 11px; font-weight: 700; }
+.route-map .maplibregl-ctrl-bottom-right { max-width: calc(100% - 16px); }
+.route-map .maplibregl-ctrl-attrib { font-size: 10px; line-height: 1.5; padding: 4px 8px; margin: 0 8px 8px 0; border-radius: 8px; white-space: normal; }
+@media (max-width: 640px) { .route-map .maplibregl-popup { max-width: 220px !important; } }
+
+/* Appearance only. Map event handlers, camera, routing and selection stay untouched. */
+.product-ui .route-map { border-radius: var(--surface-radius); border-color: hsl(var(--border) / .7); box-shadow: var(--surface-shadow); }
+.product-ui .route-map #map-title { font-family: var(--editorial-font); font-size: clamp(1.7rem, 3vw, 2.15rem); font-weight: 400; letter-spacing: -.035em; }
+.product-ui .route-map [role='group'] .app-button { border-radius: .65rem; border-color: transparent; }
+.product-ui .route-map [role='group'] .app-button[aria-pressed='true'] { background: hsl(var(--foreground)); color: hsl(var(--card)); }
+.product-ui .route-map .absolute .app-button { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: .75rem; box-shadow: 0 3px 12px hsl(162 40% 16% / .1); }
+.product-ui .route-map .absolute .app-button:hover { background: hsl(var(--accent)); }
+.product-ui .route-map .absolute .app-button[aria-pressed='true'] { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); border-color: hsl(var(--primary)); }
+.product-ui .route-marker { border-radius: 50% 50% 50% 8px; box-shadow: 0 3px 12px hsl(162 40% 16% / .22); font-weight: 600; }
+.product-ui .route-map .maplibregl-popup-content { border-radius: 1rem; box-shadow: var(--surface-shadow); padding: 18px; }
+.product-ui .route-popup strong { font-weight: 600; font-size: 1rem; }
+.product-ui .route-popup p { font-size: .8125rem; line-height: 1.5; }

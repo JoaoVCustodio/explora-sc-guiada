@@ -1,0 +1,602 @@
+{
+  "before": [
+    {
+      "id": "11",
+      "status": "success",
+      "totalMs": 27143,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 1
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 2174,
+            "estimatedTokens": 1081,
+            "tokens": {
+              "completionTokens": 115,
+              "promptTokens": 1968,
+              "totalTokens": 2083
+            }
+          },
+          {
+            "ms": 22237,
+            "estimatedTokens": 49128,
+            "tokens": {
+              "completionTokens": 2276,
+              "promptTokens": 59845,
+              "totalTokens": 62121
+            }
+          }
+        ],
+        "base_ValeEuropeu": [
+          {
+            "ms": 1796
+          }
+        ],
+        "AI Agent": [
+          {
+            "ms": 26396
+          }
+        ],
+        "Validar itinerário": [
+          {
+            "ms": 688
+          }
+        ],
+        "Respond to Webhook": [
+          {
+            "ms": 4
+          }
+        ]
+      },
+      "modelCalls": 2,
+      "days": [
+        {
+          "dia": 1,
+          "places": 3
+        },
+        {
+          "dia": 2,
+          "places": 3
+        },
+        {
+          "dia": 3,
+          "places": 3
+        }
+      ],
+      "contractValid": true
+    },
+    {
+      "id": "13",
+      "status": "success",
+      "totalMs": 48724,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 0
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 3223,
+            "estimatedTokens": 1150,
+            "tokens": {
+              "completionTokens": 132,
+              "promptTokens": 2056,
+              "totalTokens": 2188
+            }
+          },
+          {
+            "ms": 44134,
+            "estimatedTokens": 91830,
+            "tokens": {
+              "completionTokens": 3382,
+              "promptTokens": 111969,
+              "totalTokens": 115351
+            }
+          }
+        ],
+        "base_Florianopolis": [
+          {
+            "ms": 938
+          }
+        ],
+        "base_ValeEuropeu": [
+          {
+            "ms": 914
+          }
+        ],
+        "AI Agent": [
+          {
+            "ms": 48616
+          }
+        ],
+        "Validar itinerário": [
+          {
+            "ms": 90
+          }
+        ],
+        "Respond to Webhook": [
+          {
+            "ms": 2
+          }
+        ]
+      },
+      "modelCalls": 2,
+      "days": [
+        {
+          "dia": 1,
+          "places": 3
+        },
+        {
+          "dia": 2,
+          "places": 3
+        },
+        {
+          "dia": 3,
+          "places": 3
+        },
+        {
+          "dia": 4,
+          "places": 3
+        },
+        {
+          "dia": 5,
+          "places": 3
+        }
+      ],
+      "contractValid": true
+    },
+    {
+      "id": "15",
+      "status": "success",
+      "totalMs": 36509,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 15
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 2831,
+            "estimatedTokens": 1133,
+            "tokens": {
+              "completionTokens": 80,
+              "promptTokens": 2036,
+              "totalTokens": 2116
+            }
+          },
+          {
+            "ms": 29508,
+            "estimatedTokens": 43776,
+            "tokens": {
+              "completionTokens": 1607,
+              "promptTokens": 54090,
+              "totalTokens": 55697
+            }
+          }
+        ],
+        "base_Florianopolis": [
+          {
+            "ms": 2253
+          }
+        ],
+        "AI Agent": [
+          {
+            "ms": 35847
+          }
+        ],
+        "Validar itinerário": [
+          {
+            "ms": 494
+          }
+        ],
+        "Respond to Webhook": [
+          {
+            "ms": 4
+          }
+        ]
+      },
+      "modelCalls": 2,
+      "days": [
+        {
+          "dia": 1,
+          "places": 5
+        },
+        {
+          "dia": 2,
+          "places": 5
+        }
+      ],
+      "contractValid": true
+    }
+  ],
+  "after": [
+    {
+      "id": "17",
+      "status": "success",
+      "totalMs": 36020,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 6
+          }
+        ],
+        "Selecionar bases": [
+          {
+            "ms": 433
+          }
+        ],
+        "Consultar bases selecionadas": [
+          {
+            "ms": 1840
+          }
+        ],
+        "Preparar candidatos": [
+          {
+            "ms": 620
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 32120,
+            "estimatedTokens": 4724,
+            "tokens": {
+              "completionTokens": 2617,
+              "promptTokens": 5627,
+              "totalTokens": 8244
+            }
+          }
+        ],
+        "Montar roteiro": [
+          {
+            "ms": 32910
+          }
+        ],
+        "Recuperar locais reais": [
+          {
+            "ms": 53
+          }
+        ],
+        "Validar itinerário": [
+          {
+            "ms": 23
+          }
+        ],
+        "Respond to Webhook": [
+          {
+            "ms": 2
+          }
+        ]
+      },
+      "modelCalls": 1,
+      "metrics": {
+        "rows": 122,
+        "invalid": 1,
+        "duplicates": 7,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 114,
+        "selected": 32,
+        "budget": 32,
+        "expanded": false,
+        "lowConfidence": false,
+        "sparse": false,
+        "unknownTermCount": 0,
+        "missingInterestCount": 0,
+        "contextChars": 11721,
+        "beforeModelMs": 2069,
+        "preprocessingMs": 407
+      },
+      "days": [
+        {
+          "dia": 1,
+          "places": 4
+        },
+        {
+          "dia": 2,
+          "places": 3
+        }
+      ],
+      "contractValid": true
+    },
+    {
+      "id": "18",
+      "status": "success",
+      "totalMs": 45764,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 3
+          }
+        ],
+        "Selecionar bases": [
+          {
+            "ms": 56
+          }
+        ],
+        "Consultar bases selecionadas": [
+          {
+            "ms": 481
+          }
+        ],
+        "Preparar candidatos": [
+          {
+            "ms": 102
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 45051,
+            "error": "Request timed out.",
+            "estimatedTokens": 14202
+          }
+        ],
+        "Montar roteiro": [
+          {
+            "ms": 45102,
+            "error": "Request timed out."
+          }
+        ],
+        "Responder erro de validação": [
+          {
+            "ms": 1
+          }
+        ]
+      },
+      "modelCalls": 1,
+      "metrics": {
+        "rows": 114,
+        "invalid": 0,
+        "duplicates": 29,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 85,
+        "selected": 77,
+        "budget": 77,
+        "expanded": true,
+        "lowConfidence": true,
+        "sparse": true,
+        "unknownTermCount": 1,
+        "missingInterestCount": 0,
+        "contextChars": 33958,
+        "beforeModelMs": 521,
+        "preprocessingMs": 58
+      },
+      "contractValid": false
+    },
+    {
+      "id": "19",
+      "status": "success",
+      "totalMs": 45697,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 1
+          }
+        ],
+        "Selecionar bases": [
+          {
+            "ms": 36
+          }
+        ],
+        "Consultar bases selecionadas": [
+          {
+            "ms": 360
+          }
+        ],
+        "Preparar candidatos": [
+          {
+            "ms": 205
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 45006,
+            "error": "Request timed out.",
+            "estimatedTokens": 12031
+          }
+        ],
+        "Montar roteiro": [
+          {
+            "ms": 45077,
+            "error": "Request timed out."
+          }
+        ],
+        "Responder erro de validação": [
+          {
+            "ms": 0
+          }
+        ]
+      },
+      "modelCalls": 1,
+      "metrics": {
+        "rows": 236,
+        "invalid": 1,
+        "duplicates": 41,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 194,
+        "selected": 76,
+        "budget": 76,
+        "expanded": false,
+        "lowConfidence": false,
+        "sparse": false,
+        "unknownTermCount": 0,
+        "missingInterestCount": 0,
+        "contextChars": 32449,
+        "beforeModelMs": 425,
+        "preprocessingMs": 133
+      },
+      "contractValid": false
+    },
+    {
+      "id": "20",
+      "status": "success",
+      "totalMs": 55099,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 0
+          }
+        ],
+        "Selecionar bases": [
+          {
+            "ms": 33
+          }
+        ],
+        "Consultar bases selecionadas": [
+          {
+            "ms": 369
+          }
+        ],
+        "Preparar candidatos": [
+          {
+            "ms": 88
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 54468,
+            "error": "Request timed out.",
+            "estimatedTokens": 11261
+          }
+        ],
+        "Montar roteiro": [
+          {
+            "ms": 54595,
+            "error": "Request timed out."
+          }
+        ],
+        "Responder erro de validação": [
+          {
+            "ms": 0
+          }
+        ]
+      },
+      "modelCalls": 1,
+      "metrics": {
+        "rows": 114,
+        "invalid": 0,
+        "duplicates": 29,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 85,
+        "selected": 77,
+        "budget": 77,
+        "expanded": true,
+        "lowConfidence": true,
+        "sparse": true,
+        "unknownTermCount": 1,
+        "missingInterestCount": 0,
+        "contextChars": 28259,
+        "beforeModelMs": 402,
+        "preprocessingMs": 44
+      },
+      "contractValid": false
+    },
+    {
+      "id": "21",
+      "status": "success",
+      "totalMs": 35358,
+      "nodes": {
+        "Webhook": [
+          {
+            "ms": 0
+          }
+        ],
+        "Selecionar bases": [
+          {
+            "ms": 29
+          }
+        ],
+        "Consultar bases selecionadas": [
+          {
+            "ms": 556
+          }
+        ],
+        "Preparar candidatos": [
+          {
+            "ms": 167
+          }
+        ],
+        "OpenRouter Chat Model": [
+          {
+            "ms": 34464,
+            "estimatedTokens": 9960,
+            "tokens": {
+              "completionTokens": 4546,
+              "promptTokens": 11552,
+              "totalTokens": 16098
+            }
+          }
+        ],
+        "Montar roteiro": [
+          {
+            "ms": 34534
+          }
+        ],
+        "Recuperar locais reais": [
+          {
+            "ms": 41
+          }
+        ],
+        "Validar itinerário": [
+          {
+            "ms": 17
+          }
+        ],
+        "Respond to Webhook": [
+          {
+            "ms": 2
+          }
+        ]
+      },
+      "modelCalls": 1,
+      "metrics": {
+        "rows": 236,
+        "invalid": 1,
+        "duplicates": 41,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 194,
+        "selected": 76,
+        "budget": 76,
+        "expanded": false,
+        "lowConfidence": false,
+        "sparse": false,
+        "unknownTermCount": 0,
+        "missingInterestCount": 0,
+        "contextChars": 26704,
+        "beforeModelMs": 603,
+        "preprocessingMs": 110
+      },
+      "days": [
+        {
+          "dia": 1,
+          "places": 3
+        },
+        {
+          "dia": 2,
+          "places": 3
+        },
+        {
+          "dia": 3,
+          "places": 3
+        },
+        {
+          "dia": 4,
+          "places": 2
+        },
+        {
+          "dia": 5,
+          "places": 2
+        }
+      ],
+      "contractValid": true
+    }
+  ]
+}

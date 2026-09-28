@@ -1,0 +1,57 @@
+const fail = (message) => { throw new Error('Itinerário inválido: ' + message); };
+const record = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+const textField = (value, path, max, empty = false) => {
+  if (typeof value !== 'string' || (!empty && !value.trim()) || value.length > max) {
+    fail(path + ' deve ser texto válido de até ' + max + ' caracteres.');
+  }
+};
+const requestedDays = $('Webhook').first().json.body?.dias;
+if (!Number.isInteger(requestedDays) || requestedDays < 1 || requestedDays > 7) {
+  fail('dias solicitado deve ser inteiro entre 1 e 7.');
+}
+let itinerary = $input.first().json.output;
+if (typeof itinerary === 'string') {
+  if (itinerary.length > 250000) fail('resposta excede 250000 caracteres.');
+  let raw = itinerary.trim();
+  if (!raw.startsWith('{')) {
+    const fences = [...raw.matchAll(/```(?:json)?\s*([\s\S]*?)\s*```/gi)];
+    if (fences.length === 1) {
+      const outside = raw.slice(0, fences[0].index) + raw.slice(fences[0].index + fences[0][0].length);
+      if (/[{}\[\]]/.test(outside) || outside.includes('```')) fail('output contém conteúdo JSON ambíguo.');
+      raw = fences[0][1].trim();
+    }
+  }
+  try { itinerary = JSON.parse(raw); }
+  catch { fail('output não contém JSON válido.'); }
+}
+if (!record(itinerary)) fail('output deve conter um objeto JSON.');
+textField(itinerary.titulo, 'titulo', 180);
+textField(itinerary.descricao_geral, 'descricao_geral', 2500);
+textField(itinerary.fonte, 'fonte', 500, true);
+if (!Array.isArray(itinerary.dias) || itinerary.dias.length !== requestedDays) {
+  fail('esperados exatamente ' + requestedDays + ' dias.');
+}
+let expectedOrder = 1;
+const periods = ['manha', 'tarde', 'noite'];
+itinerary.dias.forEach((day, dayIndex) => {
+  const path = 'dias[' + dayIndex + ']';
+  if (!record(day) || day.dia !== dayIndex + 1) fail(path + '.dia deve seguir a sequência de 1 até N.');
+  if (!Array.isArray(day.locais) || day.locais.length > 20) fail(path + '.locais deve ser array com até 20 locais.');
+  let previousPeriod = -1;
+  day.locais.forEach((place, placeIndex) => {
+    const localPath = path + '.locais[' + placeIndex + ']';
+    if (!record(place)) fail(localPath + ' deve ser objeto.');
+    if (place.ordem !== expectedOrder) fail(localPath + '.ordem deve ser ' + expectedOrder + ' (sequência global).');
+    const period = periods.indexOf(place.periodo);
+    if (period < 0 || period < previousPeriod) fail(localPath + '.periodo deve respeitar manha, tarde, noite.');
+    textField(place.nome, localPath + '.nome', 120);
+    textField(place.descricao_curta, localPath + '.descricao_curta', 1200);
+    textField(place.duracao_estimada, localPath + '.duracao_estimada', 80);
+    if (!Number.isFinite(place.latitude) || Math.abs(place.latitude) > 90) fail(localPath + '.latitude inválida.');
+    if (!Number.isFinite(place.longitude) || Math.abs(place.longitude) > 180) fail(localPath + '.longitude inválida.');
+    expectedOrder++;
+    previousPeriod = period;
+  });
+});
+if (expectedOrder === 1) fail('nenhum local retornado nas bases permitidas.');
+return [{ json: itinerary }];

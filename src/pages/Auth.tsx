@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { PasswordRecovery } from "@/components/PasswordRecovery";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -35,13 +36,13 @@ type SignUpForm = z.infer<typeof signUpSchema>;
 type AuthTab = "signin" | "signup";
 
 const getRedirectPath = (state: unknown) => {
-  if (typeof state !== "object" || state === null || !("from" in state)) return "/";
+  if (typeof state !== "object" || state === null || !("from" in state)) return "/planejar";
   const from = (state as { from?: { pathname?: unknown } }).from;
   const pathname = from?.pathname;
 
   return typeof pathname === "string" && pathname.startsWith("/") && !pathname.startsWith("//")
     ? pathname
-    : "/";
+    : "/planejar";
 };
 
 const FieldError = ({ id, message }: { id: string; message?: string }) =>
@@ -56,15 +57,18 @@ export default function Auth() {
   const navigate = useNavigate();
   const location = useLocation();
   const redirectPath = getRedirectPath(location.state);
-  const [activeTab, setActiveTab] = useState<AuthTab>("signin");
+  const mode = new URLSearchParams(location.search).get("mode");
+  const recovery = mode === "reset" || mode === "forgot";
+  const submitting = useRef(false);
+  const [activeTab, setActiveTab] = useState<AuthTab>(mode === "signup" ? "signup" : "signin");
   const [isLoadingSignIn, setIsLoadingSignIn] = useState(false);
   const [isLoadingSignUp, setIsLoadingSignUp] = useState(false);
   const [showSignInPassword, setShowSignInPassword] = useState(false);
   const [showSignUpPassword, setShowSignUpPassword] = useState(false);
 
   useEffect(() => {
-    if (user) navigate(redirectPath, { replace: true });
-  }, [navigate, redirectPath, user]);
+    if (user && !recovery) navigate(redirectPath, { replace: true });
+  }, [navigate, redirectPath, user, recovery]);
 
   const signInForm = useForm<SignInForm>({
     resolver: zodResolver(signInSchema),
@@ -76,6 +80,8 @@ export default function Auth() {
   });
 
   const onSignIn = async (data: SignInForm) => {
+    if (submitting.current) return;
+    submitting.current = true;
     setIsLoadingSignIn(true);
     try {
       const { error } = await signIn(data.email.trim(), data.password);
@@ -87,11 +93,14 @@ export default function Auth() {
       toast.success("Bem-vindo de volta!");
       navigate(redirectPath, { replace: true });
     } finally {
+      submitting.current = false;
       setIsLoadingSignIn(false);
     }
   };
 
   const onSignUp = async (data: SignUpForm) => {
+    if (submitting.current) return;
+    submitting.current = true;
     setIsLoadingSignUp(true);
     try {
       const { error, session } = await signUp(data.email.trim(), data.password, data.fullName);
@@ -110,10 +119,12 @@ export default function Auth() {
       toast.success("Conta criada com sucesso!");
       navigate(redirectPath, { replace: true });
     } finally {
+      submitting.current = false;
       setIsLoadingSignUp(false);
     }
   };
 
+  if (recovery) return <PasswordRecovery key={mode} reset={mode === "reset"} />;
   return (
     <main className="relative min-h-dvh overflow-hidden bg-background">
       <h1 className="sr-only">Entrar ou criar conta no ExploraSC</h1>
@@ -180,6 +191,7 @@ export default function Auth() {
                     {isLoadingSignIn && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
                     {isLoadingSignIn ? "Entrando..." : "Entrar"}
                   </Button>
+                  <Link to="/auth?mode=forgot" className="inline-block py-2 text-sm font-medium text-primary underline">Esqueci minha senha</Link>
                 </form>
               </TabsContent>
 

@@ -51,7 +51,7 @@ export const MultiSelectField = ({
               aria-pressed={selectedOption}
               onClick={() => toggleOption(option.value)}
               className={cn(
-                "relative flex min-h-14 items-center gap-2.5 rounded-xl border px-3 py-2 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                "choice-tile relative flex min-h-14 items-center gap-2.5 rounded-xl border px-3 py-2 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                 selectedOption
                   ? "border-primary bg-primary/10 text-primary"
                   : "border-border bg-card text-foreground hover:border-primary/40 hover:bg-accent/70",

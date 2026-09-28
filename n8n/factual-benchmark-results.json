@@ -1,0 +1,1193 @@
+{
+  "model": "google/gemini-3.1-flash-lite",
+  "attempts": 3,
+  "checkedPlaces": 30,
+  "factualScope": "Grounded in provided records; does not certify real-world accuracy, availability or planning quality.",
+  "results": [
+    {
+      "caseIndex": 0,
+      "executionId": "31",
+      "baselineExecutionId": "23",
+      "totalMs": {
+        "before": 3821,
+        "after": 4192
+      },
+      "modelMs": {
+        "before": 3182,
+        "after": 2671
+      },
+      "tokens": {
+        "before": {
+          "completionTokens": 557,
+          "promptTokens": 5589,
+          "totalTokens": 6146
+        },
+        "after": {
+          "completionTokens": 146,
+          "promptTokens": 4946,
+          "totalTokens": 5092
+        }
+      },
+      "candidates": 32,
+      "contextIdentical": true,
+      "sourceFactsVerified": true,
+      "frontendContractValid": true,
+      "places": 6,
+      "days": [
+        {
+          "day": 1,
+          "visits": 3,
+          "estimatedVisitMinutes": 420,
+          "straightLineKm": 1.7
+        },
+        {
+          "day": 2,
+          "visits": 3,
+          "estimatedVisitMinutes": 480,
+          "straightLineKm": 1.4
+        }
+      ],
+      "output": {
+        "titulo": "2 dias • Grande Florianópolis",
+        "descricao_geral": "Planejamento de 2 dias com 6 paradas. Bases consultadas: Grande Florianópolis. Interesses do pedido: praias, esportes. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Trilha Praia do Gravatá",
+                "descricao_curta": "Visita à área de trilha. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (6820 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.607526,
+                "longitude": -48.4410569
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Praia Mole",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (3506 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.6022459,
+                "longitude": -48.4326839
+              },
+              {
+                "ordem": 3,
+                "periodo": "tarde",
+                "nome": "Mirante Praia Mole",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1755 avaliações).",
+                "duracao_estimada": "1h",
+                "latitude": -27.5973163,
+                "longitude": -48.436863300000006
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 4,
+                "periodo": "manha",
+                "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (926 avaliações).",
+                "duracao_estimada": "4h",
+                "latitude": -27.7576643,
+                "longitude": -48.4960673
+              },
+              {
+                "ordem": 5,
+                "periodo": "tarde",
+                "nome": "Praia do Matadeiro",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (549 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.757199699999997,
+                "longitude": -48.4933224
+              },
+              {
+                "ordem": 6,
+                "periodo": "tarde",
+                "nome": "Praia da Armação",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (9142 avaliações).",
+                "duracao_estimada": "1h",
+                "latitude": -27.750407799999998,
+                "longitude": -48.501763700000005
+              }
+            ]
+          }
+        ],
+        "fonte": "base_Florianopolis"
+      },
+      "assemblyComparisonSameSelection": {
+        "before": {
+          "titulo": "Roteiro de Praias e Natureza na Grande Florianópolis",
+          "descricao_geral": "Roteiro de dois dias focado em praias e áreas de trilha na região da Grande Florianópolis. A seleção prioriza locais com categorias de atrativo turístico, praia e áreas de trilha, atendendo ao interesse por natureza e esportes. Devido à natureza dos dados, não é possível garantir condições específicas para esportes aquáticos ou infraestrutura além do que está cadastrado.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Praia Barra da Lagoa",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado, com tempo reservado para conhecer o local.",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.573907799999997,
+                  "longitude": -48.4239234
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Praia Mole",
+                  "descricao_curta": "Visita à praia, em uma parada voltada ao seu interesse pelo litoral.",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.6022459,
+                  "longitude": -48.4326839
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "tarde",
+                  "nome": "Mirante Praia Mole",
+                  "descricao_curta": "Parada no mirante para contemplação da vista.",
+                  "duracao_estimada": "45min",
+                  "latitude": -27.5973163,
+                  "longitude": -48.436863300000006
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                  "descricao_curta": "Percurso pela área de trilha cadastrada, adequada para atividades ao ar livre.",
+                  "duracao_estimada": "3h",
+                  "latitude": -27.7576643,
+                  "longitude": -48.4960673
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Praia do Matadeiro",
+                  "descricao_curta": "Visita ao atrativo turístico, com tempo reservado para conhecer o local.",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.757199699999997,
+                  "longitude": -48.4933224
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "tarde",
+                  "nome": "Praia da Armação",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado, com tempo reservado para conhecer o local.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -27.750407799999998,
+                  "longitude": -48.501763700000005
+                }
+              ]
+            }
+          ],
+          "fonte": "base_Florianopolis"
+        },
+        "after": {
+          "titulo": "2 dias • Grande Florianópolis",
+          "descricao_geral": "Planejamento de 2 dias com 6 paradas. Bases consultadas: Grande Florianópolis. Interesses do pedido: praias, esportes. As durações são estimativas de permanência.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Praia Barra da Lagoa",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (15977 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.573907799999997,
+                  "longitude": -48.4239234
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Praia Mole",
+                  "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (3506 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.6022459,
+                  "longitude": -48.4326839
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "tarde",
+                  "nome": "Mirante Praia Mole",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1755 avaliações).",
+                  "duracao_estimada": "45min",
+                  "latitude": -27.5973163,
+                  "longitude": -48.436863300000006
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                  "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (926 avaliações).",
+                  "duracao_estimada": "3h",
+                  "latitude": -27.7576643,
+                  "longitude": -48.4960673
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Praia do Matadeiro",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (549 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.757199699999997,
+                  "longitude": -48.4933224
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "tarde",
+                  "nome": "Praia da Armação",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (9142 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -27.750407799999998,
+                  "longitude": -48.501763700000005
+                }
+              ]
+            }
+          ],
+          "fonte": "base_Florianopolis"
+        }
+      }
+    },
+    {
+      "caseIndex": 1,
+      "executionId": "32",
+      "baselineExecutionId": "25",
+      "totalMs": {
+        "before": 4910,
+        "after": 3435
+      },
+      "modelMs": {
+        "before": 4282,
+        "after": 2765
+      },
+      "tokens": {
+        "before": {
+          "completionTokens": 778,
+          "promptTokens": 15253,
+          "totalTokens": 16031
+        },
+        "after": {
+          "completionTokens": 430,
+          "promptTokens": 14610,
+          "totalTokens": 15040
+        }
+      },
+      "candidates": 77,
+      "contextIdentical": true,
+      "sourceFactsVerified": true,
+      "frontendContractValid": true,
+      "places": 9,
+      "days": [
+        {
+          "day": 1,
+          "visits": 3,
+          "estimatedVisitMinutes": 450,
+          "straightLineKm": 51.2
+        },
+        {
+          "day": 2,
+          "visits": 3,
+          "estimatedVisitMinutes": 450,
+          "straightLineKm": 46.5
+        },
+        {
+          "day": 3,
+          "visits": 3,
+          "estimatedVisitMinutes": 450,
+          "straightLineKm": 94.7
+        }
+      ],
+      "output": {
+        "titulo": "3 dias • Vale Europeu",
+        "descricao_geral": "Planejamento de 3 dias com 9 paradas. Bases consultadas: Vale Europeu. Interesses do pedido: praias. O pedido também inclui suas preferências em texto livre. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Praia do Centro",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (362 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.1047965,
+                "longitude": -48.6128632
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Omas Haus BrewPub - Blumenau",
+                "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.917370299999998,
+                "longitude": -49.0619037
+              },
+              {
+                "ordem": 3,
+                "periodo": "noite",
+                "nome": "Bierstelle I Pub",
+                "descricao_curta": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+                "duracao_estimada": "2h30",
+                "latitude": -26.908385499999998,
+                "longitude": -49.079791099999994
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 4,
+                "periodo": "manha",
+                "nome": "Praia da Solidão",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. Avaliação registrada: 4,8/5 (189 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.9297115,
+                "longitude": -48.6250001
+              },
+              {
+                "ordem": 5,
+                "periodo": "tarde",
+                "nome": "E-10 Tap House",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (149 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.9220957,
+                "longitude": -49.0638167
+              },
+              {
+                "ordem": 6,
+                "periodo": "noite",
+                "nome": "Velharia",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (382 avaliações).",
+                "duracao_estimada": "2h30",
+                "latitude": -26.8981857,
+                "longitude": -49.0773989
+              }
+            ]
+          },
+          {
+            "dia": 3,
+            "locais": [
+              {
+                "ordem": 7,
+                "periodo": "manha",
+                "nome": "Dunas do Santinho",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (2126 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.4463907,
+                "longitude": -48.3746273
+              },
+              {
+                "ordem": 8,
+                "periodo": "tarde",
+                "nome": "La Vinoteca Emporium & Bistrô",
+                "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. Cardápio infantil informado no cadastro. Avaliação registrada: 4,9/5 (236 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.8957181,
+                "longitude": -49.08784
+              },
+              {
+                "ordem": 9,
+                "periodo": "noite",
+                "nome": "Norden Blumenau",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+                "duracao_estimada": "2h30",
+                "latitude": -26.8996482,
+                "longitude": -49.0755755
+              }
+            ]
+          }
+        ],
+        "fonte": "base_ValeEuropeu"
+      },
+      "assemblyComparisonSameSelection": {
+        "before": {
+          "titulo": "Roteiro de 3 dias no Vale Europeu",
+          "descricao_geral": "Este roteiro explora o Vale Europeu, focando em atrativos culturais, parques e gastronomia local. Ressaltamos que a região do Vale Europeu não possui praias litorâneas, portanto, não foi possível atender ao seu interesse por praias ou acesso a bares de praia. As sugestões priorizam locais com boa infraestrutura e avaliação dos usuários.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Biergarten Pomerânia",
+                  "descricao_curta": "Visita ao restaurante Biergarten Pomerânia, com estrutura adequada para grupos e crianças.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.7404325,
+                  "longitude": -49.175846
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Tour Nugali Chocolates - Fábrica",
+                  "descricao_curta": "Tour pela fábrica de chocolates Nugali, atrativo turístico com foco em produção de doces.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.6772705,
+                  "longitude": -49.1824405
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "tarde",
+                  "nome": "Vila Encantada Parque dos Dinossauros",
+                  "descricao_curta": "Visita ao parque Vila Encantada, atrativo voltado ao público infantil.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.737197,
+                  "longitude": -49.174439
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Parque Vila Germânica",
+                  "descricao_curta": "Passeio pelo Parque Vila Germânica, espaço de eventos em Blumenau.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.915820699999998,
+                  "longitude": -49.085123100000004
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Catedral São Paulo Apóstolo",
+                  "descricao_curta": "Visita à Catedral São Paulo Apóstolo, local de culto e atrativo arquitetônico.",
+                  "duracao_estimada": "1h",
+                  "latitude": -26.919644599999998,
+                  "longitude": -49.0661452
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "noite",
+                  "nome": "Omas Haus BrewPub - Blumenau",
+                  "descricao_curta": "Parada no restaurante e bar Omas Haus BrewPub para uma refeição.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.917370299999998,
+                  "longitude": -49.0619037
+                }
+              ]
+            },
+            {
+              "dia": 3,
+              "locais": [
+                {
+                  "ordem": 7,
+                  "periodo": "manha",
+                  "nome": "Parque Malwee",
+                  "descricao_curta": "Visita ao Parque Malwee, área verde com infraestrutura para lazer.",
+                  "duracao_estimada": "3h",
+                  "latitude": -26.505276799999997,
+                  "longitude": -49.126241
+                },
+                {
+                  "ordem": 8,
+                  "periodo": "tarde",
+                  "nome": "SCAR Centro Cultural",
+                  "descricao_curta": "Conhecimento do SCAR Centro Cultural, espaço dedicado a eventos e artes.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.478019699999997,
+                  "longitude": -49.0805778
+                },
+                {
+                  "ordem": 9,
+                  "periodo": "tarde",
+                  "nome": "Blauer Berg Cervejaria",
+                  "descricao_curta": "Parada na Blauer Berg Cervejaria, restaurante com opções de bebidas.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7734103,
+                  "longitude": -49.272880099999995
+                }
+              ]
+            }
+          ],
+          "fonte": "base_ValeEuropeu"
+        },
+        "after": {
+          "titulo": "3 dias • Vale Europeu",
+          "descricao_geral": "Planejamento de 3 dias com 9 paradas. Bases consultadas: Vale Europeu. Interesses do pedido: praias. O pedido também inclui suas preferências em texto livre. As durações são estimativas de permanência.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Biergarten Pomerânia",
+                  "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.7404325,
+                  "longitude": -49.175846
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Tour Nugali Chocolates - Fábrica",
+                  "descricao_curta": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.6772705,
+                  "longitude": -49.1824405
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "tarde",
+                  "nome": "Vila Encantada Parque dos Dinossauros",
+                  "descricao_curta": "Visita ao espaço de eventos. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (11907 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.737197,
+                  "longitude": -49.174439
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Parque Vila Germânica",
+                  "descricao_curta": "Visita ao parque. Avaliação registrada: 4,8/5 (11625 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.915820699999998,
+                  "longitude": -49.085123100000004
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Catedral São Paulo Apóstolo",
+                  "descricao_curta": "Visita à igreja. Avaliação registrada: 4,8/5 (5065 avaliações).",
+                  "duracao_estimada": "1h",
+                  "latitude": -26.919644599999998,
+                  "longitude": -49.0661452
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "noite",
+                  "nome": "Omas Haus BrewPub - Blumenau",
+                  "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.917370299999998,
+                  "longitude": -49.0619037
+                }
+              ]
+            },
+            {
+              "dia": 3,
+              "locais": [
+                {
+                  "ordem": 7,
+                  "periodo": "manha",
+                  "nome": "Parque Malwee",
+                  "descricao_curta": "Visita ao parque. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (18453 avaliações).",
+                  "duracao_estimada": "3h",
+                  "latitude": -26.505276799999997,
+                  "longitude": -49.126241
+                },
+                {
+                  "ordem": 8,
+                  "periodo": "tarde",
+                  "nome": "SCAR Centro Cultural",
+                  "descricao_curta": "Visita ao espaço de eventos. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (2860 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.478019699999997,
+                  "longitude": -49.0805778
+                },
+                {
+                  "ordem": 9,
+                  "periodo": "tarde",
+                  "nome": "Blauer Berg Cervejaria",
+                  "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para grupos. Avaliação registrada: 4,8/5 (156 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7734103,
+                  "longitude": -49.272880099999995
+                }
+              ]
+            }
+          ],
+          "fonte": "base_ValeEuropeu"
+        }
+      }
+    },
+    {
+      "caseIndex": 2,
+      "executionId": "33",
+      "baselineExecutionId": "30",
+      "totalMs": {
+        "before": 8653,
+        "after": 3407
+      },
+      "modelMs": {
+        "before": 5708,
+        "after": 2703
+      },
+      "tokens": {
+        "before": {
+          "completionTokens": 1209,
+          "promptTokens": 13058,
+          "totalTokens": 14267
+        },
+        "after": {
+          "completionTokens": 366,
+          "promptTokens": 12415,
+          "totalTokens": 12781
+        }
+      },
+      "candidates": 76,
+      "contextIdentical": true,
+      "sourceFactsVerified": true,
+      "frontendContractValid": true,
+      "places": 15,
+      "days": [
+        {
+          "day": 1,
+          "visits": 3,
+          "estimatedVisitMinutes": 390,
+          "straightLineKm": 3.6
+        },
+        {
+          "day": 2,
+          "visits": 3,
+          "estimatedVisitMinutes": 480,
+          "straightLineKm": 10.9
+        },
+        {
+          "day": 3,
+          "visits": 3,
+          "estimatedVisitMinutes": 390,
+          "straightLineKm": 10.9
+        },
+        {
+          "day": 4,
+          "visits": 3,
+          "estimatedVisitMinutes": 420,
+          "straightLineKm": 50.5
+        },
+        {
+          "day": 5,
+          "visits": 3,
+          "estimatedVisitMinutes": 420,
+          "straightLineKm": 4.3
+        }
+      ],
+      "output": {
+        "titulo": "5 dias • Vale Europeu e Grande Florianópolis",
+        "descricao_geral": "Planejamento de 5 dias com 15 paradas. Bases consultadas: Vale Europeu, Grande Florianópolis. Interesses do pedido: praias, esportes, montanhas, gastronomia. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Praia Barra da Lagoa",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (15977 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.573907799999997,
+                "longitude": -48.4239234
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Mirante Praia Mole",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1755 avaliações).",
+                "duracao_estimada": "1h30",
+                "latitude": -27.5973163,
+                "longitude": -48.436863300000006
+              },
+              {
+                "ordem": 3,
+                "periodo": "tarde",
+                "nome": "Praia Mole",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (3506 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.6022459,
+                "longitude": -48.4326839
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 4,
+                "periodo": "manha",
+                "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (926 avaliações).",
+                "duracao_estimada": "4h",
+                "latitude": -27.7576643,
+                "longitude": -48.4960673
+              },
+              {
+                "ordem": 5,
+                "periodo": "tarde",
+                "nome": "Praia do Matadeiro",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (549 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.757199699999997,
+                "longitude": -48.4933224
+              },
+              {
+                "ordem": 6,
+                "periodo": "noite",
+                "nome": "Wooden Tap Beer - Floripa Airport",
+                "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para grupos. Avaliação registrada: 4,8/5 (239 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.6743748,
+                "longitude": -48.546581200000006
+              }
+            ]
+          },
+          {
+            "dia": 3,
+            "locais": [
+              {
+                "ordem": 7,
+                "periodo": "manha",
+                "nome": "Tour Nugali Chocolates - Fábrica",
+                "descricao_curta": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+                "duracao_estimada": "2h30",
+                "latitude": -26.6772705,
+                "longitude": -49.1824405
+              },
+              {
+                "ordem": 8,
+                "periodo": "tarde",
+                "nome": "Biergarten Pomerânia",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.7404325,
+                "longitude": -49.175846
+              },
+              {
+                "ordem": 9,
+                "periodo": "tarde",
+                "nome": "Morro Azul Topo",
+                "descricao_curta": "Visita ao parque. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1709 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.7630776,
+                "longitude": -49.204468899999995
+              }
+            ]
+          },
+          {
+            "dia": 4,
+            "locais": [
+              {
+                "ordem": 10,
+                "periodo": "manha",
+                "nome": "Cachoeira Paulista Adventure Park",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (2300 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.793701799999997,
+                "longitude": -49.5315115
+              },
+              {
+                "ordem": 11,
+                "periodo": "tarde",
+                "nome": "Container da Serra",
+                "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (955 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.6254623,
+                "longitude": -49.516577299999994
+              },
+              {
+                "ordem": 12,
+                "periodo": "tarde",
+                "nome": "Cachoeira Da Pedra Furada",
+                "descricao_curta": "Visita ao centro de esportes de aventura. Avaliação registrada: 4,9/5 (271 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.9044858,
+                "longitude": -49.451372
+              }
+            ]
+          },
+          {
+            "dia": 5,
+            "locais": [
+              {
+                "ordem": 13,
+                "periodo": "manha",
+                "nome": "Norden Blumenau",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.8996482,
+                "longitude": -49.0755755
+              },
+              {
+                "ordem": 14,
+                "periodo": "tarde",
+                "nome": "Oktoberfest Blumenau",
+                "descricao_curta": "Parada no bar. Avaliação registrada: 4,8/5 (3882 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.9155433,
+                "longitude": -49.084672499999996
+              },
+              {
+                "ordem": 15,
+                "periodo": "noite",
+                "nome": "Omas Haus BrewPub - Blumenau",
+                "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.917370299999998,
+                "longitude": -49.0619037
+              }
+            ]
+          }
+        ],
+        "fonte": "base_Florianopolis, base_ValeEuropeu"
+      },
+      "assemblyComparisonSameSelection": {
+        "before": {
+          "titulo": "Roteiro de 5 Dias: Litoral e Vale Europeu em Santa Catarina",
+          "descricao_geral": "Este roteiro combina a exploração das praias e trilhas da Grande Florianópolis com a cultura e natureza do Vale Europeu. Devido à diversidade de interesses, o itinerário alterna entre atividades ao ar livre, mirantes e paradas gastronômicas. A disponibilidade dos locais pode variar; recomenda-se verificar horários específicos antes da visita.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Praia Barra da Lagoa",
+                  "descricao_curta": "Visita à praia, em uma parada voltada ao seu interesse pelo litoral.",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.573907799999997,
+                  "longitude": -48.4239234
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Mirante Praia Mole",
+                  "descricao_curta": "Visita ao mirante para contemplar a vista da região.",
+                  "duracao_estimada": "45min",
+                  "latitude": -27.5973163,
+                  "longitude": -48.436863300000006
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "noite",
+                  "nome": "Wooden Tap Beer - Floripa Airport",
+                  "descricao_curta": "Parada no restaurante para uma refeição; o cadastro não detalha o cardápio.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -27.6743748,
+                  "longitude": -48.546581200000006
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                  "descricao_curta": "Trilha em área de natureza, atendendo ao interesse por ecoturismo.",
+                  "duracao_estimada": "3h",
+                  "latitude": -27.7576643,
+                  "longitude": -48.4960673
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Lagoa do Peri",
+                  "descricao_curta": "Visita ao parque e área de trilha, com tempo reservado para conhecer o local.",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.7263108,
+                  "longitude": -48.507363899999994
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "noite",
+                  "nome": "Paraíso das Ostras Fazenda Marinha",
+                  "descricao_curta": "Visita à fazenda marinha, com foco em produtos locais.",
+                  "duracao_estimada": "1h",
+                  "latitude": -27.816785799999998,
+                  "longitude": -48.563774099999996
+                }
+              ]
+            },
+            {
+              "dia": 3,
+              "locais": [
+                {
+                  "ordem": 7,
+                  "periodo": "manha",
+                  "nome": "Tour Nugali Chocolates - Fábrica",
+                  "descricao_curta": "Visita à fábrica de chocolates, atrativo turístico cadastrado.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.6772705,
+                  "longitude": -49.1824405
+                },
+                {
+                  "ordem": 8,
+                  "periodo": "tarde",
+                  "nome": "Biergarten Pomerânia",
+                  "descricao_curta": "Parada no restaurante para uma refeição; o cadastro não detalha o cardápio.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7404325,
+                  "longitude": -49.175846
+                },
+                {
+                  "ordem": 9,
+                  "periodo": "tarde",
+                  "nome": "Morro Azul Topo",
+                  "descricao_curta": "Visita ao topo do morro, área de parque voltada ao interesse por montanhas.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7630776,
+                  "longitude": -49.204468899999995
+                }
+              ]
+            },
+            {
+              "dia": 4,
+              "locais": [
+                {
+                  "ordem": 10,
+                  "periodo": "manha",
+                  "nome": "Cachoeira Paulista Adventure Park",
+                  "descricao_curta": "Visita ao parque de aventura, com trilhas e natureza.",
+                  "duracao_estimada": "3h",
+                  "latitude": -26.793701799999997,
+                  "longitude": -49.5315115
+                },
+                {
+                  "ordem": 11,
+                  "periodo": "tarde",
+                  "nome": "Container da Serra",
+                  "descricao_curta": "Parada no restaurante para uma refeição; o cadastro não detalha o cardápio.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.6254623,
+                  "longitude": -49.516577299999994
+                },
+                {
+                  "ordem": 12,
+                  "periodo": "tarde",
+                  "nome": "Cachoeira Da Pedra Furada",
+                  "descricao_curta": "Visita ao centro de esportes de aventura e cachoeira.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.9044858,
+                  "longitude": -49.451372
+                }
+              ]
+            },
+            {
+              "dia": 5,
+              "locais": [
+                {
+                  "ordem": 13,
+                  "periodo": "manha",
+                  "nome": "Norden Blumenau",
+                  "descricao_curta": "Parada no restaurante para uma refeição; o cadastro não detalha o cardápio.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.8996482,
+                  "longitude": -49.0755755
+                },
+                {
+                  "ordem": 14,
+                  "periodo": "tarde",
+                  "nome": "Oktoberfest Blumenau",
+                  "descricao_curta": "Visita ao local de eventos, atrativo turístico da região.",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.9155433,
+                  "longitude": -49.084672499999996
+                },
+                {
+                  "ordem": 15,
+                  "periodo": "noite",
+                  "nome": "La Vinoteca Emporium & Bistrô",
+                  "descricao_curta": "Parada no bistrô e empório para uma refeição.",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.8957181,
+                  "longitude": -49.08784
+                }
+              ]
+            }
+          ],
+          "fonte": "base_Florianopolis, base_ValeEuropeu"
+        },
+        "after": {
+          "titulo": "5 dias • Vale Europeu e Grande Florianópolis",
+          "descricao_geral": "Planejamento de 5 dias com 15 paradas. Bases consultadas: Vale Europeu, Grande Florianópolis. Interesses do pedido: praias, esportes, montanhas, gastronomia. As durações são estimativas de permanência.",
+          "dias": [
+            {
+              "dia": 1,
+              "locais": [
+                {
+                  "ordem": 1,
+                  "periodo": "manha",
+                  "nome": "Praia Barra da Lagoa",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (15977 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.573907799999997,
+                  "longitude": -48.4239234
+                },
+                {
+                  "ordem": 2,
+                  "periodo": "tarde",
+                  "nome": "Mirante Praia Mole",
+                  "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1755 avaliações).",
+                  "duracao_estimada": "45min",
+                  "latitude": -27.5973163,
+                  "longitude": -48.436863300000006
+                },
+                {
+                  "ordem": 3,
+                  "periodo": "noite",
+                  "nome": "Wooden Tap Beer - Floripa Airport",
+                  "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para grupos. Avaliação registrada: 4,8/5 (239 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -27.6743748,
+                  "longitude": -48.546581200000006
+                }
+              ]
+            },
+            {
+              "dia": 2,
+              "locais": [
+                {
+                  "ordem": 4,
+                  "periodo": "manha",
+                  "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                  "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (926 avaliações).",
+                  "duracao_estimada": "3h",
+                  "latitude": -27.7576643,
+                  "longitude": -48.4960673
+                },
+                {
+                  "ordem": 5,
+                  "periodo": "tarde",
+                  "nome": "Lagoa do Peri",
+                  "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (8451 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -27.7263108,
+                  "longitude": -48.507363899999994
+                },
+                {
+                  "ordem": 6,
+                  "periodo": "noite",
+                  "nome": "Paraíso das Ostras Fazenda Marinha",
+                  "descricao_curta": "Visita à fazenda. Avaliação registrada: 4,9/5 (108 avaliações).",
+                  "duracao_estimada": "1h",
+                  "latitude": -27.816785799999998,
+                  "longitude": -48.563774099999996
+                }
+              ]
+            },
+            {
+              "dia": 3,
+              "locais": [
+                {
+                  "ordem": 7,
+                  "periodo": "manha",
+                  "nome": "Tour Nugali Chocolates - Fábrica",
+                  "descricao_curta": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.6772705,
+                  "longitude": -49.1824405
+                },
+                {
+                  "ordem": 8,
+                  "periodo": "tarde",
+                  "nome": "Biergarten Pomerânia",
+                  "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7404325,
+                  "longitude": -49.175846
+                },
+                {
+                  "ordem": 9,
+                  "periodo": "tarde",
+                  "nome": "Morro Azul Topo",
+                  "descricao_curta": "Visita ao parque. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1709 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.7630776,
+                  "longitude": -49.204468899999995
+                }
+              ]
+            },
+            {
+              "dia": 4,
+              "locais": [
+                {
+                  "ordem": 10,
+                  "periodo": "manha",
+                  "nome": "Cachoeira Paulista Adventure Park",
+                  "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (2300 avaliações).",
+                  "duracao_estimada": "3h",
+                  "latitude": -26.793701799999997,
+                  "longitude": -49.5315115
+                },
+                {
+                  "ordem": 11,
+                  "periodo": "tarde",
+                  "nome": "Container da Serra",
+                  "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (955 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.6254623,
+                  "longitude": -49.516577299999994
+                },
+                {
+                  "ordem": 12,
+                  "periodo": "tarde",
+                  "nome": "Cachoeira Da Pedra Furada",
+                  "descricao_curta": "Visita ao centro de esportes de aventura. Avaliação registrada: 4,9/5 (271 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.9044858,
+                  "longitude": -49.451372
+                }
+              ]
+            },
+            {
+              "dia": 5,
+              "locais": [
+                {
+                  "ordem": 13,
+                  "periodo": "manha",
+                  "nome": "Norden Blumenau",
+                  "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.8996482,
+                  "longitude": -49.0755755
+                },
+                {
+                  "ordem": 14,
+                  "periodo": "tarde",
+                  "nome": "Oktoberfest Blumenau",
+                  "descricao_curta": "Parada no bar. Avaliação registrada: 4,8/5 (3882 avaliações).",
+                  "duracao_estimada": "2h",
+                  "latitude": -26.9155433,
+                  "longitude": -49.084672499999996
+                },
+                {
+                  "ordem": 15,
+                  "periodo": "noite",
+                  "nome": "La Vinoteca Emporium & Bistrô",
+                  "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. Cardápio infantil informado no cadastro. Avaliação registrada: 4,9/5 (236 avaliações).",
+                  "duracao_estimada": "1h30",
+                  "latitude": -26.8957181,
+                  "longitude": -49.08784
+                }
+              ]
+            }
+          ],
+          "fonte": "base_Florianopolis, base_ValeEuropeu"
+        }
+      }
+    }
+  ]
+}

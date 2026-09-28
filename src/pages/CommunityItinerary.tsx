@@ -31,7 +31,7 @@ const CommunityItinerary = () => {
     return () => controller.abort();
   }, [id, revision, user?.id]);
   return (
-    <div className="relative min-h-dvh bg-background">
+    <div className="product-ui relative min-h-dvh bg-background">
       <TourismBackdrop /><Header />
       <div className="relative z-10">
         {!loading && !error && data ? (
@@ -44,7 +44,7 @@ const CommunityItinerary = () => {
           <main id="main-content" className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
             <h1 className="mb-6 text-3xl font-bold">Roteiro da comunidade</h1>
             {loading ? <LoadingAnimation compact message="Abrindo roteiro..." /> : (
-              <div className="rounded-xl border border-border bg-card p-6"><p role={error ? "alert" : "status"}>{error ?? "Este roteiro não está disponível na comunidade. Ele pode ter sido retirado pelo autor."}</p><div className="mt-4 flex flex-wrap gap-3"><Button asChild variant="outline" className="min-h-11"><Link to="/comunidade">Voltar à comunidade</Link></Button>{error && <Button className="min-h-11" onClick={() => setRevision((value) => value + 1)}>Tentar novamente</Button>}</div></div>
+              <div className="feedback-panel"><p role={error ? "alert" : "status"}>{error ?? "Este roteiro não está disponível na comunidade. Ele pode ter sido retirado pelo autor."}</p><div className="mt-4 flex flex-wrap gap-3"><Button asChild variant="outline" className="min-h-11"><Link to="/comunidade">Voltar à comunidade</Link></Button>{error && <Button className="min-h-11" onClick={() => setRevision((value) => value + 1)}>Tentar novamente</Button>}</div></div>
             )}
           </main>
         )}

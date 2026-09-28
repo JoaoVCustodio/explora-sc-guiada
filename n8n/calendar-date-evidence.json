@@ -1,0 +1,3836 @@
+[
+  {
+    "id": 47,
+    "ms": 5494,
+    "prepared": {
+      "catalog": [
+        {
+          "realId": "ChIJS2KSgXAf35QRR0dAu9IrGEc",
+          "name": "Norden Blumenau",
+          "lat": -26.8996482,
+          "lon": -49.0755755,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002",
+          "rating": 4.8,
+          "reviews": 4557,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 17:00 – 00:00",
+            "quarta-feira: 17:00 – 00:00",
+            "quinta-feira: 17:00 – 00:00",
+            "sexta-feira: 17:00 – 00:00",
+            "sábado: 11:00 – 00:00",
+            "domingo: 11:00 – 00:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p1"
+        },
+        {
+          "realId": "ChIJJRZ_CSkZ35QR0RiK7M68cTQ",
+          "name": "Oktoberfest Blumenau",
+          "lat": -26.9155433,
+          "lon": -49.084672499999996,
+          "types": [
+            "bar",
+            "event_venue"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-900",
+          "rating": 4.8,
+          "reviews": 3882,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 00:00",
+            "terça-feira: 08:00 – 00:00",
+            "quarta-feira: 08:00 – 00:00",
+            "quinta-feira: 08:00 – 00:00",
+            "sexta-feira: 08:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 00:00"
+          ],
+          "id": "p2"
+        },
+        {
+          "realId": "ChIJLcI9Wi8f35QRLpz648Y_Wyk",
+          "name": "Mundo Animal Lanchonete Temática - Blumenau",
+          "lat": -26.886530999999998,
+          "lon": -49.0687685,
+          "types": [
+            "american_restaurant",
+            "diner",
+            "food",
+            "hamburger_restaurant",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Shopping Park Europeu 1045 - Rodovia Paul Fritz Kuehnrich, 1600 - Itoupava Norte, Blumenau - SC, 89052-475",
+          "rating": 4.8,
+          "reviews": 1930,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "menuForChildren": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 18:00 – 22:00",
+            "terça-feira: 18:00 – 22:00",
+            "quarta-feira: 18:00 – 22:00",
+            "quinta-feira: 18:00 – 22:00",
+            "sexta-feira: 18:00 – 22:00",
+            "sábado: 11:00 – 14:00, 18:00 – 23:00",
+            "domingo: 11:30 – 20:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p3"
+        },
+        {
+          "realId": "ChIJn7C1hsAY35QRFLRPknOtR6Y",
+          "name": "Omas Haus BrewPub - Blumenau",
+          "lat": -26.917370299999998,
+          "lon": -49.0619037,
+          "types": [
+            "american_restaurant",
+            "bar",
+            "barbecue_restaurant",
+            "food",
+            "hamburger_restaurant",
+            "pub",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020",
+          "rating": 4.8,
+          "reviews": 644,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "menuForChildren": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 17:00 – 23:45",
+            "quarta-feira: 17:00 – 23:45",
+            "quinta-feira: 17:00 – 23:45",
+            "sexta-feira: 17:00 – 23:45",
+            "sábado: 11:00 – 23:45",
+            "domingo: 11:00 – 22:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p4"
+        },
+        {
+          "realId": "ChIJgVxJ-4Af35QRu9S9vIlTTdk",
+          "name": "Velharia",
+          "lat": -26.8981857,
+          "lon": -49.0773989,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 2192 - Itoupava Seca, Blumenau - SC, 89030-000",
+          "rating": 4.8,
+          "reviews": 382,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: 18:00 – 00:00",
+            "quinta-feira: 18:00 – 00:00",
+            "sexta-feira: 18:00 – 00:00",
+            "sábado: 17:00 – 00:00",
+            "domingo: 13:00 – 19:00"
+          ],
+          "id": "p5"
+        },
+        {
+          "realId": "ChIJs3pZ_3sf35QRA0qdYi-VaxI",
+          "name": "La Vinoteca Emporium & Bistrô",
+          "lat": -26.8957181,
+          "lon": -49.08784,
+          "types": [
+            "bar",
+            "event_venue",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "restaurant",
+            "store",
+            "wine_bar"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Gustavo Salinger, 651 - Itoupava Seca, Blumenau - SC, 89030-310",
+          "rating": 4.9,
+          "reviews": 236,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 14:00 – 23:00",
+            "quarta-feira: 14:00 – 23:30",
+            "quinta-feira: 14:00 – 23:30",
+            "sexta-feira: 14:00 – 23:30",
+            "sábado: 11:00 – 23:00",
+            "domingo: Fechado"
+          ],
+          "id": "p6"
+        },
+        {
+          "realId": "ChIJH6JDSmkZ35QRqiKpviT7K60",
+          "name": "Bierstelle I Pub",
+          "lat": -26.908385499999998,
+          "lon": -49.079791099999994,
+          "types": [
+            "bar",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "pub",
+            "restaurant",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540",
+          "rating": 4.9,
+          "reviews": 124,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 15:30 – 00:00",
+            "quarta-feira: 15:30 – 00:00",
+            "quinta-feira: 15:30 – 00:00",
+            "sexta-feira: 15:30 – 00:30",
+            "sábado: 14:00 – 00:30",
+            "domingo: 11:00 – 23:00"
+          ],
+          "id": "p7"
+        },
+        {
+          "realId": "ChIJM8DwE0sZ35QRGPOi1kXW5No",
+          "name": "E-10 Tap House",
+          "lat": -26.9220957,
+          "lon": -49.0638167,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Curt Hering, 33 - sala 7 - Centro, Blumenau - SC, 89010-030",
+          "rating": 4.8,
+          "reviews": 149,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": false,
+            "liveMusic": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": true
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 16:30 – 00:00",
+            "quarta-feira: 16:30 – 00:00",
+            "quinta-feira: 16:30 – 00:00",
+            "sexta-feira: 16:30 – 00:00",
+            "sábado: 10:00 – 00:00",
+            "domingo: 10:00 – 18:00"
+          ],
+          "id": "p8"
+        },
+        {
+          "realId": "ChIJ37q5o1nv3pQRjK8sydTYzmo",
+          "name": "Tour Nugali Chocolates - Fábrica",
+          "lat": -26.6772705,
+          "lon": -49.1824405,
+          "types": [
+            "candy_store",
+            "chocolate_shop",
+            "confectionery",
+            "dessert_shop",
+            "food",
+            "food_store",
+            "museum",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Testo Alto, 4848 - Testo Alto, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 24128,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 18:00",
+            "domingo: 09:00 – 18:00"
+          ],
+          "id": "p9"
+        },
+        {
+          "realId": "ChIJVVWFBSkZ35QRNjQYx-baeJE",
+          "name": "Parque Vila Germânica",
+          "lat": -26.915820699999998,
+          "lon": -49.085123100000004,
+          "types": [
+            "event_venue",
+            "park"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-200",
+          "rating": 4.8,
+          "reviews": 11625,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 00:00",
+            "terça-feira: 08:00 – 00:00",
+            "quarta-feira: 08:00 – 00:00",
+            "quinta-feira: 08:00 – 00:00",
+            "sexta-feira: 08:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 00:00"
+          ],
+          "id": "p10"
+        },
+        {
+          "realId": "ChIJ5wvD5Tvl3pQROVn3SteV9ro",
+          "name": "Biergarten Pomerânia",
+          "lat": -26.7404325,
+          "lon": -49.175846,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. XV de Novembro, 367 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 4909,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sexta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sábado: 11:30 – 23:00",
+            "domingo: 11:30 – 16:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p11"
+        },
+        {
+          "realId": "ChIJ2dcID8UY35QRnPyAeRe7Aec",
+          "name": "Catedral São Paulo Apóstolo",
+          "lat": -26.919644599999998,
+          "lon": -49.0661452,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. XV de Novembro, 955 - Centro, Blumenau - SC, 89010-003",
+          "rating": 4.8,
+          "reviews": 5065,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 06:00 – 20:00",
+            "terça-feira: 06:00 – 20:00",
+            "quarta-feira: 06:00 – 20:00",
+            "quinta-feira: 06:00 – 20:00",
+            "sexta-feira: 06:00 – 20:00",
+            "sábado: 06:00 – 20:00",
+            "domingo: 06:00 – 20:00"
+          ],
+          "id": "p12"
+        },
+        {
+          "realId": "ChIJbeouEHrl3pQR1ECgzDqx3Ws",
+          "name": "Wunderwald",
+          "lat": -26.8052578,
+          "lon": -49.1656532,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Avenida - R. XV de Novembro, 8444 - Testo Central, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 4456,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "terça-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "quarta-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "quinta-feira: 11:30 – 15:30, 18:00 – 22:00",
+            "sexta-feira: 11:30 – 15:30, 18:00 – 22:00",
+            "sábado: 11:30 – 16:00, 18:00 – 22:30",
+            "domingo: 11:30 – 16:00"
+          ],
+          "price": "PRICE_LEVEL_EXPENSIVE",
+          "id": "p13"
+        },
+        {
+          "realId": "ChIJbffF2-Ee35QRpeP3nJUY2cw",
+          "name": "Santuário Nossa Senhora de Aparecida",
+          "lat": -26.8851221,
+          "lon": -49.081775799999996,
+          "types": [
+            "church",
+            "place_of_worship",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Paris, 150 - Itoupava Norte, Blumenau - SC, 89052-510",
+          "rating": 4.9,
+          "reviews": 1547,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p14"
+        },
+        {
+          "realId": "ChIJucMKnJFn3pQR9125p23Uxfo",
+          "name": "Container da Serra",
+          "lat": -26.6254623,
+          "lon": -49.516577299999994,
+          "types": [
+            "food",
+            "meal_takeaway",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "SC-477 - São João da Esperança, Dr. Pedrinho - SC, 89126-000",
+          "rating": 4.9,
+          "reviews": 955,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": false,
+            "menuForChildren": false,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 08:00 – 18:00",
+            "sábado: 08:00 – 18:00",
+            "domingo: 08:00 – 18:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "priceRange": {
+            "startPrice": {
+              "currencyCode": "BRL",
+              "units": "20"
+            },
+            "endPrice": {
+              "currencyCode": "BRL",
+              "units": "40"
+            }
+          },
+          "id": "p15"
+        },
+        {
+          "realId": "ChIJNcbtUNIY35QR7lLIxnx09p4",
+          "name": "Igreja ADBLU",
+          "lat": -26.908310099999998,
+          "lon": -49.073101699999995,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 890 - Victor Konder, Blumenau - SC, 89012-000",
+          "rating": 4.9,
+          "reviews": 786,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "terça-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 21:00",
+            "quarta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quinta-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 22:00",
+            "sexta-feira: 08:00 – 12:00, 14:00 – 18:00, 21:00 – 23:00",
+            "sábado: Fechado",
+            "domingo: 10:00 – 12:00, 19:00 – 22:00"
+          ],
+          "id": "p16"
+        },
+        {
+          "realId": "ChIJd8WhCbEe35QR6M5XeBZJ2BM",
+          "name": "Bavihaus Blumenau",
+          "lat": -26.9110119,
+          "lon": -49.109491000000006,
+          "types": [
+            "liquor_store",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Frei Estanislau Schaette, 1839 - Água Verde, Blumenau - SC, 89037-003",
+          "rating": 4.8,
+          "reviews": 858,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 23:00",
+            "terça-feira: 09:00 – 23:00",
+            "quarta-feira: 09:00 – 00:00",
+            "quinta-feira: 09:00 – 00:00",
+            "sexta-feira: 09:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 22:00"
+          ],
+          "id": "p17"
+        },
+        {
+          "realId": "ChIJUx2hvALl3pQRDo7cl1rm6y8",
+          "name": "Queijos Pomerode",
+          "lat": -26.739456200000003,
+          "lon": -49.1729074,
+          "types": [
+            "food"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. dos Atiradores, 71 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 728,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 19:00",
+            "terça-feira: 09:00 – 19:00",
+            "quarta-feira: 09:00 – 19:00",
+            "quinta-feira: 09:00 – 19:00",
+            "sexta-feira: 09:00 – 19:00",
+            "sábado: 09:00 – 19:00",
+            "domingo: 10:00 – 16:00"
+          ],
+          "id": "p18"
+        },
+        {
+          "realId": "ChIJU0g8lPof35QRRWkUm7gq2_0",
+          "name": "Wow Park",
+          "lat": -26.863694799999998,
+          "lon": -49.0926064,
+          "types": [
+            "amusement_park",
+            "banquet_hall",
+            "event_venue",
+            "playground"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "BR-470, 3000 - Salto Norte, Blumenau - SC, 89065-800",
+          "rating": 4.8,
+          "reviews": 659,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 12:00 – 22:00",
+            "terça-feira: 12:00 – 22:00",
+            "quarta-feira: 12:00 – 22:00",
+            "quinta-feira: 12:00 – 22:00",
+            "sexta-feira: 12:00 – 22:00",
+            "sábado: 10:00 – 22:00",
+            "domingo: 11:00 – 21:00"
+          ],
+          "id": "p19"
+        },
+        {
+          "realId": "ChIJeQAjzcUf35QRjH1oh3JQ3IE",
+          "name": "Blu Padel e Esportes de Areia Ltda",
+          "lat": -26.894097,
+          "lon": -49.0816459,
+          "types": [
+            "sports_club"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 2815 - Itoupava Seca, Blumenau - SC, 89030-001",
+          "rating": 4.9,
+          "reviews": 379,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 06:00 – 23:30",
+            "terça-feira: 06:00 – 23:30",
+            "quarta-feira: 06:00 – 23:30",
+            "quinta-feira: 06:00 – 23:30",
+            "sexta-feira: 06:00 – 23:30",
+            "sábado: 07:00 – 20:00",
+            "domingo: 09:00 – 22:00"
+          ],
+          "id": "p20"
+        },
+        {
+          "realId": "ChIJT6Cr9I4Y35QRDhHj_CGmAHs",
+          "name": "Shalom Igreja - Primeira Igreja Batista em Blumenau",
+          "lat": -26.9311975,
+          "lon": -49.0549696,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Pref. Frederico Busch Júnior, 455 - Garcia, Blumenau - SC, 89020-400",
+          "rating": 4.9,
+          "reviews": 334,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: Fechado",
+            "sábado: 14:00 – 22:00",
+            "domingo: 09:30 – 11:30, 16:00 – 21:30"
+          ],
+          "id": "p21"
+        },
+        {
+          "realId": "ChIJ-UtCHNQe35QRhrPGHgCP7C8",
+          "name": "Paróquia Nossa Senhora Imaculada Conceição - Mais informações acesse o site.",
+          "lat": -26.904869100000003,
+          "lon": -49.0862121,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Joinville, 665 - Vila Nova, Blumenau - SC, 89035-200",
+          "rating": 4.8,
+          "reviews": 343,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "terça-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "quarta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "quinta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "sexta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "sábado: 08:00 – 11:30",
+            "domingo: Fechado"
+          ],
+          "id": "p22"
+        },
+        {
+          "realId": "ChIJq6oab5EY35QR3zB5y_KNR_g",
+          "name": "Igreja Luterana de Blumenau",
+          "lat": -26.9246001,
+          "lon": -49.055608299999996,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Amazonas, 119 - Garcia, Blumenau - SC, 89020-001",
+          "rating": 4.8,
+          "reviews": 334,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p23"
+        },
+        {
+          "realId": "ChIJxc8u1rAe35QRG2GbKOyTbyY",
+          "name": "Igreja Bola de Neve",
+          "lat": -26.9094581,
+          "lon": -49.1081619,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Frei Estanislau Schaette, 1592 - Água Verde, Blumenau - SC, 89037-002",
+          "rating": 4.8,
+          "reviews": 287,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p24"
+        },
+        {
+          "realId": "ChIJs7VViTcZ35QRp5Pnv_Dk2hg",
+          "name": "Paróquia Cristo Rei",
+          "lat": -26.923690900000004,
+          "lon": -49.100297399999995,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. João Pessoa, 3085 - Velha, Blumenau - SC, 89036-004",
+          "rating": 4.8,
+          "reviews": 284,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quarta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quinta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "sexta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "sábado: 08:00 – 12:00",
+            "domingo: Fechado"
+          ],
+          "id": "p25"
+        },
+        {
+          "realId": "ChIJMefZMxof35QRLxwu8C7QfnU",
+          "name": "Museu do Cristal de Blumenau Mozart Crystal",
+          "lat": -26.888120599999997,
+          "lon": -49.119391099999994,
+          "types": [
+            "museum",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Bahia, 4253 - Mezanino, Blumenau - SC, 89032-000",
+          "rating": 4.9,
+          "reviews": 160,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 13:00",
+            "domingo: 09:00 – 13:00"
+          ],
+          "id": "p26"
+        },
+        {
+          "realId": "ChIJaysxNwAZ35QRc6Ve6SWxYb8",
+          "name": "Parque do Garcia (Prefeito Carlos Curt Zadrozny)",
+          "lat": -26.963160900000002,
+          "lon": -49.077829,
+          "types": [
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Germano Roeder, 110 - Progresso, Blumenau - SC, 89026-250",
+          "rating": 4.8,
+          "reviews": 192,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: 05:00 – 23:00",
+            "terça-feira: 05:00 – 23:00",
+            "quarta-feira: 05:00 – 23:00",
+            "quinta-feira: 05:00 – 23:00",
+            "sexta-feira: 05:00 – 23:00",
+            "sábado: 05:00 – 23:00",
+            "domingo: 05:00 – 23:00"
+          ],
+          "id": "p27"
+        },
+        {
+          "realId": "ChIJpRL2Up7j3pQRfbhH44cFrUU",
+          "name": "Cachaçaria Wilbert - Alambique de cachaça - Licores e Bitter - Pomerode Blumenau - Fábrica de licores e cachaça",
+          "lat": -26.838646999999998,
+          "lon": -49.1593514,
+          "types": [
+            "liquor_store",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua dos atiradores n•13315 - Testo Central, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 07:30 – 18:30",
+            "terça-feira: 07:30 – 18:30",
+            "quarta-feira: 07:30 – 18:30",
+            "quinta-feira: 07:30 – 18:30",
+            "sexta-feira: 07:30 – 18:30",
+            "sábado: 07:30 – 17:00",
+            "domingo: 09:00 – 11:00, 14:00 – 17:00"
+          ],
+          "id": "p28"
+        },
+        {
+          "realId": "ChIJ2ynQFMbv3pQRNoWVm9BPRPU",
+          "name": "Kekshaus Emporium",
+          "lat": -26.6957515,
+          "lon": -49.1737937,
+          "types": [
+            "diner",
+            "food",
+            "food_store",
+            "grocery_store",
+            "restaurant",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Testo Alto, 2131 - Testo Alto, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: Fechado",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 18:00",
+            "domingo: 09:00 – 18:00"
+          ],
+          "id": "p29"
+        },
+        {
+          "realId": "ChIJL4wfwDH63pQR_2RiX_2JWCs",
+          "name": "Blauer Berg Cervejaria",
+          "lat": -26.7734103,
+          "lon": -49.272880099999995,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Km 5845 - SC-417, 4 - Das Capitais, Timbó - SC, 89120-000",
+          "rating": 4.8,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": false,
+            "liveMusic": false,
+            "menuForChildren": false,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 08:00 – 18:00",
+            "quarta-feira: 08:00 – 18:00",
+            "quinta-feira: 08:00 – 18:00",
+            "sexta-feira: 08:00 – 18:00",
+            "sábado: Fechado",
+            "domingo: Fechado"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "priceRange": {
+            "startPrice": {
+              "currencyCode": "BRL",
+              "units": "80"
+            },
+            "endPrice": {
+              "currencyCode": "BRL",
+              "units": "100"
+            }
+          },
+          "id": "p30"
+        },
+        {
+          "realId": "ChIJOSuEkVkf35QRIihTn3PYtvg",
+          "name": "Arca Ministério",
+          "lat": -26.8557904,
+          "lon": -49.1006785,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Herbert André Lubow, 157 - Itoupavazinha, Blumenau - SC, 89066-352",
+          "rating": 4.9,
+          "reviews": 127,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 21:00 – 23:30",
+            "sábado: Fechado",
+            "domingo: 18:00 – 21:00"
+          ],
+          "id": "p31"
+        },
+        {
+          "realId": "ChIJ1dFxuGNg3pQRl6fx2tFiOuA",
+          "name": "Feirinha Comunitária Amigos do Pinhal",
+          "lat": -26.615487599999998,
+          "lon": -49.4023593,
+          "types": [
+            "food",
+            "food_store",
+            "grocery_store",
+            "market",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estr. Geral Alto Cedros - Cedro Alto, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.8,
+          "reviews": 146,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 13:00 – 19:00",
+            "sábado: 08:30 – 19:00",
+            "domingo: 08:30 – 19:00"
+          ],
+          "id": "p32"
+        },
+        {
+          "realId": "ChIJs7xBc-Q4J5URYFYXAXpnLbo",
+          "name": "Diocese de Blumenau",
+          "lat": -26.9198876,
+          "lon": -49.066541199999996,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. 7 de Setembro, 1086 - Centro, Blumenau - SC, 89010-204",
+          "rating": 4.8,
+          "reviews": 117,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p33"
+        },
+        {
+          "realId": "ChIJmy6eIai32JQRw1PltseKjxQ",
+          "name": "Oceanic Aquarium",
+          "lat": -27.005585399999998,
+          "lon": -48.6164154,
+          "types": [
+            "amusement_center",
+            "amusement_park",
+            "aquarium",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. 4000, 133 - Centro, Balneário Camboriú - SC, 88330-180",
+          "rating": 4.8,
+          "reviews": 96900,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 19:00",
+            "domingo: 09:00 – 19:00"
+          ],
+          "id": "p34"
+        },
+        {
+          "realId": "ChIJA_rIEh3l3pQRuZlfrBDzTIQ",
+          "name": "Pórtico de Pomerode",
+          "lat": -26.7440346,
+          "lon": -49.1745324,
+          "types": [
+            "tour_agency",
+            "tourist_information_center",
+            "travel_agency"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Ac. Jorge Lacerda, 821 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 5476,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 17:00",
+            "terça-feira: 09:00 – 17:00",
+            "quarta-feira: 09:00 – 17:00",
+            "quinta-feira: 09:00 – 17:00",
+            "sexta-feira: 09:00 – 17:00",
+            "sábado: 09:00 – 17:00",
+            "domingo: 09:00 – 17:00"
+          ],
+          "id": "p35"
+        },
+        {
+          "realId": "ChIJhfSO3KqV3pQRIHFrECMgx0o",
+          "name": "SCAR Centro Cultural",
+          "lat": -26.478019699999997,
+          "lon": -49.0805778,
+          "types": [
+            "cultural_center",
+            "event_venue",
+            "performing_arts_theater"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Jorge Czerniewicz, 160 - Czerniewicz, Jaraguá do Sul - SC, 89255-000",
+          "rating": 4.9,
+          "reviews": 2860,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 08:00 – 21:30",
+            "terça-feira: 08:00 – 21:30",
+            "quarta-feira: 08:00 – 21:30",
+            "quinta-feira: 08:00 – 21:30",
+            "sexta-feira: 08:00 – 21:30",
+            "sábado: 08:00 – 12:00",
+            "domingo: Fechado"
+          ],
+          "id": "p36"
+        },
+        {
+          "realId": "ChIJT8vgUGf33pQRKjb0hlFchhs",
+          "name": "Morro São Bernardo",
+          "lat": -26.7461643,
+          "lon": -49.3048401,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alto São Bernardo - Rio dos Cedros, SC, 89121-000",
+          "rating": 4.9,
+          "reviews": 732,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 07:00 – 20:00",
+            "terça-feira: 07:00 – 20:00",
+            "quarta-feira: 07:00 – 20:00",
+            "quinta-feira: 07:00 – 20:00",
+            "sexta-feira: 07:00 – 20:00",
+            "sábado: 07:00 – 20:00",
+            "domingo: 07:00 – 20:00"
+          ],
+          "id": "p37"
+        },
+        {
+          "realId": "ChIJEQgDrAX83pQRcqoiuZXRJTs",
+          "name": "Ponte do Imigrante",
+          "lat": -26.826512599999997,
+          "lon": -49.276163499999996,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Ponte Complexo Jardim do Imigrante - nº 211 - Centro, Timbó - SC, 89120-000",
+          "rating": 4.8,
+          "reviews": 582,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p38"
+        },
+        {
+          "realId": "ChIJaxJcoKSx2JQRmRh9cbghXvA",
+          "name": "Praia do Centro",
+          "lat": -27.1047965,
+          "lon": -48.6128632,
+          "types": [
+            "beach",
+            "natural_feature"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Praia do Centro, Santa Catarina, 88220-000",
+          "rating": 4.8,
+          "reviews": 362,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p39"
+        },
+        {
+          "realId": "ChIJ81zgnwdT3pQRbZxkSfZCVGY",
+          "name": "Cachoeira Da Pedra Furada",
+          "lat": -26.9044858,
+          "lon": -49.451372,
+          "types": [
+            "adventure_sports_center",
+            "sports_activity_location",
+            "sports_complex"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Benedito Novo - SC, 89124-000",
+          "rating": 4.9,
+          "reviews": 271,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 17:00",
+            "terça-feira: 08:00 – 17:00",
+            "quarta-feira: 08:00 – 17:00",
+            "quinta-feira: 08:00 – 17:00",
+            "sexta-feira: 08:00 – 17:00",
+            "sábado: 08:00 – 17:00",
+            "domingo: 08:00 – 17:00"
+          ],
+          "id": "p40"
+        },
+        {
+          "realId": "ChIJN2gYnZFD3pQRU2N6bI7qLSE",
+          "name": "Pousada Salto Donner",
+          "lat": -26.7572667,
+          "lon": -49.457463499999996,
+          "types": [
+            "guest_house",
+            "hotel",
+            "inn",
+            "lodging"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. da Glória, 63 - Salto Donner, Dr. Pedrinho - SC, 89126-000",
+          "rating": 5,
+          "reviews": 146,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p41"
+        },
+        {
+          "realId": "ChIJO3TrH85l3pQR8Mtt_B6eVdE",
+          "name": "Camping e Cabanas Minatti & Ramos",
+          "lat": -26.5561981,
+          "lon": -49.479280499999994,
+          "types": [
+            "campground",
+            "camping_cabin",
+            "cottage",
+            "lodging",
+            "park"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estrada Geral Pedra Preta - Barra do Avencal, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.9,
+          "reviews": 171,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p42"
+        },
+        {
+          "realId": "ChIJdd-pSG7J2JQRDIiWpmi30Ts",
+          "name": "Praia da Solidão",
+          "lat": -26.9297115,
+          "lon": -48.6250001,
+          "types": [
+            "landmark",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Samuel Heusi Júnior - Praia Brava, Itajaí - SC, 88306",
+          "rating": 4.8,
+          "reviews": 189,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p43"
+        },
+        {
+          "realId": "ChIJMUcL6qWK3pQRlgiDxKPpc0Y",
+          "name": "Cavalgada Fernandes - Rio dos Cedros",
+          "lat": -26.6031342,
+          "lon": -49.3592108,
+          "types": [
+            "campground",
+            "lodging",
+            "park",
+            "rv_park",
+            "tour_agency",
+            "travel_agency"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estr. Mun. 409 - Cedro Alto, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.8,
+          "reviews": 112,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: 07:30 – 19:00",
+            "quinta-feira: 07:30 – 19:00",
+            "sexta-feira: 07:30 – 19:00",
+            "sábado: 07:30 – 19:00",
+            "domingo: 07:30 – 19:00"
+          ],
+          "id": "p44"
+        }
+      ],
+      "context": "{\"preferencias_usuario\":{\"dias\":3,\"regioes\":[\"Vale Europeu\"],\"interesses\":[\"gastronomia\"],\"texto\":\"Quero visitar Norden Blumenau.\",\"data_inicio\":\"2026-11-16\"},\"bases_consultadas\":[\"base_ValeEuropeu\"],\"selecao_ampliada\":false,\"calendario_viagem\":[{\"dia\":1,\"data\":\"2026-11-16\",\"semana\":0,\"dia_semana\":\"segunda\"},{\"dia\":2,\"data\":\"2026-11-17\",\"semana\":1,\"dia_semana\":\"terça\"},{\"dia\":3,\"data\":\"2026-11-18\",\"semana\":2,\"dia_semana\":\"quarta\"}],\"legenda_planejamento\":{\"hd\":\"Uma linha por dia de calendario_viagem; colunas manha/tarde/noite. Minutos da maior janela contínua cadastrada nesse dia da semana. Zero = sem abertura cadastrada; null = informação ausente, incompleta ou conflitante. Prefira períodos compatíveis. Referência semanal, não confirmação em tempo real; feriados e exceções não estão confirmados.\",\"geo_km\":\"Distâncias Haversine aproximadas em km, na ordem de referencias_geograficas; linha reta, não trajeto nem tempo de viagem. Referências não são grupos ou visitas obrigatórias.\",\"hp\":\"Ordem dos vetores: manha(06–12), tarde(12–18), noite(18–24). conhecidos: dias semanais interpretados/7. dias: quantos têm alguma abertura por período. janela_tipica: mediana da maior janela contínua por período, em minutos, incluindo zero nos dias conhecidos sem abertura. janela_max: maior dessas janelas. Demais dias/desconhecidos não significam fechado. Null = desconhecido. Confira h para dias e horários exatos; use hd para as datas da viagem.\"},\"referencias_geograficas\":[{\"id\":\"p39\",\"n\":\"Praia do Centro\",\"c\":[-27.1047965,-48.6128632]},{\"id\":\"p36\",\"n\":\"SCAR Centro Cultural\",\"c\":[-26.478019699999997,-49.0805778]},{\"id\":\"p15\",\"n\":\"Container da Serra\",\"c\":[-26.6254623,-49.516577299999994]}],\"fatos_atracoes\":[{\"id\":\"p1\",\"n\":\"Norden Blumenau\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8996482,-49.0755755],\"a\":\"R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002\",\"q\":[4.8,4557],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 17:00 – 00:00\",\"sábado,domingo: 11:00 – 00:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[51.2,46.9,53.4],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,7],\"janela_tipica\":[0,60,360],\"janela_max\":[60,360,360]},\"hd\":[[0,60,360],[0,60,360],[0,60,360]]},{\"id\":\"p2\",\"n\":\"Oktoberfest Blumenau\",\"t\":[\"bar\",\"event_venue\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9155433,-49.084672499999996],\"a\":\"R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-900\",\"q\":[4.8,3882],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 00:00\"],\"geo_km\":[51.3,48.7,53.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[240,360,360],\"janela_max\":[240,360,360]},\"hd\":[[240,360,360],[240,360,360],[240,360,360]]},{\"id\":\"p3\",\"n\":\"Mundo Animal Lanchonete Temática - Blumenau\",\"t\":[\"american_restaurant\",\"diner\",\"food\",\"hamburger_restaurant\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.886530999999998,-49.0687685],\"a\":\"Shopping Park Europeu 1045 - Rodovia Paul Fritz Kuehnrich, 1600 - Itoupava Norte, Blumenau - SC, 89052-475\",\"q\":[4.8,1930],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 18:00 – 22:00\",\"sábado: 11:00 – 14:00, 18:00 – 23:00\",\"domingo: 11:30 – 20:00\"],\"f\":{\"goodForChildren\":true,\"menuForChildren\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[51.3,45.4,53.1],\"hp\":{\"conhecidos\":7,\"dias\":[2,2,7],\"janela_tipica\":[0,0,240],\"janela_max\":[60,360,300]},\"hd\":[[0,0,240],[0,0,240],[0,0,240]]},{\"id\":\"p4\",\"n\":\"Omas Haus BrewPub - Blumenau\",\"t\":[\"american_restaurant\",\"bar\",\"barbecue_restaurant\",\"food\",\"hamburger_restaurant\",\"pub\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.917370299999998,-49.0619037],\"a\":\"R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020\",\"q\":[4.8,644],\"h\":[\"segunda-feira: Fechado\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 17:00 – 23:45\",\"sábado: 11:00 – 23:45\",\"domingo: 11:00 – 22:00\"],\"f\":{\"menuForChildren\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[49.1,48.9,55.6],\"hp\":{\"conhecidos\":7,\"dias\":[2,6,6],\"janela_tipica\":[0,60,345],\"janela_max\":[60,360,345]},\"hd\":[[0,0,0],[0,60,345],[0,60,345]]},{\"id\":\"p5\",\"n\":\"Velharia\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8981857,-49.0773989],\"a\":\"R. São Paulo, 2192 - Itoupava Seca, Blumenau - SC, 89030-000\",\"q\":[4.8,382],\"h\":[\"segunda-feira,terça-feira: Fechado\",\"quarta-feira,quinta-feira,sexta-feira: 18:00 – 00:00\",\"sábado: 17:00 – 00:00\",\"domingo: 13:00 – 19:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"goodForGroups\":true},\"geo_km\":[51.4,46.7,53.1],\"hp\":{\"conhecidos\":7,\"dias\":[0,2,5],\"janela_tipica\":[0,0,360],\"janela_max\":[0,300,360]},\"hd\":[[0,0,0],[0,0,0],[0,0,360]]},{\"id\":\"p6\",\"n\":\"La Vinoteca Emporium & Bistrô\",\"t\":[\"bar\",\"event_venue\",\"food\",\"food_store\",\"grocery_store\",\"liquor_store\",\"restaurant\",\"store\",\"wine_bar\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8957181,-49.08784],\"a\":\"R. Gustavo Salinger, 651 - Itoupava Seca, Blumenau - SC, 89030-310\",\"q\":[4.9,236],\"h\":[\"segunda-feira,domingo: Fechado\",\"terça-feira: 14:00 – 23:00\",\"quarta-feira,quinta-feira,sexta-feira: 14:00 – 23:30\",\"sábado: 11:00 – 23:00\"],\"f\":{\"goodForChildren\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"geo_km\":[52.5,46.5,52.1],\"hp\":{\"conhecidos\":7,\"dias\":[1,5,5],\"janela_tipica\":[0,240,300],\"janela_max\":[60,360,330]},\"hd\":[[0,0,0],[0,240,300],[0,240,330]]},{\"id\":\"p7\",\"n\":\"Bierstelle I Pub\",\"t\":[\"bar\",\"food\",\"food_store\",\"grocery_store\",\"liquor_store\",\"pub\",\"restaurant\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.908385499999998,-49.079791099999994],\"a\":\"R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540\",\"q\":[4.9,124],\"h\":[\"segunda-feira: Fechado\",\"terça-feira,quarta-feira,quinta-feira: 15:30 – 00:00\",\"sexta-feira: 15:30 – 00:30\",\"sábado: 14:00 – 00:30\",\"domingo: 11:00 – 23:00\"],\"f\":{\"goodForGroups\":true},\"geo_km\":[51.2,47.9,53.6],\"hp\":{\"conhecidos\":7,\"dias\":[1,6,6],\"janela_tipica\":[0,150,360],\"janela_max\":[60,360,360]},\"hd\":[[0,0,0],[0,150,360],[0,150,360]]},{\"id\":\"p8\",\"n\":\"E-10 Tap House\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9220957,-49.0638167],\"a\":\"R. Curt Hering, 33 - sala 7 - Centro, Blumenau - SC, 89010-030\",\"q\":[4.8,149],\"h\":[\"segunda-feira: 17:00 – 00:00\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 16:30 – 00:00\",\"sábado: 10:00 – 00:00\",\"domingo: 10:00 – 18:00\"],\"f\":{\"goodForChildren\":false,\"liveMusic\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":true},\"geo_km\":[49.1,49.4,55.8],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,6],\"janela_tipica\":[0,90,360],\"janela_max\":[120,360,360]},\"hd\":[[0,60,360],[0,90,360],[0,90,360]]},{\"id\":\"p9\",\"n\":\"Tour Nugali Chocolates - Fábrica\",\"t\":[\"candy_store\",\"chocolate_shop\",\"confectionery\",\"dessert_shop\",\"food\",\"food_store\",\"museum\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6772705,-49.1824405],\"a\":\"Rua Testo Alto, 4848 - Testo Alto, Pomerode - SC, 89107-000\",\"q\":[4.9,24128],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 18:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[73.8,24.4,33.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,360,0],[180,360,0]]},{\"id\":\"p10\",\"n\":\"Parque Vila Germânica\",\"t\":[\"event_venue\",\"park\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.915820699999998,-49.085123100000004],\"a\":\"R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-200\",\"q\":[4.8,11625],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 00:00\"],\"geo_km\":[51.3,48.7,53.6],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[240,360,360],\"janela_max\":[240,360,360]},\"hd\":[[240,360,360],[240,360,360],[240,360,360]]},{\"id\":\"p11\",\"n\":\"Biergarten Pomerânia\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7404325,-49.175846],\"a\":\"R. XV de Novembro, 367 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.9,4909],\"h\":[\"segunda-feira,quinta-feira,sexta-feira: 11:45 – 16:00, 18:00 – 22:00\",\"terça-feira,quarta-feira: Fechado\",\"sábado: 11:30 – 23:00\",\"domingo: 11:30 – 16:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[69,30.7,36.2],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,4],\"janela_tipica\":[15,240,240],\"janela_max\":[30,360,300]},\"hd\":[[15,240,240],[0,0,0],[0,0,0]]},{\"id\":\"p12\",\"n\":\"Catedral São Paulo Apóstolo\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.919644599999998,-49.0661452],\"a\":\"R. XV de Novembro, 955 - Centro, Blumenau - SC, 89010-003\",\"q\":[4.8,5065],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 06:00 – 20:00\"],\"geo_km\":[49.4,49.1,55.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,120],\"janela_max\":[360,360,120]},\"hd\":[[360,360,120],[360,360,120],[360,360,120]]},{\"id\":\"p13\",\"n\":\"Wunderwald\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8052578,-49.1656532],\"a\":\"Avenida - R. XV de Novembro, 8444 - Testo Central, Pomerode - SC, 89107-000\",\"q\":[4.8,4456],\"h\":[\"segunda-feira,terça-feira,quarta-feira: 11:30 – 15:00, 18:00 – 22:00\",\"quinta-feira,sexta-feira: 11:30 – 15:30, 18:00 – 22:00\",\"sábado: 11:30 – 16:00, 18:00 – 22:30\",\"domingo: 11:30 – 16:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_EXPENSIVE\",\"geo_km\":[64.1,37.4,40.2],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,6],\"janela_tipica\":[30,210,240],\"janela_max\":[30,240,270]},\"hd\":[[30,180,240],[30,180,240],[30,180,240]]},{\"id\":\"p14\",\"n\":\"Santuário Nossa Senhora de Aparecida\",\"t\":[\"church\",\"place_of_worship\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8851221,-49.081775799999996],\"a\":\"R. Paris, 150 - Itoupava Norte, Blumenau - SC, 89052-510\",\"q\":[4.9,1547],\"geo_km\":[52.5,45.3,51.9],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p15\",\"n\":\"Container da Serra\",\"t\":[\"food\",\"meal_takeaway\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6254623,-49.516577299999994],\"a\":\"SC-477 - São João da Esperança, Dr. Pedrinho - SC, 89126-000\",\"q\":[4.9,955],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira: Fechado\",\"sexta-feira,sábado,domingo: 08:00 – 18:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":false,\"menuForChildren\":false,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"priceRange\":{\"startPrice\":{\"currencyCode\":\"BRL\",\"units\":\"20\"},\"endPrice\":{\"currencyCode\":\"BRL\",\"units\":\"40\"}},\"geo_km\":[104.3,46.4,0],\"hp\":{\"conhecidos\":7,\"dias\":[3,3,0],\"janela_tipica\":[0,0,0],\"janela_max\":[240,360,0]},\"hd\":[[0,0,0],[0,0,0],[0,0,0]]},{\"id\":\"p16\",\"n\":\"Igreja ADBLU\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.908310099999998,-49.073101699999995],\"a\":\"R. São Paulo, 890 - Victor Konder, Blumenau - SC, 89012-000\",\"q\":[4.9,786],\"h\":[\"segunda-feira,quarta-feira: 08:00 – 12:00, 14:00 – 18:00\",\"terça-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 21:00\",\"quinta-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 22:00\",\"sexta-feira: 08:00 – 12:00, 14:00 – 18:00, 21:00 – 23:00\",\"sábado: Fechado\",\"domingo: 10:00 – 12:00, 19:00 – 22:00\"],\"geo_km\":[50.6,47.9,54.1],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,4],\"janela_tipica\":[240,240,120],\"janela_max\":[240,240,180]},\"hd\":[[240,240,0],[240,240,120],[240,240,0]]},{\"id\":\"p17\",\"n\":\"Bavihaus Blumenau\",\"t\":[\"liquor_store\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9110119,-49.109491000000006],\"a\":\"Rua Frei Estanislau Schaette, 1839 - Água Verde, Blumenau - SC, 89037-003\",\"q\":[4.8,858],\"h\":[\"segunda-feira,terça-feira: 09:00 – 23:00\",\"quarta-feira,quinta-feira,sexta-feira: 09:00 – 00:00\",\"sábado: 08:00 – 00:00\",\"domingo: 08:00 – 22:00\"],\"geo_km\":[53.7,48.2,51.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[180,360,360],\"janela_max\":[240,360,360]},\"hd\":[[180,360,300],[180,360,300],[180,360,360]]},{\"id\":\"p18\",\"n\":\"Queijos Pomerode\",\"t\":[\"food\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.739456200000003,-49.1729074],\"a\":\"R. dos Atiradores, 71 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.8,728],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado: 09:00 – 19:00\",\"domingo: 10:00 – 16:00\"],\"geo_km\":[68.8,30.5,36.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,6],\"janela_tipica\":[180,360,60],\"janela_max\":[180,360,60]},\"hd\":[[180,360,60],[180,360,60],[180,360,60]]},{\"id\":\"p19\",\"n\":\"Wow Park\",\"t\":[\"amusement_park\",\"banquet_hall\",\"event_venue\",\"playground\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.863694799999998,-49.0926064],\"a\":\"BR-470, 3000 - Salto Norte, Blumenau - SC, 89065-800\",\"q\":[4.8,659],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 12:00 – 22:00\",\"sábado: 10:00 – 22:00\",\"domingo: 11:00 – 21:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[54.6,42.9,49.7],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,7],\"janela_tipica\":[0,360,240],\"janela_max\":[120,360,240]},\"hd\":[[0,360,240],[0,360,240],[0,360,240]]},{\"id\":\"p20\",\"n\":\"Blu Padel e Esportes de Areia Ltda\",\"t\":[\"sports_club\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.894097,-49.0816459],\"a\":\"R. São Paulo, 2815 - Itoupava Seca, Blumenau - SC, 89030-001\",\"q\":[4.9,379],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 06:00 – 23:30\",\"sábado: 07:00 – 20:00\",\"domingo: 09:00 – 22:00\"],\"geo_km\":[52,46.3,52.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,330],\"janela_max\":[360,360,330]},\"hd\":[[360,360,330],[360,360,330],[360,360,330]]},{\"id\":\"p21\",\"n\":\"Shalom Igreja - Primeira Igreja Batista em Blumenau\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9311975,-49.0549696],\"a\":\"R. Pref. Frederico Busch Júnior, 455 - Garcia, Blumenau - SC, 89020-400\",\"q\":[4.9,334],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: Fechado\",\"sábado: 14:00 – 22:00\",\"domingo: 09:30 – 11:30, 16:00 – 21:30\"],\"geo_km\":[47.9,50.5,57.1],\"hp\":{\"conhecidos\":7,\"dias\":[1,2,2],\"janela_tipica\":[0,0,0],\"janela_max\":[120,240,240]},\"hd\":[[0,0,0],[0,0,0],[0,0,0]]},{\"id\":\"p22\",\"n\":\"Paróquia Nossa Senhora Imaculada Conceição - Mais informações acesse o site.\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.904869100000003,-49.0862121],\"a\":\"R. Joinville, 665 - Vila Nova, Blumenau - SC, 89035-200\",\"q\":[4.8,343],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 12:00, 13:30 – 17:30\",\"sábado: 08:00 – 11:30\",\"domingo: Fechado\"],\"geo_km\":[51.9,47.5,52.8],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,0],\"janela_tipica\":[240,240,0],\"janela_max\":[240,240,0]},\"hd\":[[240,240,0],[240,240,0],[240,240,0]]},{\"id\":\"p23\",\"n\":\"Igreja Luterana de Blumenau\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9246001,-49.055608299999996],\"a\":\"R. Amazonas, 119 - Garcia, Blumenau - SC, 89020-001\",\"q\":[4.8,334],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[48.2,49.7,56.6],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p24\",\"n\":\"Igreja Bola de Neve\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9094581,-49.1081619],\"a\":\"Rua Frei Estanislau Schaette, 1592 - Água Verde, Blumenau - SC, 89037-002\",\"q\":[4.8,287],\"geo_km\":[53.7,48.1,51.4],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p25\",\"n\":\"Paróquia Cristo Rei\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.923690900000004,-49.100297399999995],\"a\":\"R. João Pessoa, 3085 - Velha, Blumenau - SC, 89036-004\",\"q\":[4.8,284],\"h\":[\"segunda-feira,domingo: Fechado\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 12:00, 14:00 – 18:00\",\"sábado: 08:00 – 12:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[52.3,49.6,53],\"hp\":{\"conhecidos\":7,\"dias\":[5,4,0],\"janela_tipica\":[240,240,0],\"janela_max\":[240,240,0]},\"hd\":[[0,0,0],[240,240,0],[240,240,0]]},{\"id\":\"p26\",\"n\":\"Museu do Cristal de Blumenau Mozart Crystal\",\"t\":[\"museum\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.888120599999997,-49.119391099999994],\"a\":\"R. Bahia, 4253 - Mezanino, Blumenau - SC, 89032-000\",\"q\":[4.9,160],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 09:00 – 18:00\",\"sábado,domingo: 09:00 – 13:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[55.7,45.8,49.1],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,360,0],[180,360,0]]},{\"id\":\"p27\",\"n\":\"Parque do Garcia (Prefeito Carlos Curt Zadrozny)\",\"t\":[\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.963160900000002,-49.077829],\"a\":\"R. Germano Roeder, 110 - Progresso, Blumenau - SC, 89026-250\",\"q\":[4.8,192],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 05:00 – 23:00\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[48.7,53.9,57.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,300],\"janela_max\":[360,360,300]},\"hd\":[[360,360,300],[360,360,300],[360,360,300]]},{\"id\":\"p28\",\"n\":\"Cachaçaria Wilbert - Alambique de cachaça - Licores e Bitter - Pomerode Blumenau - Fábrica de licores e cachaça\",\"t\":[\"liquor_store\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.838646999999998,-49.1593514],\"a\":\"Rua dos atiradores n•13315 - Testo Central, Pomerode - SC, 89107-000\",\"q\":[4.9,156],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 07:30 – 18:30\",\"sábado: 07:30 – 17:00\",\"domingo: 09:00 – 11:00, 14:00 – 17:00\"],\"geo_km\":[61.7,40.9,42.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,5],\"janela_tipica\":[270,360,30],\"janela_max\":[270,360,30]},\"hd\":[[270,360,30],[270,360,30],[270,360,30]]},{\"id\":\"p29\",\"n\":\"Kekshaus Emporium\",\"t\":[\"diner\",\"food\",\"food_store\",\"grocery_store\",\"restaurant\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6957515,-49.1737937],\"a\":\"Rua Testo Alto, 2131 - Testo Alto, Pomerode - SC, 89107-000\",\"q\":[4.8,156],\"h\":[\"segunda-feira,terça-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 18:00\",\"quarta-feira: Fechado\"],\"geo_km\":[71.9,25.9,34.9],\"hp\":{\"conhecidos\":7,\"dias\":[6,6,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,360,0],[0,0,0]]},{\"id\":\"p30\",\"n\":\"Blauer Berg Cervejaria\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7734103,-49.272880099999995],\"a\":\"Km 5845 - SC-417, 4 - Das Capitais, Timbó - SC, 89120-000\",\"q\":[4.8,156],\"h\":[\"segunda-feira: 09:00 – 18:00\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 18:00\",\"sábado,domingo: Fechado\"],\"f\":{\"goodForChildren\":false,\"liveMusic\":false,\"menuForChildren\":false,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"priceRange\":{\"startPrice\":{\"currencyCode\":\"BRL\",\"units\":\"80\"},\"endPrice\":{\"currencyCode\":\"BRL\",\"units\":\"100\"}},\"geo_km\":[75.1,38,29.3],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,0],\"janela_tipica\":[240,360,0],\"janela_max\":[240,360,0]},\"hd\":[[180,360,0],[240,360,0],[240,360,0]]},{\"id\":\"p31\",\"n\":\"Arca Ministério\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8557904,-49.1006785],\"a\":\"R. Herbert André Lubow, 157 - Itoupavazinha, Blumenau - SC, 89066-352\",\"q\":[4.9,127],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sábado: Fechado\",\"sexta-feira: 21:00 – 23:30\",\"domingo: 18:00 – 21:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[55.7,42.1,48.6],\"hp\":{\"conhecidos\":7,\"dias\":[0,0,2],\"janela_tipica\":[0,0,0],\"janela_max\":[0,0,180]},\"hd\":[[0,0,0],[0,0,0],[0,0,0]]},{\"id\":\"p32\",\"n\":\"Feirinha Comunitária Amigos do Pinhal\",\"t\":[\"food\",\"food_store\",\"grocery_store\",\"market\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.615487599999998,-49.4023593],\"a\":\"Estr. Geral Alto Cedros - Cedro Alto, Rio dos Cedros - SC, 89121-000\",\"q\":[4.8,146],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira: Fechado\",\"sexta-feira: 13:00 – 19:00\",\"sábado,domingo: 08:30 – 19:00\"],\"geo_km\":[95.4,35.5,11.4],\"hp\":{\"conhecidos\":7,\"dias\":[2,3,3],\"janela_tipica\":[0,0,0],\"janela_max\":[210,360,60]},\"hd\":[[0,0,0],[0,0,0],[0,0,0]]},{\"id\":\"p33\",\"n\":\"Diocese de Blumenau\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.9198876,-49.066541199999996],\"a\":\"R. 7 de Setembro, 1086 - Centro, Blumenau - SC, 89010-204\",\"q\":[4.8,117],\"geo_km\":[49.4,49.2,55.4],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p34\",\"n\":\"Oceanic Aquarium\",\"t\":[\"amusement_center\",\"amusement_park\",\"aquarium\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-27.005585399999998,-48.6164154],\"a\":\"R. 4000, 133 - Centro, Balneário Camboriú - SC, 88330-180\",\"q\":[4.8,96900],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 09:00 – 18:00\",\"sábado,domingo: 09:00 – 19:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[11,74.6,98.8],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,2],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,60]},\"hd\":[[180,360,0],[180,360,0],[180,360,0]]},{\"id\":\"p35\",\"n\":\"Pórtico de Pomerode\",\"t\":[\"tour_agency\",\"tourist_information_center\",\"travel_agency\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7440346,-49.1745324],\"a\":\"Ac. Jorge Lacerda, 821 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.8,5476],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 17:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[68.6,31,36.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,300,0],\"janela_max\":[180,300,0]},\"hd\":[[180,300,0],[180,300,0],[180,300,0]]},{\"id\":\"p36\",\"n\":\"SCAR Centro Cultural\",\"t\":[\"cultural_center\",\"event_venue\",\"performing_arts_theater\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.478019699999997,-49.0805778],\"a\":\"R. Jorge Czerniewicz, 160 - Czerniewicz, Jaraguá do Sul - SC, 89255-000\",\"q\":[4.9,2860],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 21:30\",\"sábado: 08:00 – 12:00\",\"domingo: Fechado\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[83.7,0,46.4],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,5],\"janela_tipica\":[240,360,210],\"janela_max\":[240,360,210]},\"hd\":[[240,360,210],[240,360,210],[240,360,210]]},{\"id\":\"p37\",\"n\":\"Morro São Bernardo\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.7461643,-49.3048401],\"a\":\"R. Alto São Bernardo - Rio dos Cedros, SC, 89121-000\",\"q\":[4.9,732],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 07:00 – 20:00\"],\"geo_km\":[79.4,37.2,25],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[300,360,120],\"janela_max\":[300,360,120]},\"hd\":[[300,360,120],[300,360,120],[300,360,120]]},{\"id\":\"p38\",\"n\":\"Ponte do Imigrante\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.826512599999997,-49.276163499999996],\"a\":\"Ponte Complexo Jardim do Imigrante - nº 211 - Centro, Timbó - SC, 89120-000\",\"q\":[4.8,582],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[72.7,43.4,32.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p39\",\"n\":\"Praia do Centro\",\"t\":[\"beach\",\"natural_feature\"],\"r\":[\"Vale Europeu\"],\"c\":[-27.1047965,-48.6128632],\"a\":\"Praia do Centro, Santa Catarina, 88220-000\",\"q\":[4.8,362],\"geo_km\":[0,83.7,104.3],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p40\",\"n\":\"Cachoeira Da Pedra Furada\",\"t\":[\"adventure_sports_center\",\"sports_activity_location\",\"sports_complex\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9044858,-49.451372],\"a\":\"Benedito Novo - SC, 89124-000\",\"q\":[4.9,271],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 17:00\"],\"geo_km\":[86,60,31.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[240,300,0],\"janela_max\":[240,300,0]},\"hd\":[[240,300,0],[240,300,0],[240,300,0]]},{\"id\":\"p41\",\"n\":\"Pousada Salto Donner\",\"t\":[\"guest_house\",\"hotel\",\"inn\",\"lodging\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7572667,-49.457463499999996],\"a\":\"R. da Glória, 63 - Salto Donner, Dr. Pedrinho - SC, 89126-000\",\"q\":[5,146],\"geo_km\":[92.2,48.7,15.8],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p42\",\"n\":\"Camping e Cabanas Minatti & Ramos\",\"t\":[\"campground\",\"camping_cabin\",\"cottage\",\"lodging\",\"park\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.5561981,-49.479280499999994],\"a\":\"Estrada Geral Pedra Preta - Barra do Avencal, Rio dos Cedros - SC, 89121-000\",\"q\":[4.9,171],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[105.4,40.6,8.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p43\",\"n\":\"Praia da Solidão\",\"t\":[\"landmark\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9297115,-48.6250001],\"a\":\"R. Samuel Heusi Júnior - Praia Brava, Itajaí - SC, 88306\",\"q\":[4.8,189],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[19.5,67.6,94.8],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p44\",\"n\":\"Cavalgada Fernandes - Rio dos Cedros\",\"t\":[\"campground\",\"lodging\",\"park\",\"rv_park\",\"tour_agency\",\"travel_agency\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6031342,-49.3592108],\"a\":\"Estr. Mun. 409 - Cedro Alto, Rio dos Cedros - SC, 89121-000\",\"q\":[4.8,112],\"h\":[\"segunda-feira,terça-feira: Fechado\",\"quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 07:30 – 19:00\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[92.7,31,15.8],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,5],\"janela_tipica\":[270,360,60],\"janela_max\":[270,360,60]},\"hd\":[[0,0,0],[0,0,0],[270,360,60]]}]}",
+      "preferences": {
+        "dias": 3,
+        "regioes": [
+          "Vale Europeu"
+        ],
+        "interesses": [
+          "gastronomia"
+        ],
+        "texto": "Quero visitar Norden Blumenau.",
+        "data_inicio": "2026-11-16"
+      },
+      "bases": [
+        [
+          "Vale Europeu",
+          "base_ValeEuropeu",
+          "Vale Europeu"
+        ]
+      ],
+      "requestId": "n8n-47",
+      "startedAt": 1790043687622,
+      "preparedAt": 1790043689981,
+      "metrics": {
+        "rows": 114,
+        "invalid": 0,
+        "duplicates": 29,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 85,
+        "selected": 44,
+        "budget": 44,
+        "expanded": false,
+        "lowConfidence": false,
+        "sparse": false,
+        "unknownTermCount": 0,
+        "missingInterestCount": 0,
+        "contextChars": 25826,
+        "beforeModelMs": 1906,
+        "preprocessingMs": 456
+      }
+    },
+    "plan": {
+      "dias": [
+        {
+          "dia": 1,
+          "locais": [
+            {
+              "id": "p1",
+              "periodo": "noite",
+              "duracao_minutos": 180
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "locais": [
+            {
+              "id": "p6",
+              "periodo": "tarde",
+              "duracao_minutos": 120
+            },
+            {
+              "id": "p4",
+              "periodo": "noite",
+              "duracao_minutos": 180
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "locais": [
+            {
+              "id": "p7",
+              "periodo": "tarde",
+              "duracao_minutos": 120
+            },
+            {
+              "id": "p8",
+              "periodo": "noite",
+              "duracao_minutos": 180
+            }
+          ]
+        }
+      ]
+    },
+    "gate": {
+      "event": "explorasc_quality_gate",
+      "requestId": "n8n-47",
+      "passed": true,
+      "initialPassed": true,
+      "initialReasons": [],
+      "reasons": [],
+      "uncertainties": [],
+      "correctionAttempted": false,
+      "firstCallElapsedMs": 2437,
+      "correctionElapsedMs": 0,
+      "totalMs": 4976,
+      "result": "passed_direct"
+    },
+    "factualAudit": [
+      {
+        "id": "p1",
+        "realId": "ChIJS2KSgXAf35QRR0dAu9IrGEc",
+        "day": 1,
+        "order": 1,
+        "facts": {
+          "name": "Norden Blumenau",
+          "latitude": -26.8996482,
+          "longitude": -49.0755755,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "address": "R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002",
+          "rating": 4.8,
+          "reviews": 4557,
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 17:00 – 00:00",
+            "quarta-feira: 17:00 – 00:00",
+            "quinta-feira: 17:00 – 00:00",
+            "sexta-feira: 17:00 – 00:00",
+            "sábado: 11:00 – 00:00",
+            "domingo: 11:00 – 00:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.liveMusic",
+              "value": true
+            },
+            {
+              "field": "attrs.allowsDogs",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 4557
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p6",
+        "realId": "ChIJs3pZ_3sf35QRA0qdYi-VaxI",
+        "day": 2,
+        "order": 2,
+        "facts": {
+          "name": "La Vinoteca Emporium & Bistrô",
+          "latitude": -26.8957181,
+          "longitude": -49.08784,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "bar",
+            "event_venue",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "restaurant",
+            "store",
+            "wine_bar"
+          ],
+          "address": "R. Gustavo Salinger, 651 - Itoupava Seca, Blumenau - SC, 89030-310",
+          "rating": 4.9,
+          "reviews": 236,
+          "attrs": {
+            "goodForChildren": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 14:00 – 23:00",
+            "quarta-feira: 14:00 – 23:30",
+            "quinta-feira: 14:00 – 23:30",
+            "sexta-feira: 14:00 – 23:30",
+            "sábado: 11:00 – 23:00",
+            "domingo: Fechado"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. O cadastro informa que aceita cães. Cardápio infantil informado no cadastro. Avaliação registrada: 4,9/5 (236 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.allowsDogs",
+              "value": true
+            },
+            {
+              "field": "attrs.menuForChildren",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.9
+            },
+            {
+              "field": "reviews",
+              "value": 236
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p4",
+        "realId": "ChIJn7C1hsAY35QRFLRPknOtR6Y",
+        "day": 2,
+        "order": 3,
+        "facts": {
+          "name": "Omas Haus BrewPub - Blumenau",
+          "latitude": -26.917370299999998,
+          "longitude": -49.0619037,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "american_restaurant",
+            "bar",
+            "barbecue_restaurant",
+            "food",
+            "hamburger_restaurant",
+            "pub",
+            "restaurant"
+          ],
+          "address": "R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020",
+          "rating": 4.8,
+          "reviews": 644,
+          "attrs": {
+            "menuForChildren": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 17:00 – 23:45",
+            "quarta-feira: 17:00 – 23:45",
+            "quinta-feira: 17:00 – 23:45",
+            "sexta-feira: 17:00 – 23:45",
+            "sábado: 11:00 – 23:45",
+            "domingo: 11:00 – 22:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 644
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p7",
+        "realId": "ChIJH6JDSmkZ35QRqiKpviT7K60",
+        "day": 3,
+        "order": 4,
+        "facts": {
+          "name": "Bierstelle I Pub",
+          "latitude": -26.908385499999998,
+          "longitude": -49.079791099999994,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "bar",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "pub",
+            "restaurant",
+            "store"
+          ],
+          "address": "R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540",
+          "rating": 4.9,
+          "reviews": 124,
+          "attrs": {
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 15:30 – 00:00",
+            "quarta-feira: 15:30 – 00:00",
+            "quinta-feira: 15:30 – 00:00",
+            "sexta-feira: 15:30 – 00:30",
+            "sábado: 14:00 – 00:30",
+            "domingo: 11:00 – 23:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.goodForGroups",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.9
+            },
+            {
+              "field": "reviews",
+              "value": 124
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p8",
+        "realId": "ChIJM8DwE0sZ35QRGPOi1kXW5No",
+        "day": 3,
+        "order": 5,
+        "facts": {
+          "name": "E-10 Tap House",
+          "latitude": -26.9220957,
+          "longitude": -49.0638167,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "address": "R. Curt Hering, 33 - sala 7 - Centro, Blumenau - SC, 89010-030",
+          "rating": 4.8,
+          "reviews": 149,
+          "attrs": {
+            "goodForChildren": false,
+            "liveMusic": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": true
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 16:30 – 00:00",
+            "quarta-feira: 16:30 – 00:00",
+            "quinta-feira: 16:30 – 00:00",
+            "sexta-feira: 16:30 – 00:00",
+            "sábado: 10:00 – 00:00",
+            "domingo: 10:00 – 18:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (149 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.liveMusic",
+              "value": true
+            },
+            {
+              "field": "attrs.allowsDogs",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 149
+            }
+          ],
+          "kind": "source-facts"
+        }
+      }
+    ],
+    "output": {
+      "titulo": "3 dias • Vale Europeu",
+      "descricao_geral": "Planejamento de 3 dias com 5 paradas. Bases consultadas: Vale Europeu. Interesses do pedido: gastronomia. O pedido também inclui suas preferências em texto livre. As durações são estimativas de permanência.",
+      "dias": [
+        {
+          "dia": 1,
+          "data": "2026-11-16",
+          "locais": [
+            {
+              "ordem": 1,
+              "periodo": "noite",
+              "nome": "Norden Blumenau",
+              "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+              "duracao_estimada": "3h",
+              "latitude": -26.8996482,
+              "longitude": -49.0755755
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "data": "2026-11-17",
+          "locais": [
+            {
+              "ordem": 2,
+              "periodo": "tarde",
+              "nome": "La Vinoteca Emporium & Bistrô",
+              "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. Cardápio infantil informado no cadastro. Avaliação registrada: 4,9/5 (236 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.8957181,
+              "longitude": -49.08784
+            },
+            {
+              "ordem": 3,
+              "periodo": "noite",
+              "nome": "Omas Haus BrewPub - Blumenau",
+              "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+              "duracao_estimada": "3h",
+              "latitude": -26.917370299999998,
+              "longitude": -49.0619037
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "data": "2026-11-18",
+          "locais": [
+            {
+              "ordem": 4,
+              "periodo": "tarde",
+              "nome": "Bierstelle I Pub",
+              "descricao_curta": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.908385499999998,
+              "longitude": -49.079791099999994
+            },
+            {
+              "ordem": 5,
+              "periodo": "noite",
+              "nome": "E-10 Tap House",
+              "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (149 avaliações).",
+              "duracao_estimada": "3h",
+              "latitude": -26.9220957,
+              "longitude": -49.0638167
+            }
+          ]
+        }
+      ],
+      "fonte": "base_ValeEuropeu"
+    },
+    "models": [
+      {
+        "ms": 2296,
+        "tokens": {
+          "completionTokens": 133,
+          "promptTokens": 14782,
+          "totalTokens": 14915
+        }
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "ms": 3484,
+    "prepared": {
+      "catalog": [
+        {
+          "realId": "ChIJS2KSgXAf35QRR0dAu9IrGEc",
+          "name": "Norden Blumenau",
+          "lat": -26.8996482,
+          "lon": -49.0755755,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002",
+          "rating": 4.8,
+          "reviews": 4557,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 17:00 – 00:00",
+            "quarta-feira: 17:00 – 00:00",
+            "quinta-feira: 17:00 – 00:00",
+            "sexta-feira: 17:00 – 00:00",
+            "sábado: 11:00 – 00:00",
+            "domingo: 11:00 – 00:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p1"
+        },
+        {
+          "realId": "ChIJJRZ_CSkZ35QR0RiK7M68cTQ",
+          "name": "Oktoberfest Blumenau",
+          "lat": -26.9155433,
+          "lon": -49.084672499999996,
+          "types": [
+            "bar",
+            "event_venue"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-900",
+          "rating": 4.8,
+          "reviews": 3882,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 00:00",
+            "terça-feira: 08:00 – 00:00",
+            "quarta-feira: 08:00 – 00:00",
+            "quinta-feira: 08:00 – 00:00",
+            "sexta-feira: 08:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 00:00"
+          ],
+          "id": "p2"
+        },
+        {
+          "realId": "ChIJLcI9Wi8f35QRLpz648Y_Wyk",
+          "name": "Mundo Animal Lanchonete Temática - Blumenau",
+          "lat": -26.886530999999998,
+          "lon": -49.0687685,
+          "types": [
+            "american_restaurant",
+            "diner",
+            "food",
+            "hamburger_restaurant",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Shopping Park Europeu 1045 - Rodovia Paul Fritz Kuehnrich, 1600 - Itoupava Norte, Blumenau - SC, 89052-475",
+          "rating": 4.8,
+          "reviews": 1930,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "menuForChildren": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 18:00 – 22:00",
+            "terça-feira: 18:00 – 22:00",
+            "quarta-feira: 18:00 – 22:00",
+            "quinta-feira: 18:00 – 22:00",
+            "sexta-feira: 18:00 – 22:00",
+            "sábado: 11:00 – 14:00, 18:00 – 23:00",
+            "domingo: 11:30 – 20:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p3"
+        },
+        {
+          "realId": "ChIJn7C1hsAY35QRFLRPknOtR6Y",
+          "name": "Omas Haus BrewPub - Blumenau",
+          "lat": -26.917370299999998,
+          "lon": -49.0619037,
+          "types": [
+            "american_restaurant",
+            "bar",
+            "barbecue_restaurant",
+            "food",
+            "hamburger_restaurant",
+            "pub",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020",
+          "rating": 4.8,
+          "reviews": 644,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "menuForChildren": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 17:00 – 23:45",
+            "quarta-feira: 17:00 – 23:45",
+            "quinta-feira: 17:00 – 23:45",
+            "sexta-feira: 17:00 – 23:45",
+            "sábado: 11:00 – 23:45",
+            "domingo: 11:00 – 22:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p4"
+        },
+        {
+          "realId": "ChIJgVxJ-4Af35QRu9S9vIlTTdk",
+          "name": "Velharia",
+          "lat": -26.8981857,
+          "lon": -49.0773989,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 2192 - Itoupava Seca, Blumenau - SC, 89030-000",
+          "rating": 4.8,
+          "reviews": 382,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: 18:00 – 00:00",
+            "quinta-feira: 18:00 – 00:00",
+            "sexta-feira: 18:00 – 00:00",
+            "sábado: 17:00 – 00:00",
+            "domingo: 13:00 – 19:00"
+          ],
+          "id": "p5"
+        },
+        {
+          "realId": "ChIJs3pZ_3sf35QRA0qdYi-VaxI",
+          "name": "La Vinoteca Emporium & Bistrô",
+          "lat": -26.8957181,
+          "lon": -49.08784,
+          "types": [
+            "bar",
+            "event_venue",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "restaurant",
+            "store",
+            "wine_bar"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Gustavo Salinger, 651 - Itoupava Seca, Blumenau - SC, 89030-310",
+          "rating": 4.9,
+          "reviews": 236,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 14:00 – 23:00",
+            "quarta-feira: 14:00 – 23:30",
+            "quinta-feira: 14:00 – 23:30",
+            "sexta-feira: 14:00 – 23:30",
+            "sábado: 11:00 – 23:00",
+            "domingo: Fechado"
+          ],
+          "id": "p6"
+        },
+        {
+          "realId": "ChIJH6JDSmkZ35QRqiKpviT7K60",
+          "name": "Bierstelle I Pub",
+          "lat": -26.908385499999998,
+          "lon": -49.079791099999994,
+          "types": [
+            "bar",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "pub",
+            "restaurant",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540",
+          "rating": 4.9,
+          "reviews": 124,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 15:30 – 00:00",
+            "quarta-feira: 15:30 – 00:00",
+            "quinta-feira: 15:30 – 00:00",
+            "sexta-feira: 15:30 – 00:30",
+            "sábado: 14:00 – 00:30",
+            "domingo: 11:00 – 23:00"
+          ],
+          "id": "p7"
+        },
+        {
+          "realId": "ChIJM8DwE0sZ35QRGPOi1kXW5No",
+          "name": "E-10 Tap House",
+          "lat": -26.9220957,
+          "lon": -49.0638167,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Curt Hering, 33 - sala 7 - Centro, Blumenau - SC, 89010-030",
+          "rating": 4.8,
+          "reviews": 149,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": false,
+            "liveMusic": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": true
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 16:30 – 00:00",
+            "quarta-feira: 16:30 – 00:00",
+            "quinta-feira: 16:30 – 00:00",
+            "sexta-feira: 16:30 – 00:00",
+            "sábado: 10:00 – 00:00",
+            "domingo: 10:00 – 18:00"
+          ],
+          "id": "p8"
+        },
+        {
+          "realId": "ChIJ37q5o1nv3pQRjK8sydTYzmo",
+          "name": "Tour Nugali Chocolates - Fábrica",
+          "lat": -26.6772705,
+          "lon": -49.1824405,
+          "types": [
+            "candy_store",
+            "chocolate_shop",
+            "confectionery",
+            "dessert_shop",
+            "food",
+            "food_store",
+            "museum",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Testo Alto, 4848 - Testo Alto, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 24128,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 18:00",
+            "domingo: 09:00 – 18:00"
+          ],
+          "id": "p9"
+        },
+        {
+          "realId": "ChIJVVWFBSkZ35QRNjQYx-baeJE",
+          "name": "Parque Vila Germânica",
+          "lat": -26.915820699999998,
+          "lon": -49.085123100000004,
+          "types": [
+            "event_venue",
+            "park"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-200",
+          "rating": 4.8,
+          "reviews": 11625,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 00:00",
+            "terça-feira: 08:00 – 00:00",
+            "quarta-feira: 08:00 – 00:00",
+            "quinta-feira: 08:00 – 00:00",
+            "sexta-feira: 08:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 00:00"
+          ],
+          "id": "p10"
+        },
+        {
+          "realId": "ChIJ5wvD5Tvl3pQROVn3SteV9ro",
+          "name": "Biergarten Pomerânia",
+          "lat": -26.7404325,
+          "lon": -49.175846,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. XV de Novembro, 367 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 4909,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sexta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sábado: 11:30 – 23:00",
+            "domingo: 11:30 – 16:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "id": "p11"
+        },
+        {
+          "realId": "ChIJ2dcID8UY35QRnPyAeRe7Aec",
+          "name": "Catedral São Paulo Apóstolo",
+          "lat": -26.919644599999998,
+          "lon": -49.0661452,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. XV de Novembro, 955 - Centro, Blumenau - SC, 89010-003",
+          "rating": 4.8,
+          "reviews": 5065,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 06:00 – 20:00",
+            "terça-feira: 06:00 – 20:00",
+            "quarta-feira: 06:00 – 20:00",
+            "quinta-feira: 06:00 – 20:00",
+            "sexta-feira: 06:00 – 20:00",
+            "sábado: 06:00 – 20:00",
+            "domingo: 06:00 – 20:00"
+          ],
+          "id": "p12"
+        },
+        {
+          "realId": "ChIJbeouEHrl3pQR1ECgzDqx3Ws",
+          "name": "Wunderwald",
+          "lat": -26.8052578,
+          "lon": -49.1656532,
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Avenida - R. XV de Novembro, 8444 - Testo Central, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 4456,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "terça-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "quarta-feira: 11:30 – 15:00, 18:00 – 22:00",
+            "quinta-feira: 11:30 – 15:30, 18:00 – 22:00",
+            "sexta-feira: 11:30 – 15:30, 18:00 – 22:00",
+            "sábado: 11:30 – 16:00, 18:00 – 22:30",
+            "domingo: 11:30 – 16:00"
+          ],
+          "price": "PRICE_LEVEL_EXPENSIVE",
+          "id": "p13"
+        },
+        {
+          "realId": "ChIJbffF2-Ee35QRpeP3nJUY2cw",
+          "name": "Santuário Nossa Senhora de Aparecida",
+          "lat": -26.8851221,
+          "lon": -49.081775799999996,
+          "types": [
+            "church",
+            "place_of_worship",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Paris, 150 - Itoupava Norte, Blumenau - SC, 89052-510",
+          "rating": 4.9,
+          "reviews": 1547,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p14"
+        },
+        {
+          "realId": "ChIJucMKnJFn3pQR9125p23Uxfo",
+          "name": "Container da Serra",
+          "lat": -26.6254623,
+          "lon": -49.516577299999994,
+          "types": [
+            "food",
+            "meal_takeaway",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "SC-477 - São João da Esperança, Dr. Pedrinho - SC, 89126-000",
+          "rating": 4.9,
+          "reviews": 955,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": false,
+            "menuForChildren": false,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 08:00 – 18:00",
+            "sábado: 08:00 – 18:00",
+            "domingo: 08:00 – 18:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "priceRange": {
+            "startPrice": {
+              "currencyCode": "BRL",
+              "units": "20"
+            },
+            "endPrice": {
+              "currencyCode": "BRL",
+              "units": "40"
+            }
+          },
+          "id": "p15"
+        },
+        {
+          "realId": "ChIJNcbtUNIY35QR7lLIxnx09p4",
+          "name": "Igreja ADBLU",
+          "lat": -26.908310099999998,
+          "lon": -49.073101699999995,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 890 - Victor Konder, Blumenau - SC, 89012-000",
+          "rating": 4.9,
+          "reviews": 786,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "terça-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 21:00",
+            "quarta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quinta-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 22:00",
+            "sexta-feira: 08:00 – 12:00, 14:00 – 18:00, 21:00 – 23:00",
+            "sábado: Fechado",
+            "domingo: 10:00 – 12:00, 19:00 – 22:00"
+          ],
+          "id": "p16"
+        },
+        {
+          "realId": "ChIJd8WhCbEe35QR6M5XeBZJ2BM",
+          "name": "Bavihaus Blumenau",
+          "lat": -26.9110119,
+          "lon": -49.109491000000006,
+          "types": [
+            "liquor_store",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Frei Estanislau Schaette, 1839 - Água Verde, Blumenau - SC, 89037-003",
+          "rating": 4.8,
+          "reviews": 858,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 23:00",
+            "terça-feira: 09:00 – 23:00",
+            "quarta-feira: 09:00 – 00:00",
+            "quinta-feira: 09:00 – 00:00",
+            "sexta-feira: 09:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 22:00"
+          ],
+          "id": "p17"
+        },
+        {
+          "realId": "ChIJUx2hvALl3pQRDo7cl1rm6y8",
+          "name": "Queijos Pomerode",
+          "lat": -26.739456200000003,
+          "lon": -49.1729074,
+          "types": [
+            "food"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. dos Atiradores, 71 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 728,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 19:00",
+            "terça-feira: 09:00 – 19:00",
+            "quarta-feira: 09:00 – 19:00",
+            "quinta-feira: 09:00 – 19:00",
+            "sexta-feira: 09:00 – 19:00",
+            "sábado: 09:00 – 19:00",
+            "domingo: 10:00 – 16:00"
+          ],
+          "id": "p18"
+        },
+        {
+          "realId": "ChIJU0g8lPof35QRRWkUm7gq2_0",
+          "name": "Wow Park",
+          "lat": -26.863694799999998,
+          "lon": -49.0926064,
+          "types": [
+            "amusement_park",
+            "banquet_hall",
+            "event_venue",
+            "playground"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "BR-470, 3000 - Salto Norte, Blumenau - SC, 89065-800",
+          "rating": 4.8,
+          "reviews": 659,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 12:00 – 22:00",
+            "terça-feira: 12:00 – 22:00",
+            "quarta-feira: 12:00 – 22:00",
+            "quinta-feira: 12:00 – 22:00",
+            "sexta-feira: 12:00 – 22:00",
+            "sábado: 10:00 – 22:00",
+            "domingo: 11:00 – 21:00"
+          ],
+          "id": "p19"
+        },
+        {
+          "realId": "ChIJeQAjzcUf35QRjH1oh3JQ3IE",
+          "name": "Blu Padel e Esportes de Areia Ltda",
+          "lat": -26.894097,
+          "lon": -49.0816459,
+          "types": [
+            "sports_club"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. São Paulo, 2815 - Itoupava Seca, Blumenau - SC, 89030-001",
+          "rating": 4.9,
+          "reviews": 379,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 06:00 – 23:30",
+            "terça-feira: 06:00 – 23:30",
+            "quarta-feira: 06:00 – 23:30",
+            "quinta-feira: 06:00 – 23:30",
+            "sexta-feira: 06:00 – 23:30",
+            "sábado: 07:00 – 20:00",
+            "domingo: 09:00 – 22:00"
+          ],
+          "id": "p20"
+        },
+        {
+          "realId": "ChIJT6Cr9I4Y35QRDhHj_CGmAHs",
+          "name": "Shalom Igreja - Primeira Igreja Batista em Blumenau",
+          "lat": -26.9311975,
+          "lon": -49.0549696,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Pref. Frederico Busch Júnior, 455 - Garcia, Blumenau - SC, 89020-400",
+          "rating": 4.9,
+          "reviews": 334,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: Fechado",
+            "sábado: 14:00 – 22:00",
+            "domingo: 09:30 – 11:30, 16:00 – 21:30"
+          ],
+          "id": "p21"
+        },
+        {
+          "realId": "ChIJ-UtCHNQe35QRhrPGHgCP7C8",
+          "name": "Paróquia Nossa Senhora Imaculada Conceição - Mais informações acesse o site.",
+          "lat": -26.904869100000003,
+          "lon": -49.0862121,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Joinville, 665 - Vila Nova, Blumenau - SC, 89035-200",
+          "rating": 4.8,
+          "reviews": 343,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "terça-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "quarta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "quinta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "sexta-feira: 08:00 – 12:00, 13:30 – 17:30",
+            "sábado: 08:00 – 11:30",
+            "domingo: Fechado"
+          ],
+          "id": "p22"
+        },
+        {
+          "realId": "ChIJq6oab5EY35QR3zB5y_KNR_g",
+          "name": "Igreja Luterana de Blumenau",
+          "lat": -26.9246001,
+          "lon": -49.055608299999996,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Amazonas, 119 - Garcia, Blumenau - SC, 89020-001",
+          "rating": 4.8,
+          "reviews": 334,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p23"
+        },
+        {
+          "realId": "ChIJxc8u1rAe35QRG2GbKOyTbyY",
+          "name": "Igreja Bola de Neve",
+          "lat": -26.9094581,
+          "lon": -49.1081619,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Frei Estanislau Schaette, 1592 - Água Verde, Blumenau - SC, 89037-002",
+          "rating": 4.8,
+          "reviews": 287,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p24"
+        },
+        {
+          "realId": "ChIJs7VViTcZ35QRp5Pnv_Dk2hg",
+          "name": "Paróquia Cristo Rei",
+          "lat": -26.923690900000004,
+          "lon": -49.100297399999995,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. João Pessoa, 3085 - Velha, Blumenau - SC, 89036-004",
+          "rating": 4.8,
+          "reviews": 284,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quarta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "quinta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "sexta-feira: 08:00 – 12:00, 14:00 – 18:00",
+            "sábado: 08:00 – 12:00",
+            "domingo: Fechado"
+          ],
+          "id": "p25"
+        },
+        {
+          "realId": "ChIJMefZMxof35QRLxwu8C7QfnU",
+          "name": "Museu do Cristal de Blumenau Mozart Crystal",
+          "lat": -26.888120599999997,
+          "lon": -49.119391099999994,
+          "types": [
+            "museum",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Bahia, 4253 - Mezanino, Blumenau - SC, 89032-000",
+          "rating": 4.9,
+          "reviews": 160,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 13:00",
+            "domingo: 09:00 – 13:00"
+          ],
+          "id": "p26"
+        },
+        {
+          "realId": "ChIJaysxNwAZ35QRc6Ve6SWxYb8",
+          "name": "Parque do Garcia (Prefeito Carlos Curt Zadrozny)",
+          "lat": -26.963160900000002,
+          "lon": -49.077829,
+          "types": [
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Germano Roeder, 110 - Progresso, Blumenau - SC, 89026-250",
+          "rating": 4.8,
+          "reviews": 192,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: 05:00 – 23:00",
+            "terça-feira: 05:00 – 23:00",
+            "quarta-feira: 05:00 – 23:00",
+            "quinta-feira: 05:00 – 23:00",
+            "sexta-feira: 05:00 – 23:00",
+            "sábado: 05:00 – 23:00",
+            "domingo: 05:00 – 23:00"
+          ],
+          "id": "p27"
+        },
+        {
+          "realId": "ChIJpRL2Up7j3pQRfbhH44cFrUU",
+          "name": "Cachaçaria Wilbert - Alambique de cachaça - Licores e Bitter - Pomerode Blumenau - Fábrica de licores e cachaça",
+          "lat": -26.838646999999998,
+          "lon": -49.1593514,
+          "types": [
+            "liquor_store",
+            "store",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua dos atiradores n•13315 - Testo Central, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 07:30 – 18:30",
+            "terça-feira: 07:30 – 18:30",
+            "quarta-feira: 07:30 – 18:30",
+            "quinta-feira: 07:30 – 18:30",
+            "sexta-feira: 07:30 – 18:30",
+            "sábado: 07:30 – 17:00",
+            "domingo: 09:00 – 11:00, 14:00 – 17:00"
+          ],
+          "id": "p28"
+        },
+        {
+          "realId": "ChIJ2ynQFMbv3pQRNoWVm9BPRPU",
+          "name": "Kekshaus Emporium",
+          "lat": -26.6957515,
+          "lon": -49.1737937,
+          "types": [
+            "diner",
+            "food",
+            "food_store",
+            "grocery_store",
+            "restaurant",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Rua Testo Alto, 2131 - Testo Alto, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: Fechado",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 18:00",
+            "domingo: 09:00 – 18:00"
+          ],
+          "id": "p29"
+        },
+        {
+          "realId": "ChIJL4wfwDH63pQR_2RiX_2JWCs",
+          "name": "Blauer Berg Cervejaria",
+          "lat": -26.7734103,
+          "lon": -49.272880099999995,
+          "types": [
+            "bar",
+            "food",
+            "restaurant"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Km 5845 - SC-417, 4 - Das Capitais, Timbó - SC, 89120-000",
+          "rating": 4.8,
+          "reviews": 156,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": false,
+            "liveMusic": false,
+            "menuForChildren": false,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 08:00 – 18:00",
+            "quarta-feira: 08:00 – 18:00",
+            "quinta-feira: 08:00 – 18:00",
+            "sexta-feira: 08:00 – 18:00",
+            "sábado: Fechado",
+            "domingo: Fechado"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "priceRange": {
+            "startPrice": {
+              "currencyCode": "BRL",
+              "units": "80"
+            },
+            "endPrice": {
+              "currencyCode": "BRL",
+              "units": "100"
+            }
+          },
+          "id": "p30"
+        },
+        {
+          "realId": "ChIJOSuEkVkf35QRIihTn3PYtvg",
+          "name": "Arca Ministério",
+          "lat": -26.8557904,
+          "lon": -49.1006785,
+          "types": [
+            "church",
+            "place_of_worship"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Herbert André Lubow, 157 - Itoupavazinha, Blumenau - SC, 89066-352",
+          "rating": 4.9,
+          "reviews": 127,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 21:00 – 23:30",
+            "sábado: Fechado",
+            "domingo: 18:00 – 21:00"
+          ],
+          "id": "p31"
+        },
+        {
+          "realId": "ChIJ1dFxuGNg3pQRl6fx2tFiOuA",
+          "name": "Feirinha Comunitária Amigos do Pinhal",
+          "lat": -26.615487599999998,
+          "lon": -49.4023593,
+          "types": [
+            "food",
+            "food_store",
+            "grocery_store",
+            "market",
+            "store"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estr. Geral Alto Cedros - Cedro Alto, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.8,
+          "reviews": 146,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: Fechado",
+            "sexta-feira: 13:00 – 19:00",
+            "sábado: 08:30 – 19:00",
+            "domingo: 08:30 – 19:00"
+          ],
+          "id": "p32"
+        },
+        {
+          "realId": "ChIJs7xBc-Q4J5URYFYXAXpnLbo",
+          "name": "Diocese de Blumenau",
+          "lat": -26.9198876,
+          "lon": -49.066541199999996,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. 7 de Setembro, 1086 - Centro, Blumenau - SC, 89010-204",
+          "rating": 4.8,
+          "reviews": 117,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p33"
+        },
+        {
+          "realId": "ChIJmy6eIai32JQRw1PltseKjxQ",
+          "name": "Oceanic Aquarium",
+          "lat": -27.005585399999998,
+          "lon": -48.6164154,
+          "types": [
+            "amusement_center",
+            "amusement_park",
+            "aquarium",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. 4000, 133 - Centro, Balneário Camboriú - SC, 88330-180",
+          "rating": 4.8,
+          "reviews": 96900,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 19:00",
+            "domingo: 09:00 – 19:00"
+          ],
+          "id": "p34"
+        },
+        {
+          "realId": "ChIJA_rIEh3l3pQRuZlfrBDzTIQ",
+          "name": "Pórtico de Pomerode",
+          "lat": -26.7440346,
+          "lon": -49.1745324,
+          "types": [
+            "tour_agency",
+            "tourist_information_center",
+            "travel_agency"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Ac. Jorge Lacerda, 821 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 5476,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 17:00",
+            "terça-feira: 09:00 – 17:00",
+            "quarta-feira: 09:00 – 17:00",
+            "quinta-feira: 09:00 – 17:00",
+            "sexta-feira: 09:00 – 17:00",
+            "sábado: 09:00 – 17:00",
+            "domingo: 09:00 – 17:00"
+          ],
+          "id": "p35"
+        },
+        {
+          "realId": "ChIJhfSO3KqV3pQRIHFrECMgx0o",
+          "name": "SCAR Centro Cultural",
+          "lat": -26.478019699999997,
+          "lon": -49.0805778,
+          "types": [
+            "cultural_center",
+            "event_venue",
+            "performing_arts_theater"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Jorge Czerniewicz, 160 - Czerniewicz, Jaraguá do Sul - SC, 89255-000",
+          "rating": 4.9,
+          "reviews": 2860,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 08:00 – 21:30",
+            "terça-feira: 08:00 – 21:30",
+            "quarta-feira: 08:00 – 21:30",
+            "quinta-feira: 08:00 – 21:30",
+            "sexta-feira: 08:00 – 21:30",
+            "sábado: 08:00 – 12:00",
+            "domingo: Fechado"
+          ],
+          "id": "p36"
+        },
+        {
+          "realId": "ChIJT8vgUGf33pQRKjb0hlFchhs",
+          "name": "Morro São Bernardo",
+          "lat": -26.7461643,
+          "lon": -49.3048401,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Alto São Bernardo - Rio dos Cedros, SC, 89121-000",
+          "rating": 4.9,
+          "reviews": 732,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 07:00 – 20:00",
+            "terça-feira: 07:00 – 20:00",
+            "quarta-feira: 07:00 – 20:00",
+            "quinta-feira: 07:00 – 20:00",
+            "sexta-feira: 07:00 – 20:00",
+            "sábado: 07:00 – 20:00",
+            "domingo: 07:00 – 20:00"
+          ],
+          "id": "p37"
+        },
+        {
+          "realId": "ChIJEQgDrAX83pQRcqoiuZXRJTs",
+          "name": "Ponte do Imigrante",
+          "lat": -26.826512599999997,
+          "lon": -49.276163499999996,
+          "types": [],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Ponte Complexo Jardim do Imigrante - nº 211 - Centro, Timbó - SC, 89120-000",
+          "rating": 4.8,
+          "reviews": 582,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p38"
+        },
+        {
+          "realId": "ChIJaxJcoKSx2JQRmRh9cbghXvA",
+          "name": "Praia do Centro",
+          "lat": -27.1047965,
+          "lon": -48.6128632,
+          "types": [
+            "beach",
+            "natural_feature"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Praia do Centro, Santa Catarina, 88220-000",
+          "rating": 4.8,
+          "reviews": 362,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p39"
+        },
+        {
+          "realId": "ChIJ81zgnwdT3pQRbZxkSfZCVGY",
+          "name": "Cachoeira Da Pedra Furada",
+          "lat": -26.9044858,
+          "lon": -49.451372,
+          "types": [
+            "adventure_sports_center",
+            "sports_activity_location",
+            "sports_complex"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Benedito Novo - SC, 89124-000",
+          "rating": 4.9,
+          "reviews": 271,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 17:00",
+            "terça-feira: 08:00 – 17:00",
+            "quarta-feira: 08:00 – 17:00",
+            "quinta-feira: 08:00 – 17:00",
+            "sexta-feira: 08:00 – 17:00",
+            "sábado: 08:00 – 17:00",
+            "domingo: 08:00 – 17:00"
+          ],
+          "id": "p40"
+        },
+        {
+          "realId": "ChIJN2gYnZFD3pQRU2N6bI7qLSE",
+          "name": "Pousada Salto Donner",
+          "lat": -26.7572667,
+          "lon": -49.457463499999996,
+          "types": [
+            "guest_house",
+            "hotel",
+            "inn",
+            "lodging"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. da Glória, 63 - Salto Donner, Dr. Pedrinho - SC, 89126-000",
+          "rating": 5,
+          "reviews": 146,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [],
+          "id": "p41"
+        },
+        {
+          "realId": "ChIJO3TrH85l3pQR8Mtt_B6eVdE",
+          "name": "Camping e Cabanas Minatti & Ramos",
+          "lat": -26.5561981,
+          "lon": -49.479280499999994,
+          "types": [
+            "campground",
+            "camping_cabin",
+            "cottage",
+            "lodging",
+            "park"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estrada Geral Pedra Preta - Barra do Avencal, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.9,
+          "reviews": 171,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p42"
+        },
+        {
+          "realId": "ChIJdd-pSG7J2JQRDIiWpmi30Ts",
+          "name": "Praia da Solidão",
+          "lat": -26.9297115,
+          "lon": -48.6250001,
+          "types": [
+            "landmark",
+            "tourist_attraction"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "R. Samuel Heusi Júnior - Praia Brava, Itajaí - SC, 88306",
+          "rating": 4.8,
+          "reviews": 189,
+          "status": "OPERATIONAL",
+          "attrs": {},
+          "hours": [
+            "segunda-feira: Atendimento 24 horas",
+            "terça-feira: Atendimento 24 horas",
+            "quarta-feira: Atendimento 24 horas",
+            "quinta-feira: Atendimento 24 horas",
+            "sexta-feira: Atendimento 24 horas",
+            "sábado: Atendimento 24 horas",
+            "domingo: Atendimento 24 horas"
+          ],
+          "id": "p43"
+        },
+        {
+          "realId": "ChIJMUcL6qWK3pQRlgiDxKPpc0Y",
+          "name": "Cavalgada Fernandes - Rio dos Cedros",
+          "lat": -26.6031342,
+          "lon": -49.3592108,
+          "types": [
+            "campground",
+            "lodging",
+            "park",
+            "rv_park",
+            "tour_agency",
+            "travel_agency"
+          ],
+          "regions": [
+            "Vale Europeu"
+          ],
+          "address": "Estr. Mun. 409 - Cedro Alto, Rio dos Cedros - SC, 89121-000",
+          "rating": 4.8,
+          "reviews": 112,
+          "status": "OPERATIONAL",
+          "attrs": {
+            "goodForChildren": true,
+            "allowsDogs": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: Fechado",
+            "quarta-feira: 07:30 – 19:00",
+            "quinta-feira: 07:30 – 19:00",
+            "sexta-feira: 07:30 – 19:00",
+            "sábado: 07:30 – 19:00",
+            "domingo: 07:30 – 19:00"
+          ],
+          "id": "p44"
+        }
+      ],
+      "context": "{\"preferencias_usuario\":{\"dias\":3,\"regioes\":[\"Vale Europeu\"],\"interesses\":[\"gastronomia\"],\"texto\":\"Quero visitar Norden Blumenau.\",\"data_inicio\":\"2026-11-20\"},\"bases_consultadas\":[\"base_ValeEuropeu\"],\"selecao_ampliada\":false,\"calendario_viagem\":[{\"dia\":1,\"data\":\"2026-11-20\",\"semana\":4,\"dia_semana\":\"sexta\"},{\"dia\":2,\"data\":\"2026-11-21\",\"semana\":5,\"dia_semana\":\"sábado\"},{\"dia\":3,\"data\":\"2026-11-22\",\"semana\":6,\"dia_semana\":\"domingo\"}],\"legenda_planejamento\":{\"hd\":\"Uma linha por dia de calendario_viagem; colunas manha/tarde/noite. Minutos da maior janela contínua cadastrada nesse dia da semana. Zero = sem abertura cadastrada; null = informação ausente, incompleta ou conflitante. Prefira períodos compatíveis. Referência semanal, não confirmação em tempo real; feriados e exceções não estão confirmados.\",\"geo_km\":\"Distâncias Haversine aproximadas em km, na ordem de referencias_geograficas; linha reta, não trajeto nem tempo de viagem. Referências não são grupos ou visitas obrigatórias.\",\"hp\":\"Ordem dos vetores: manha(06–12), tarde(12–18), noite(18–24). conhecidos: dias semanais interpretados/7. dias: quantos têm alguma abertura por período. janela_tipica: mediana da maior janela contínua por período, em minutos, incluindo zero nos dias conhecidos sem abertura. janela_max: maior dessas janelas. Demais dias/desconhecidos não significam fechado. Null = desconhecido. Confira h para dias e horários exatos; use hd para as datas da viagem.\"},\"referencias_geograficas\":[{\"id\":\"p39\",\"n\":\"Praia do Centro\",\"c\":[-27.1047965,-48.6128632]},{\"id\":\"p36\",\"n\":\"SCAR Centro Cultural\",\"c\":[-26.478019699999997,-49.0805778]},{\"id\":\"p15\",\"n\":\"Container da Serra\",\"c\":[-26.6254623,-49.516577299999994]}],\"fatos_atracoes\":[{\"id\":\"p1\",\"n\":\"Norden Blumenau\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8996482,-49.0755755],\"a\":\"R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002\",\"q\":[4.8,4557],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 17:00 – 00:00\",\"sábado,domingo: 11:00 – 00:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[51.2,46.9,53.4],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,7],\"janela_tipica\":[0,60,360],\"janela_max\":[60,360,360]},\"hd\":[[0,60,360],[60,360,360],[60,360,360]]},{\"id\":\"p2\",\"n\":\"Oktoberfest Blumenau\",\"t\":[\"bar\",\"event_venue\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9155433,-49.084672499999996],\"a\":\"R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-900\",\"q\":[4.8,3882],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 00:00\"],\"geo_km\":[51.3,48.7,53.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[240,360,360],\"janela_max\":[240,360,360]},\"hd\":[[240,360,360],[240,360,360],[240,360,360]]},{\"id\":\"p3\",\"n\":\"Mundo Animal Lanchonete Temática - Blumenau\",\"t\":[\"american_restaurant\",\"diner\",\"food\",\"hamburger_restaurant\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.886530999999998,-49.0687685],\"a\":\"Shopping Park Europeu 1045 - Rodovia Paul Fritz Kuehnrich, 1600 - Itoupava Norte, Blumenau - SC, 89052-475\",\"q\":[4.8,1930],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 18:00 – 22:00\",\"sábado: 11:00 – 14:00, 18:00 – 23:00\",\"domingo: 11:30 – 20:00\"],\"f\":{\"goodForChildren\":true,\"menuForChildren\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[51.3,45.4,53.1],\"hp\":{\"conhecidos\":7,\"dias\":[2,2,7],\"janela_tipica\":[0,0,240],\"janela_max\":[60,360,300]},\"hd\":[[0,0,240],[60,120,300],[30,360,120]]},{\"id\":\"p4\",\"n\":\"Omas Haus BrewPub - Blumenau\",\"t\":[\"american_restaurant\",\"bar\",\"barbecue_restaurant\",\"food\",\"hamburger_restaurant\",\"pub\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.917370299999998,-49.0619037],\"a\":\"R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020\",\"q\":[4.8,644],\"h\":[\"segunda-feira: Fechado\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 17:00 – 23:45\",\"sábado: 11:00 – 23:45\",\"domingo: 11:00 – 22:00\"],\"f\":{\"menuForChildren\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[49.1,48.9,55.6],\"hp\":{\"conhecidos\":7,\"dias\":[2,6,6],\"janela_tipica\":[0,60,345],\"janela_max\":[60,360,345]},\"hd\":[[0,60,345],[60,360,345],[60,360,240]]},{\"id\":\"p5\",\"n\":\"Velharia\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8981857,-49.0773989],\"a\":\"R. São Paulo, 2192 - Itoupava Seca, Blumenau - SC, 89030-000\",\"q\":[4.8,382],\"h\":[\"segunda-feira,terça-feira: Fechado\",\"quarta-feira,quinta-feira,sexta-feira: 18:00 – 00:00\",\"sábado: 17:00 – 00:00\",\"domingo: 13:00 – 19:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"goodForGroups\":true},\"geo_km\":[51.4,46.7,53.1],\"hp\":{\"conhecidos\":7,\"dias\":[0,2,5],\"janela_tipica\":[0,0,360],\"janela_max\":[0,300,360]},\"hd\":[[0,0,360],[0,60,360],[0,300,60]]},{\"id\":\"p6\",\"n\":\"La Vinoteca Emporium & Bistrô\",\"t\":[\"bar\",\"event_venue\",\"food\",\"food_store\",\"grocery_store\",\"liquor_store\",\"restaurant\",\"store\",\"wine_bar\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8957181,-49.08784],\"a\":\"R. Gustavo Salinger, 651 - Itoupava Seca, Blumenau - SC, 89030-310\",\"q\":[4.9,236],\"h\":[\"segunda-feira,domingo: Fechado\",\"terça-feira: 14:00 – 23:00\",\"quarta-feira,quinta-feira,sexta-feira: 14:00 – 23:30\",\"sábado: 11:00 – 23:00\"],\"f\":{\"goodForChildren\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"geo_km\":[52.5,46.5,52.1],\"hp\":{\"conhecidos\":7,\"dias\":[1,5,5],\"janela_tipica\":[0,240,300],\"janela_max\":[60,360,330]},\"hd\":[[0,240,330],[60,360,300],[0,0,0]]},{\"id\":\"p7\",\"n\":\"Bierstelle I Pub\",\"t\":[\"bar\",\"food\",\"food_store\",\"grocery_store\",\"liquor_store\",\"pub\",\"restaurant\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.908385499999998,-49.079791099999994],\"a\":\"R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540\",\"q\":[4.9,124],\"h\":[\"segunda-feira: Fechado\",\"terça-feira,quarta-feira,quinta-feira: 15:30 – 00:00\",\"sexta-feira: 15:30 – 00:30\",\"sábado: 14:00 – 00:30\",\"domingo: 11:00 – 23:00\"],\"f\":{\"goodForGroups\":true},\"geo_km\":[51.2,47.9,53.6],\"hp\":{\"conhecidos\":7,\"dias\":[1,6,6],\"janela_tipica\":[0,150,360],\"janela_max\":[60,360,360]},\"hd\":[[0,150,360],[0,240,360],[60,360,300]]},{\"id\":\"p8\",\"n\":\"E-10 Tap House\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9220957,-49.0638167],\"a\":\"R. Curt Hering, 33 - sala 7 - Centro, Blumenau - SC, 89010-030\",\"q\":[4.8,149],\"h\":[\"segunda-feira: 17:00 – 00:00\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 16:30 – 00:00\",\"sábado: 10:00 – 00:00\",\"domingo: 10:00 – 18:00\"],\"f\":{\"goodForChildren\":false,\"liveMusic\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":true},\"geo_km\":[49.1,49.4,55.8],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,6],\"janela_tipica\":[0,90,360],\"janela_max\":[120,360,360]},\"hd\":[[0,90,360],[120,360,360],[120,360,0]]},{\"id\":\"p9\",\"n\":\"Tour Nugali Chocolates - Fábrica\",\"t\":[\"candy_store\",\"chocolate_shop\",\"confectionery\",\"dessert_shop\",\"food\",\"food_store\",\"museum\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6772705,-49.1824405],\"a\":\"Rua Testo Alto, 4848 - Testo Alto, Pomerode - SC, 89107-000\",\"q\":[4.9,24128],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 18:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[73.8,24.4,33.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,360,0],[180,360,0]]},{\"id\":\"p10\",\"n\":\"Parque Vila Germânica\",\"t\":[\"event_venue\",\"park\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.915820699999998,-49.085123100000004],\"a\":\"R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-200\",\"q\":[4.8,11625],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 00:00\"],\"geo_km\":[51.3,48.7,53.6],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[240,360,360],\"janela_max\":[240,360,360]},\"hd\":[[240,360,360],[240,360,360],[240,360,360]]},{\"id\":\"p11\",\"n\":\"Biergarten Pomerânia\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7404325,-49.175846],\"a\":\"R. XV de Novembro, 367 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.9,4909],\"h\":[\"segunda-feira,quinta-feira,sexta-feira: 11:45 – 16:00, 18:00 – 22:00\",\"terça-feira,quarta-feira: Fechado\",\"sábado: 11:30 – 23:00\",\"domingo: 11:30 – 16:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"geo_km\":[69,30.7,36.2],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,4],\"janela_tipica\":[15,240,240],\"janela_max\":[30,360,300]},\"hd\":[[15,240,240],[30,360,300],[30,240,0]]},{\"id\":\"p12\",\"n\":\"Catedral São Paulo Apóstolo\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.919644599999998,-49.0661452],\"a\":\"R. XV de Novembro, 955 - Centro, Blumenau - SC, 89010-003\",\"q\":[4.8,5065],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 06:00 – 20:00\"],\"geo_km\":[49.4,49.1,55.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,120],\"janela_max\":[360,360,120]},\"hd\":[[360,360,120],[360,360,120],[360,360,120]]},{\"id\":\"p13\",\"n\":\"Wunderwald\",\"t\":[\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8052578,-49.1656532],\"a\":\"Avenida - R. XV de Novembro, 8444 - Testo Central, Pomerode - SC, 89107-000\",\"q\":[4.8,4456],\"h\":[\"segunda-feira,terça-feira,quarta-feira: 11:30 – 15:00, 18:00 – 22:00\",\"quinta-feira,sexta-feira: 11:30 – 15:30, 18:00 – 22:00\",\"sábado: 11:30 – 16:00, 18:00 – 22:30\",\"domingo: 11:30 – 16:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":true,\"menuForChildren\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_EXPENSIVE\",\"geo_km\":[64.1,37.4,40.2],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,6],\"janela_tipica\":[30,210,240],\"janela_max\":[30,240,270]},\"hd\":[[30,210,240],[30,240,270],[30,240,0]]},{\"id\":\"p14\",\"n\":\"Santuário Nossa Senhora de Aparecida\",\"t\":[\"church\",\"place_of_worship\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8851221,-49.081775799999996],\"a\":\"R. Paris, 150 - Itoupava Norte, Blumenau - SC, 89052-510\",\"q\":[4.9,1547],\"geo_km\":[52.5,45.3,51.9],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p15\",\"n\":\"Container da Serra\",\"t\":[\"food\",\"meal_takeaway\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6254623,-49.516577299999994],\"a\":\"SC-477 - São João da Esperança, Dr. Pedrinho - SC, 89126-000\",\"q\":[4.9,955],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira: Fechado\",\"sexta-feira,sábado,domingo: 08:00 – 18:00\"],\"f\":{\"goodForChildren\":true,\"liveMusic\":false,\"menuForChildren\":false,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"priceRange\":{\"startPrice\":{\"currencyCode\":\"BRL\",\"units\":\"20\"},\"endPrice\":{\"currencyCode\":\"BRL\",\"units\":\"40\"}},\"geo_km\":[104.3,46.4,0],\"hp\":{\"conhecidos\":7,\"dias\":[3,3,0],\"janela_tipica\":[0,0,0],\"janela_max\":[240,360,0]},\"hd\":[[240,360,0],[240,360,0],[240,360,0]]},{\"id\":\"p16\",\"n\":\"Igreja ADBLU\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.908310099999998,-49.073101699999995],\"a\":\"R. São Paulo, 890 - Victor Konder, Blumenau - SC, 89012-000\",\"q\":[4.9,786],\"h\":[\"segunda-feira,quarta-feira: 08:00 – 12:00, 14:00 – 18:00\",\"terça-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 21:00\",\"quinta-feira: 08:00 – 12:00, 14:00 – 18:00, 19:00 – 22:00\",\"sexta-feira: 08:00 – 12:00, 14:00 – 18:00, 21:00 – 23:00\",\"sábado: Fechado\",\"domingo: 10:00 – 12:00, 19:00 – 22:00\"],\"geo_km\":[50.6,47.9,54.1],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,4],\"janela_tipica\":[240,240,120],\"janela_max\":[240,240,180]},\"hd\":[[240,240,120],[0,0,0],[120,0,180]]},{\"id\":\"p17\",\"n\":\"Bavihaus Blumenau\",\"t\":[\"liquor_store\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9110119,-49.109491000000006],\"a\":\"Rua Frei Estanislau Schaette, 1839 - Água Verde, Blumenau - SC, 89037-003\",\"q\":[4.8,858],\"h\":[\"segunda-feira,terça-feira: 09:00 – 23:00\",\"quarta-feira,quinta-feira,sexta-feira: 09:00 – 00:00\",\"sábado: 08:00 – 00:00\",\"domingo: 08:00 – 22:00\"],\"geo_km\":[53.7,48.2,51.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[180,360,360],\"janela_max\":[240,360,360]},\"hd\":[[180,360,360],[240,360,360],[240,360,240]]},{\"id\":\"p18\",\"n\":\"Queijos Pomerode\",\"t\":[\"food\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.739456200000003,-49.1729074],\"a\":\"R. dos Atiradores, 71 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.8,728],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado: 09:00 – 19:00\",\"domingo: 10:00 – 16:00\"],\"geo_km\":[68.8,30.5,36.4],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,6],\"janela_tipica\":[180,360,60],\"janela_max\":[180,360,60]},\"hd\":[[180,360,60],[180,360,60],[120,240,0]]},{\"id\":\"p19\",\"n\":\"Wow Park\",\"t\":[\"amusement_park\",\"banquet_hall\",\"event_venue\",\"playground\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.863694799999998,-49.0926064],\"a\":\"BR-470, 3000 - Salto Norte, Blumenau - SC, 89065-800\",\"q\":[4.8,659],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 12:00 – 22:00\",\"sábado: 10:00 – 22:00\",\"domingo: 11:00 – 21:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[54.6,42.9,49.7],\"hp\":{\"conhecidos\":7,\"dias\":[2,7,7],\"janela_tipica\":[0,360,240],\"janela_max\":[120,360,240]},\"hd\":[[0,360,240],[120,360,240],[60,360,180]]},{\"id\":\"p20\",\"n\":\"Blu Padel e Esportes de Areia Ltda\",\"t\":[\"sports_club\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.894097,-49.0816459],\"a\":\"R. São Paulo, 2815 - Itoupava Seca, Blumenau - SC, 89030-001\",\"q\":[4.9,379],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 06:00 – 23:30\",\"sábado: 07:00 – 20:00\",\"domingo: 09:00 – 22:00\"],\"geo_km\":[52,46.3,52.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,330],\"janela_max\":[360,360,330]},\"hd\":[[360,360,330],[300,360,120],[180,360,240]]},{\"id\":\"p21\",\"n\":\"Shalom Igreja - Primeira Igreja Batista em Blumenau\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9311975,-49.0549696],\"a\":\"R. Pref. Frederico Busch Júnior, 455 - Garcia, Blumenau - SC, 89020-400\",\"q\":[4.9,334],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: Fechado\",\"sábado: 14:00 – 22:00\",\"domingo: 09:30 – 11:30, 16:00 – 21:30\"],\"geo_km\":[47.9,50.5,57.1],\"hp\":{\"conhecidos\":7,\"dias\":[1,2,2],\"janela_tipica\":[0,0,0],\"janela_max\":[120,240,240]},\"hd\":[[0,0,0],[0,240,240],[120,120,210]]},{\"id\":\"p22\",\"n\":\"Paróquia Nossa Senhora Imaculada Conceição - Mais informações acesse o site.\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.904869100000003,-49.0862121],\"a\":\"R. Joinville, 665 - Vila Nova, Blumenau - SC, 89035-200\",\"q\":[4.8,343],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 12:00, 13:30 – 17:30\",\"sábado: 08:00 – 11:30\",\"domingo: Fechado\"],\"geo_km\":[51.9,47.5,52.8],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,0],\"janela_tipica\":[240,240,0],\"janela_max\":[240,240,0]},\"hd\":[[240,240,0],[210,0,0],[0,0,0]]},{\"id\":\"p23\",\"n\":\"Igreja Luterana de Blumenau\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9246001,-49.055608299999996],\"a\":\"R. Amazonas, 119 - Garcia, Blumenau - SC, 89020-001\",\"q\":[4.8,334],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[48.2,49.7,56.6],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p24\",\"n\":\"Igreja Bola de Neve\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9094581,-49.1081619],\"a\":\"Rua Frei Estanislau Schaette, 1592 - Água Verde, Blumenau - SC, 89037-002\",\"q\":[4.8,287],\"geo_km\":[53.7,48.1,51.4],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p25\",\"n\":\"Paróquia Cristo Rei\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.923690900000004,-49.100297399999995],\"a\":\"R. João Pessoa, 3085 - Velha, Blumenau - SC, 89036-004\",\"q\":[4.8,284],\"h\":[\"segunda-feira,domingo: Fechado\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 12:00, 14:00 – 18:00\",\"sábado: 08:00 – 12:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[52.3,49.6,53],\"hp\":{\"conhecidos\":7,\"dias\":[5,4,0],\"janela_tipica\":[240,240,0],\"janela_max\":[240,240,0]},\"hd\":[[240,240,0],[240,0,0],[0,0,0]]},{\"id\":\"p26\",\"n\":\"Museu do Cristal de Blumenau Mozart Crystal\",\"t\":[\"museum\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.888120599999997,-49.119391099999994],\"a\":\"R. Bahia, 4253 - Mezanino, Blumenau - SC, 89032-000\",\"q\":[4.9,160],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 09:00 – 18:00\",\"sábado,domingo: 09:00 – 13:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[55.7,45.8,49.1],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,60,0],[180,60,0]]},{\"id\":\"p27\",\"n\":\"Parque do Garcia (Prefeito Carlos Curt Zadrozny)\",\"t\":[\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.963160900000002,-49.077829],\"a\":\"R. Germano Roeder, 110 - Progresso, Blumenau - SC, 89026-250\",\"q\":[4.8,192],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 05:00 – 23:00\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[48.7,53.9,57.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,300],\"janela_max\":[360,360,300]},\"hd\":[[360,360,300],[360,360,300],[360,360,300]]},{\"id\":\"p28\",\"n\":\"Cachaçaria Wilbert - Alambique de cachaça - Licores e Bitter - Pomerode Blumenau - Fábrica de licores e cachaça\",\"t\":[\"liquor_store\",\"store\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.838646999999998,-49.1593514],\"a\":\"Rua dos atiradores n•13315 - Testo Central, Pomerode - SC, 89107-000\",\"q\":[4.9,156],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 07:30 – 18:30\",\"sábado: 07:30 – 17:00\",\"domingo: 09:00 – 11:00, 14:00 – 17:00\"],\"geo_km\":[61.7,40.9,42.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,5],\"janela_tipica\":[270,360,30],\"janela_max\":[270,360,30]},\"hd\":[[270,360,30],[270,300,0],[120,180,0]]},{\"id\":\"p29\",\"n\":\"Kekshaus Emporium\",\"t\":[\"diner\",\"food\",\"food_store\",\"grocery_store\",\"restaurant\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6957515,-49.1737937],\"a\":\"Rua Testo Alto, 2131 - Testo Alto, Pomerode - SC, 89107-000\",\"q\":[4.8,156],\"h\":[\"segunda-feira,terça-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 18:00\",\"quarta-feira: Fechado\"],\"geo_km\":[71.9,25.9,34.9],\"hp\":{\"conhecidos\":7,\"dias\":[6,6,0],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,0]},\"hd\":[[180,360,0],[180,360,0],[180,360,0]]},{\"id\":\"p30\",\"n\":\"Blauer Berg Cervejaria\",\"t\":[\"bar\",\"food\",\"restaurant\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7734103,-49.272880099999995],\"a\":\"Km 5845 - SC-417, 4 - Das Capitais, Timbó - SC, 89120-000\",\"q\":[4.8,156],\"h\":[\"segunda-feira: 09:00 – 18:00\",\"terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 18:00\",\"sábado,domingo: Fechado\"],\"f\":{\"goodForChildren\":false,\"liveMusic\":false,\"menuForChildren\":false,\"allowsDogs\":true,\"goodForGroups\":true,\"goodForWatchingSports\":false},\"price\":\"PRICE_LEVEL_MODERATE\",\"priceRange\":{\"startPrice\":{\"currencyCode\":\"BRL\",\"units\":\"80\"},\"endPrice\":{\"currencyCode\":\"BRL\",\"units\":\"100\"}},\"geo_km\":[75.1,38,29.3],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,0],\"janela_tipica\":[240,360,0],\"janela_max\":[240,360,0]},\"hd\":[[240,360,0],[0,0,0],[0,0,0]]},{\"id\":\"p31\",\"n\":\"Arca Ministério\",\"t\":[\"church\",\"place_of_worship\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.8557904,-49.1006785],\"a\":\"R. Herbert André Lubow, 157 - Itoupavazinha, Blumenau - SC, 89066-352\",\"q\":[4.9,127],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sábado: Fechado\",\"sexta-feira: 21:00 – 23:30\",\"domingo: 18:00 – 21:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[55.7,42.1,48.6],\"hp\":{\"conhecidos\":7,\"dias\":[0,0,2],\"janela_tipica\":[0,0,0],\"janela_max\":[0,0,180]},\"hd\":[[0,0,150],[0,0,0],[0,0,180]]},{\"id\":\"p32\",\"n\":\"Feirinha Comunitária Amigos do Pinhal\",\"t\":[\"food\",\"food_store\",\"grocery_store\",\"market\",\"store\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.615487599999998,-49.4023593],\"a\":\"Estr. Geral Alto Cedros - Cedro Alto, Rio dos Cedros - SC, 89121-000\",\"q\":[4.8,146],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira: Fechado\",\"sexta-feira: 13:00 – 19:00\",\"sábado,domingo: 08:30 – 19:00\"],\"geo_km\":[95.4,35.5,11.4],\"hp\":{\"conhecidos\":7,\"dias\":[2,3,3],\"janela_tipica\":[0,0,0],\"janela_max\":[210,360,60]},\"hd\":[[0,300,60],[210,360,60],[210,360,60]]},{\"id\":\"p33\",\"n\":\"Diocese de Blumenau\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.9198876,-49.066541199999996],\"a\":\"R. 7 de Setembro, 1086 - Centro, Blumenau - SC, 89010-204\",\"q\":[4.8,117],\"geo_km\":[49.4,49.2,55.4],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p34\",\"n\":\"Oceanic Aquarium\",\"t\":[\"amusement_center\",\"amusement_park\",\"aquarium\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-27.005585399999998,-48.6164154],\"a\":\"R. 4000, 133 - Centro, Balneário Camboriú - SC, 88330-180\",\"q\":[4.8,96900],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 09:00 – 18:00\",\"sábado,domingo: 09:00 – 19:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[11,74.6,98.8],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,2],\"janela_tipica\":[180,360,0],\"janela_max\":[180,360,60]},\"hd\":[[180,360,0],[180,360,60],[180,360,60]]},{\"id\":\"p35\",\"n\":\"Pórtico de Pomerode\",\"t\":[\"tour_agency\",\"tourist_information_center\",\"travel_agency\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7440346,-49.1745324],\"a\":\"Ac. Jorge Lacerda, 821 - Centro, Pomerode - SC, 89107-000\",\"q\":[4.8,5476],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 09:00 – 17:00\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[68.6,31,36.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[180,300,0],\"janela_max\":[180,300,0]},\"hd\":[[180,300,0],[180,300,0],[180,300,0]]},{\"id\":\"p36\",\"n\":\"SCAR Centro Cultural\",\"t\":[\"cultural_center\",\"event_venue\",\"performing_arts_theater\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.478019699999997,-49.0805778],\"a\":\"R. Jorge Czerniewicz, 160 - Czerniewicz, Jaraguá do Sul - SC, 89255-000\",\"q\":[4.9,2860],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira: 08:00 – 21:30\",\"sábado: 08:00 – 12:00\",\"domingo: Fechado\"],\"f\":{\"goodForChildren\":true},\"geo_km\":[83.7,0,46.4],\"hp\":{\"conhecidos\":7,\"dias\":[6,5,5],\"janela_tipica\":[240,360,210],\"janela_max\":[240,360,210]},\"hd\":[[240,360,210],[240,0,0],[0,0,0]]},{\"id\":\"p37\",\"n\":\"Morro São Bernardo\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.7461643,-49.3048401],\"a\":\"R. Alto São Bernardo - Rio dos Cedros, SC, 89121-000\",\"q\":[4.9,732],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 07:00 – 20:00\"],\"geo_km\":[79.4,37.2,25],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[300,360,120],\"janela_max\":[300,360,120]},\"hd\":[[300,360,120],[300,360,120],[300,360,120]]},{\"id\":\"p38\",\"n\":\"Ponte do Imigrante\",\"t\":[],\"r\":[\"Vale Europeu\"],\"c\":[-26.826512599999997,-49.276163499999996],\"a\":\"Ponte Complexo Jardim do Imigrante - nº 211 - Centro, Timbó - SC, 89120-000\",\"q\":[4.8,582],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[72.7,43.4,32.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p39\",\"n\":\"Praia do Centro\",\"t\":[\"beach\",\"natural_feature\"],\"r\":[\"Vale Europeu\"],\"c\":[-27.1047965,-48.6128632],\"a\":\"Praia do Centro, Santa Catarina, 88220-000\",\"q\":[4.8,362],\"geo_km\":[0,83.7,104.3],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p40\",\"n\":\"Cachoeira Da Pedra Furada\",\"t\":[\"adventure_sports_center\",\"sports_activity_location\",\"sports_complex\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9044858,-49.451372],\"a\":\"Benedito Novo - SC, 89124-000\",\"q\":[4.9,271],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 08:00 – 17:00\"],\"geo_km\":[86,60,31.7],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,0],\"janela_tipica\":[240,300,0],\"janela_max\":[240,300,0]},\"hd\":[[240,300,0],[240,300,0],[240,300,0]]},{\"id\":\"p41\",\"n\":\"Pousada Salto Donner\",\"t\":[\"guest_house\",\"hotel\",\"inn\",\"lodging\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.7572667,-49.457463499999996],\"a\":\"R. da Glória, 63 - Salto Donner, Dr. Pedrinho - SC, 89126-000\",\"q\":[5,146],\"geo_km\":[92.2,48.7,15.8],\"hp\":{\"conhecidos\":0,\"dias\":null,\"janela_tipica\":null,\"janela_max\":null},\"hd\":[null,null,null]},{\"id\":\"p42\",\"n\":\"Camping e Cabanas Minatti & Ramos\",\"t\":[\"campground\",\"camping_cabin\",\"cottage\",\"lodging\",\"park\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.5561981,-49.479280499999994],\"a\":\"Estrada Geral Pedra Preta - Barra do Avencal, Rio dos Cedros - SC, 89121-000\",\"q\":[4.9,171],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[105.4,40.6,8.5],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p43\",\"n\":\"Praia da Solidão\",\"t\":[\"landmark\",\"tourist_attraction\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.9297115,-48.6250001],\"a\":\"R. Samuel Heusi Júnior - Praia Brava, Itajaí - SC, 88306\",\"q\":[4.8,189],\"h\":[\"segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado,domingo: Atendimento 24 horas\"],\"geo_km\":[19.5,67.6,94.8],\"hp\":{\"conhecidos\":7,\"dias\":[7,7,7],\"janela_tipica\":[360,360,360],\"janela_max\":[360,360,360]},\"hd\":[[360,360,360],[360,360,360],[360,360,360]]},{\"id\":\"p44\",\"n\":\"Cavalgada Fernandes - Rio dos Cedros\",\"t\":[\"campground\",\"lodging\",\"park\",\"rv_park\",\"tour_agency\",\"travel_agency\"],\"r\":[\"Vale Europeu\"],\"c\":[-26.6031342,-49.3592108],\"a\":\"Estr. Mun. 409 - Cedro Alto, Rio dos Cedros - SC, 89121-000\",\"q\":[4.8,112],\"h\":[\"segunda-feira,terça-feira: Fechado\",\"quarta-feira,quinta-feira,sexta-feira,sábado,domingo: 07:30 – 19:00\"],\"f\":{\"goodForChildren\":true,\"allowsDogs\":true},\"geo_km\":[92.7,31,15.8],\"hp\":{\"conhecidos\":7,\"dias\":[5,5,5],\"janela_tipica\":[270,360,60],\"janela_max\":[270,360,60]},\"hd\":[[270,360,60],[270,360,60],[270,360,60]]}]}",
+      "preferences": {
+        "dias": 3,
+        "regioes": [
+          "Vale Europeu"
+        ],
+        "interesses": [
+          "gastronomia"
+        ],
+        "texto": "Quero visitar Norden Blumenau.",
+        "data_inicio": "2026-11-20"
+      },
+      "bases": [
+        [
+          "Vale Europeu",
+          "base_ValeEuropeu",
+          "Vale Europeu"
+        ]
+      ],
+      "requestId": "n8n-48",
+      "startedAt": 1790043729306,
+      "preparedAt": 1790043729858,
+      "metrics": {
+        "rows": 114,
+        "invalid": 0,
+        "duplicates": 29,
+        "conflicts": 0,
+        "emptyBases": 0,
+        "available": 85,
+        "selected": 44,
+        "budget": 44,
+        "expanded": false,
+        "lowConfidence": false,
+        "sparse": false,
+        "unknownTermCount": 0,
+        "missingInterestCount": 0,
+        "contextChars": 25888,
+        "beforeModelMs": 480,
+        "preprocessingMs": 72
+      }
+    },
+    "plan": {
+      "dias": [
+        {
+          "dia": 1,
+          "locais": [
+            {
+              "id": "p1",
+              "periodo": "noite",
+              "duracao_minutos": 180
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "locais": [
+            {
+              "id": "p10",
+              "periodo": "manha",
+              "duracao_minutos": 120
+            },
+            {
+              "id": "p4",
+              "periodo": "tarde",
+              "duracao_minutos": 120
+            },
+            {
+              "id": "p7",
+              "periodo": "noite",
+              "duracao_minutos": 120
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "locais": [
+            {
+              "id": "p9",
+              "periodo": "manha",
+              "duracao_minutos": 120
+            },
+            {
+              "id": "p11",
+              "periodo": "tarde",
+              "duracao_minutos": 90
+            },
+            {
+              "id": "p18",
+              "periodo": "tarde",
+              "duracao_minutos": 60
+            }
+          ]
+        }
+      ]
+    },
+    "gate": {
+      "event": "explorasc_quality_gate",
+      "requestId": "n8n-48",
+      "passed": true,
+      "initialPassed": true,
+      "initialReasons": [],
+      "reasons": [],
+      "uncertainties": [],
+      "correctionAttempted": false,
+      "firstCallElapsedMs": 2710,
+      "correctionElapsedMs": 0,
+      "totalMs": 3412,
+      "result": "passed_direct"
+    },
+    "factualAudit": [
+      {
+        "id": "p1",
+        "realId": "ChIJS2KSgXAf35QRR0dAu9IrGEc",
+        "day": 1,
+        "order": 1,
+        "facts": {
+          "name": "Norden Blumenau",
+          "latitude": -26.8996482,
+          "longitude": -49.0755755,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "address": "R. Xavantina, 100 - Boa Vista, Blumenau - SC, 89030-002",
+          "rating": 4.8,
+          "reviews": 4557,
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 17:00 – 00:00",
+            "terça-feira: 17:00 – 00:00",
+            "quarta-feira: 17:00 – 00:00",
+            "quinta-feira: 17:00 – 00:00",
+            "sexta-feira: 17:00 – 00:00",
+            "sábado: 11:00 – 00:00",
+            "domingo: 11:00 – 00:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.liveMusic",
+              "value": true
+            },
+            {
+              "field": "attrs.allowsDogs",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 4557
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p10",
+        "realId": "ChIJVVWFBSkZ35QRNjQYx-baeJE",
+        "day": 2,
+        "order": 2,
+        "facts": {
+          "name": "Parque Vila Germânica",
+          "latitude": -26.915820699999998,
+          "longitude": -49.085123100000004,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "event_venue",
+            "park"
+          ],
+          "address": "R. Alberto Stein, 199 - Velha, Blumenau - SC, 89036-200",
+          "rating": 4.8,
+          "reviews": 11625,
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 08:00 – 00:00",
+            "terça-feira: 08:00 – 00:00",
+            "quarta-feira: 08:00 – 00:00",
+            "quinta-feira: 08:00 – 00:00",
+            "sexta-feira: 08:00 – 00:00",
+            "sábado: 08:00 – 00:00",
+            "domingo: 08:00 – 00:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Visita ao parque. Avaliação registrada: 4,8/5 (11625 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "park"
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 11625
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p4",
+        "realId": "ChIJn7C1hsAY35QRFLRPknOtR6Y",
+        "day": 2,
+        "order": 3,
+        "facts": {
+          "name": "Omas Haus BrewPub - Blumenau",
+          "latitude": -26.917370299999998,
+          "longitude": -49.0619037,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "american_restaurant",
+            "bar",
+            "barbecue_restaurant",
+            "food",
+            "hamburger_restaurant",
+            "pub",
+            "restaurant"
+          ],
+          "address": "R. Paraguay, 223 - Ponta Aguda, Blumenau - SC, 89050-020",
+          "rating": 4.8,
+          "reviews": 644,
+          "attrs": {
+            "menuForChildren": false
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 17:00 – 23:45",
+            "quarta-feira: 17:00 – 23:45",
+            "quinta-feira: 17:00 – 23:45",
+            "sexta-feira: 17:00 – 23:45",
+            "sábado: 11:00 – 23:45",
+            "domingo: 11:00 – 22:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 644
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p7",
+        "realId": "ChIJH6JDSmkZ35QRqiKpviT7K60",
+        "day": 2,
+        "order": 4,
+        "facts": {
+          "name": "Bierstelle I Pub",
+          "latitude": -26.908385499999998,
+          "longitude": -49.079791099999994,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "bar",
+            "food",
+            "food_store",
+            "grocery_store",
+            "liquor_store",
+            "pub",
+            "restaurant",
+            "store"
+          ],
+          "address": "R. Eduardo Santos, 43 - Sala 10 - Victor Konder, Blumenau - SC, 89012-540",
+          "rating": 4.9,
+          "reviews": 124,
+          "attrs": {
+            "goodForGroups": true
+          },
+          "hours": [
+            "segunda-feira: Fechado",
+            "terça-feira: 15:30 – 00:00",
+            "quarta-feira: 15:30 – 00:00",
+            "quinta-feira: 15:30 – 00:00",
+            "sexta-feira: 15:30 – 00:30",
+            "sábado: 14:00 – 00:30",
+            "domingo: 11:00 – 23:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.goodForGroups",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.9
+            },
+            {
+              "field": "reviews",
+              "value": 124
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p9",
+        "realId": "ChIJ37q5o1nv3pQRjK8sydTYzmo",
+        "day": 3,
+        "order": 5,
+        "facts": {
+          "name": "Tour Nugali Chocolates - Fábrica",
+          "latitude": -26.6772705,
+          "longitude": -49.1824405,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "candy_store",
+            "chocolate_shop",
+            "confectionery",
+            "dessert_shop",
+            "food",
+            "food_store",
+            "museum",
+            "store",
+            "tourist_attraction"
+          ],
+          "address": "Rua Testo Alto, 4848 - Testo Alto, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 24128,
+          "attrs": {
+            "goodForChildren": true
+          },
+          "hours": [
+            "segunda-feira: 09:00 – 18:00",
+            "terça-feira: 09:00 – 18:00",
+            "quarta-feira: 09:00 – 18:00",
+            "quinta-feira: 09:00 – 18:00",
+            "sexta-feira: 09:00 – 18:00",
+            "sábado: 09:00 – 18:00",
+            "domingo: 09:00 – 18:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "museum"
+            },
+            {
+              "field": "attrs.goodForChildren",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.9
+            },
+            {
+              "field": "reviews",
+              "value": 24128
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p11",
+        "realId": "ChIJ5wvD5Tvl3pQROVn3SteV9ro",
+        "day": 3,
+        "order": 6,
+        "facts": {
+          "name": "Biergarten Pomerânia",
+          "latitude": -26.7404325,
+          "longitude": -49.175846,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "food",
+            "restaurant"
+          ],
+          "address": "R. XV de Novembro, 367 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.9,
+          "reviews": 4909,
+          "attrs": {
+            "goodForChildren": true,
+            "liveMusic": true,
+            "menuForChildren": true,
+            "allowsDogs": true,
+            "goodForGroups": true,
+            "goodForWatchingSports": false
+          },
+          "hours": [
+            "segunda-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "terça-feira: Fechado",
+            "quarta-feira: Fechado",
+            "quinta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sexta-feira: 11:45 – 16:00, 18:00 – 22:00",
+            "sábado: 11:30 – 23:00",
+            "domingo: 11:30 – 16:00"
+          ],
+          "price": "PRICE_LEVEL_MODERATE",
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+          "evidence": [
+            {
+              "field": "types",
+              "value": "restaurant"
+            },
+            {
+              "field": "attrs.liveMusic",
+              "value": true
+            },
+            {
+              "field": "attrs.allowsDogs",
+              "value": true
+            },
+            {
+              "field": "rating",
+              "value": 4.9
+            },
+            {
+              "field": "reviews",
+              "value": 4909
+            }
+          ],
+          "kind": "source-facts"
+        }
+      },
+      {
+        "id": "p18",
+        "realId": "ChIJUx2hvALl3pQRDo7cl1rm6y8",
+        "day": 3,
+        "order": 7,
+        "facts": {
+          "name": "Queijos Pomerode",
+          "latitude": -26.739456200000003,
+          "longitude": -49.1729074,
+          "regions": [
+            "Vale Europeu"
+          ],
+          "types": [
+            "food"
+          ],
+          "address": "R. dos Atiradores, 71 - Centro, Pomerode - SC, 89107-000",
+          "rating": 4.8,
+          "reviews": 728,
+          "attrs": {},
+          "hours": [
+            "segunda-feira: 09:00 – 19:00",
+            "terça-feira: 09:00 – 19:00",
+            "quarta-feira: 09:00 – 19:00",
+            "quinta-feira: 09:00 – 19:00",
+            "sexta-feira: 09:00 – 19:00",
+            "sábado: 09:00 – 19:00",
+            "domingo: 10:00 – 16:00"
+          ],
+          "status": "OPERATIONAL"
+        },
+        "description": {
+          "text": "Parada para conhecer este local. Avaliação registrada: 4,8/5 (728 avaliações).",
+          "evidence": [
+            {
+              "field": "rating",
+              "value": 4.8
+            },
+            {
+              "field": "reviews",
+              "value": 728
+            }
+          ],
+          "kind": "source-facts"
+        }
+      }
+    ],
+    "output": {
+      "titulo": "3 dias • Vale Europeu",
+      "descricao_geral": "Planejamento de 3 dias com 7 paradas. Bases consultadas: Vale Europeu. Interesses do pedido: gastronomia. O pedido também inclui suas preferências em texto livre. As durações são estimativas de permanência.",
+      "dias": [
+        {
+          "dia": 1,
+          "data": "2026-11-20",
+          "locais": [
+            {
+              "ordem": 1,
+              "periodo": "noite",
+              "nome": "Norden Blumenau",
+              "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+              "duracao_estimada": "3h",
+              "latitude": -26.8996482,
+              "longitude": -49.0755755
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "data": "2026-11-21",
+          "locais": [
+            {
+              "ordem": 2,
+              "periodo": "manha",
+              "nome": "Parque Vila Germânica",
+              "descricao_curta": "Visita ao parque. Avaliação registrada: 4,8/5 (11625 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.915820699999998,
+              "longitude": -49.085123100000004
+            },
+            {
+              "ordem": 3,
+              "periodo": "tarde",
+              "nome": "Omas Haus BrewPub - Blumenau",
+              "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.917370299999998,
+              "longitude": -49.0619037
+            },
+            {
+              "ordem": 4,
+              "periodo": "noite",
+              "nome": "Bierstelle I Pub",
+              "descricao_curta": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.908385499999998,
+              "longitude": -49.079791099999994
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "data": "2026-11-22",
+          "locais": [
+            {
+              "ordem": 5,
+              "periodo": "manha",
+              "nome": "Tour Nugali Chocolates - Fábrica",
+              "descricao_curta": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+              "duracao_estimada": "2h",
+              "latitude": -26.6772705,
+              "longitude": -49.1824405
+            },
+            {
+              "ordem": 6,
+              "periodo": "tarde",
+              "nome": "Biergarten Pomerânia",
+              "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+              "duracao_estimada": "1h30",
+              "latitude": -26.7404325,
+              "longitude": -49.175846
+            },
+            {
+              "ordem": 7,
+              "periodo": "tarde",
+              "nome": "Queijos Pomerode",
+              "descricao_curta": "Parada para conhecer este local. Avaliação registrada: 4,8/5 (728 avaliações).",
+              "duracao_estimada": "1h",
+              "latitude": -26.739456200000003,
+              "longitude": -49.1729074
+            }
+          ]
+        }
+      ],
+      "fonte": "base_ValeEuropeu"
+    },
+    "models": [
+      {
+        "ms": 2534,
+        "tokens": {
+          "completionTokens": 350,
+          "promptTokens": 14844,
+          "totalTokens": 15194
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+/* Render-only overrides. The actual product stylesheet is compiled into app.css. */
+html {
+  scrollbar-gutter: auto;
+  scroll-behavior: auto;
+}
+.film-root *,
+.film-root *::before,
+.film-root *::after {
+  animation: none !important;
+  transition: none !important;
+  caret-color: transparent;
+}
+.film-loading .animate-spin-slow {
+  transform: rotate(var(--loading-angle));
+}
+.film-root {
+  pointer-events: none;
+}
+.film-root header {
+  backdrop-filter: blur(16px);
+}

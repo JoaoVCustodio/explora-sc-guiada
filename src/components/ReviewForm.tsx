@@ -43,7 +43,7 @@ export const ReviewForm = ({ itineraryId, ownReview, onChanged }: {
   };
   const submit = (event: FormEvent) => { event.preventDefault(); void mutate(false); };
   return (
-    <form onSubmit={submit} className="my-6 rounded-2xl border border-border bg-card p-6" aria-busy={loading}>
+    <form onSubmit={submit} className="review-form my-6 rounded-2xl border border-border bg-card p-6" aria-busy={loading}>
       <h3 className="text-lg font-semibold">{ownReview ? "Editar minha avaliação" : "Avaliar este roteiro"}</h3>
       <fieldset disabled={loading} className="mt-4" aria-describedby={error ? `${formId}-error` : undefined}>
         <legend className="text-sm font-medium">Sua nota — de 1 a 5 estrelas</legend>

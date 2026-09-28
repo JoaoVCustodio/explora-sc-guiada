@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import { Store } from "lucide-react";
+import { CardMedia } from "@/components/CardMedia";
 import { Button } from "@/components/ui/button";
 import { getPartners } from "@/features/partners/api";
+import { resolvePartnerImage } from "@/features/media/card-images";
 import { partnerRegions, safePartnerUrl, type Partner } from "@/features/partners/selection";
 
 function PartnerCard({ partner }: { partner: Partner }) {
-  const image = safePartnerUrl(partner.image_url, "image");
-  const [failedImage, setFailedImage] = useState<string>();
+  const image = resolvePartnerImage({ name: partner.name, description: partner.description, imageUrl: partner.image_url });
   const whatsapp = safePartnerUrl(partner.whatsapp_url, "whatsapp");
   const instagram = safePartnerUrl(partner.instagram_url, "instagram");
   return (
-    <article className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-      <div className="flex aspect-video items-center justify-center bg-muted">
-        {image && image !== failedImage ? <img src={image} alt={partner.name} loading="lazy" decoding="async" referrerPolicy="no-referrer" className="h-full w-full object-cover" onError={() => setFailedImage(image)} /> : <Store className="h-10 w-10 text-muted-foreground" aria-hidden="true" />}
-      </div>
+    <article className="partner-card flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+      <CardMedia image={image} name={partner.name} className="aspect-[16/9] w-full" />
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex flex-wrap gap-2 text-xs font-medium">
           <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">Parceiro local</span>
@@ -47,7 +45,7 @@ export function PartnersSection({ regions }: { regions: readonly string[] }) {
   if (result?.key !== regionKey || !result.partners.length) return null;
   return (
     <section className="mt-10" aria-labelledby="partners-title">
-      <h2 id="partners-title" className="text-2xl font-bold">Parceiros da região</h2>
+      <h2 id="partners-title" className="section-title text-2xl font-bold">Parceiros da região</h2>
       <p className="mt-2 text-sm text-muted-foreground">Estabelecimentos parceiros que podem complementar sua viagem.</p>
       <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {result.partners.map((partner) => <PartnerCard key={partner.id} partner={partner} />)}

@@ -37,7 +37,7 @@ export const DeleteItineraryButton = ({ id, title, onDeleted }: {
 
   return (
     <div>
-      <Button type="button" variant="outline" className="min-h-11 text-destructive hover:text-destructive"
+      <Button type="button" variant="ghost" className="min-h-11 text-destructive hover:text-destructive"
         disabled={deleting || !user} aria-busy={deleting} aria-label={`Excluir roteiro ${title}`} onClick={() => void remove()}>
         {deleting ? <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Trash2 aria-hidden="true" className="h-4 w-4" />}
         {deleting ? "Excluindo..." : "Excluir"}

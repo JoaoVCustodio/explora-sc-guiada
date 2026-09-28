@@ -1,0 +1,18 @@
+{
+  "workflowId": "MDQJ97FJOBn1yoHj",
+  "productionVersionUnchanged": "42de097c-1573-41a0-b5c6-1af5d99b03e1",
+  "models": ["deepseek/deepseek-v4-flash", "google/gemini-3.1-flash-lite", "mistralai/mistral-small-2603"],
+  "modelOrderByCase": [[0,1,2],[1,2,0],[2,0,1]],
+  "executionMode": "manual",
+  "parallelGenerations": false,
+  "temperature": 0.2,
+  "maxOutputTokens": 8192,
+  "responseFormat": "json_object",
+  "maxRetries": 0,
+  "pipelineBudgetMs": 55000,
+  "providerRouting": "OpenRouter default; no provider or reasoning override",
+  "contextCheck": "SHA-256 of exact model context must match across models within each case",
+  "factualReview": "Manual closed-world comparison of title, summary and each description against source records; structural validation is not factual validation",
+  "qualityReview": ["preference adherence", "geographical coherence", "viable visit distribution", "clarity and language", "handling missing facts"],
+  "scope": "9 generation attempts; no Edge calls, user credits, publication, frontend or database changes"
+}

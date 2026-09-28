@@ -1,0 +1,33 @@
+{
+  "draft": "c752fe8d-ca95-4685-b3cd-993826ab656f",
+  "active": "42de097c-1573-41a0-b5c6-1af5d99b03e1",
+  "activeVersionUnchanged": true,
+  "connectionsUnchanged": true,
+  "unchangedNodes": [
+    {
+      "name": "Webhook",
+      "identical": true
+    },
+    {
+      "name": "Respond to Webhook",
+      "identical": true
+    },
+    {
+      "name": "OpenRouter Chat Model",
+      "identical": true
+    },
+    {
+      "name": "Validar itinerário",
+      "identical": true
+    },
+    {
+      "name": "Responder erro de validação",
+      "identical": true
+    },
+    {
+      "name": "Consultar bases selecionadas",
+      "identical": true
+    }
+  ],
+  "editedNodesMatch": true
+}

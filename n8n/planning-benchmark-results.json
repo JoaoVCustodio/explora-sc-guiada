@@ -1,0 +1,958 @@
+{
+  "model": "google/gemini-3.1-flash-lite",
+  "attempts": 4,
+  "checkedPlaces": 27,
+  "scope": "Distances are straight-line diagnostics; no routing, reassignment, rejection or retry. Schedule compatibility is conditional on weekday, not guaranteed availability.",
+  "results": [
+    {
+      "caseIndex": 0,
+      "executionId": "34",
+      "totalMs": 3883,
+      "modelMs": 2003,
+      "tokens": {
+        "completionTokens": 214,
+        "promptTokens": 7523,
+        "totalTokens": 7737
+      },
+      "candidates": 32,
+      "days": 2,
+      "visits": 4,
+      "emptyDays": [],
+      "dailyStraightLineKm": [
+        1.9,
+        1
+      ],
+      "noRegisteredOpening": 0,
+      "limitedPeriods": [],
+      "unknownPeriods": 2,
+      "hoursConflicts": 0,
+      "baseline": {
+        "executionId": "31",
+        "totalMs": 4192,
+        "modelMs": 2671,
+        "tokens": {
+          "completionTokens": 146,
+          "promptTokens": 4946,
+          "totalTokens": 5092
+        },
+        "visits": 6,
+        "dailyStraightLineKm": [
+          1.7,
+          1.4
+        ],
+        "limitedPeriods": 0
+      },
+      "modelOrderPreserved": true,
+      "frontendContractValid": true,
+      "groundingVerified": true,
+      "output": {
+        "titulo": "2 dias • Grande Florianópolis",
+        "descricao_geral": "Planejamento de 2 dias com 4 paradas. Bases consultadas: Grande Florianópolis. Interesses do pedido: praias, esportes. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Trilha Caminho dos Naufragados",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (417 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.8167156,
+                "longitude": -48.5609932
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Praia Naufragados",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,9/5 (1019 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.833558699999998,
+                "longitude": -48.5641537
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 3,
+                "periodo": "manha",
+                "nome": "Trilha Praia do Gravatá",
+                "descricao_curta": "Visita à área de trilha. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (6820 avaliações).",
+                "duracao_estimada": "2h30",
+                "latitude": -27.607526,
+                "longitude": -48.4410569
+              },
+              {
+                "ordem": 4,
+                "periodo": "tarde",
+                "nome": "Praia Mole",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (3506 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.6022459,
+                "longitude": -48.4326839
+              }
+            ]
+          }
+        ],
+        "fonte": "base_Florianopolis"
+      },
+      "diagnostics": [
+        {
+          "day": 1,
+          "legs": [
+            {
+              "from": "p25",
+              "to": "p16",
+              "straightLineKm": 1.9
+            }
+          ],
+          "totalStraightLineKm": 1.9,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p25",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p16",
+              "period": "tarde",
+              "knownDays": 0,
+              "daysWithOpening": null,
+              "typicalWindowMinutes": null,
+              "maxWindowMinutes": null,
+              "assessment": "unknown"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "legs": [
+            {
+              "from": "p5",
+              "to": "p11",
+              "straightLineKm": 1
+            }
+          ],
+          "totalStraightLineKm": 1,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p5",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p11",
+              "period": "tarde",
+              "knownDays": 0,
+              "daysWithOpening": null,
+              "typicalWindowMinutes": null,
+              "maxWindowMinutes": null,
+              "assessment": "unknown"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "executionId": "35",
+      "totalMs": 2941,
+      "modelMs": 2322,
+      "tokens": {
+        "completionTokens": 220,
+        "promptTokens": 20925,
+        "totalTokens": 21145
+      },
+      "candidates": 77,
+      "days": 3,
+      "visits": 9,
+      "emptyDays": [],
+      "dailyStraightLineKm": [
+        53.4,
+        64.3,
+        59.7
+      ],
+      "noRegisteredOpening": 0,
+      "limitedPeriods": [
+        {
+          "id": "p9",
+          "period": "tarde",
+          "knownDays": 7,
+          "daysWithOpening": 3,
+          "typicalWindowMinutes": 0,
+          "maxWindowMinutes": 360,
+          "assessment": "limited_days"
+        }
+      ],
+      "unknownPeriods": 2,
+      "hoursConflicts": 0,
+      "baseline": {
+        "executionId": "32",
+        "totalMs": 3435,
+        "modelMs": 2765,
+        "tokens": {
+          "completionTokens": 430,
+          "promptTokens": 14610,
+          "totalTokens": 15040
+        },
+        "visits": 9,
+        "dailyStraightLineKm": [
+          51.1,
+          46.5,
+          94.7
+        ],
+        "limitedPeriods": 0
+      },
+      "modelOrderPreserved": true,
+      "frontendContractValid": true,
+      "groundingVerified": true,
+      "output": {
+        "titulo": "3 dias • Vale Europeu",
+        "descricao_geral": "Planejamento de 3 dias com 9 paradas. Bases consultadas: Vale Europeu. Interesses do pedido: praias. O pedido também inclui suas preferências em texto livre. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Praia do Centro",
+                "descricao_curta": "Parada na praia. Avaliação registrada: 4,8/5 (362 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.1047965,
+                "longitude": -48.6128632
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Bierstelle I Pub",
+                "descricao_curta": "Parada no restaurante. O cadastro indica adequação para grupos. Avaliação registrada: 4,9/5 (124 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.908385499999998,
+                "longitude": -49.079791099999994
+              },
+              {
+                "ordem": 3,
+                "periodo": "noite",
+                "nome": "E-10 Tap House",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (149 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.9220957,
+                "longitude": -49.0638167
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 4,
+                "periodo": "manha",
+                "nome": "Rio dos Cedros",
+                "descricao_curta": "Parada para conhecer este local. Avaliação registrada: 4,8/5 (471 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.6450071,
+                "longitude": -49.4061266
+              },
+              {
+                "ordem": 5,
+                "periodo": "tarde",
+                "nome": "Container da Serra",
+                "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (955 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.6254623,
+                "longitude": -49.516577299999994
+              },
+              {
+                "ordem": 6,
+                "periodo": "noite",
+                "nome": "Velharia",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (382 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.8981857,
+                "longitude": -49.0773989
+              }
+            ]
+          },
+          {
+            "dia": 3,
+            "locais": [
+              {
+                "ordem": 7,
+                "periodo": "manha",
+                "nome": "Cachoeira Véu de Noiva",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (805 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.6510397,
+                "longitude": -49.5233543
+              },
+              {
+                "ordem": 8,
+                "periodo": "tarde",
+                "nome": "Gruta e Cachoeira Nossa Senhora De Fatima",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (767 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.7749544,
+                "longitude": -49.4926848
+              },
+              {
+                "ordem": 9,
+                "periodo": "noite",
+                "nome": "Omas Haus BrewPub - Blumenau",
+                "descricao_curta": "Parada no restaurante. Avaliação registrada: 4,8/5 (644 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.917370299999998,
+                "longitude": -49.0619037
+              }
+            ]
+          }
+        ],
+        "fonte": "base_ValeEuropeu"
+      },
+      "diagnostics": [
+        {
+          "day": 1,
+          "legs": [
+            {
+              "from": "p2",
+              "to": "p15",
+              "straightLineKm": 51.2
+            },
+            {
+              "from": "p15",
+              "to": "p16",
+              "straightLineKm": 2.2
+            }
+          ],
+          "totalStraightLineKm": 53.4,
+          "longLegsForReview": 1,
+          "hours": [
+            {
+              "id": "p2",
+              "period": "manha",
+              "knownDays": 0,
+              "daysWithOpening": null,
+              "typicalWindowMinutes": null,
+              "maxWindowMinutes": null,
+              "assessment": "unknown"
+            },
+            {
+              "id": "p15",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 6,
+              "typicalWindowMinutes": 150,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p16",
+              "period": "noite",
+              "knownDays": 7,
+              "daysWithOpening": 6,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "legs": [
+            {
+              "from": "p1",
+              "to": "p9",
+              "straightLineKm": 11.2
+            },
+            {
+              "from": "p9",
+              "to": "p11",
+              "straightLineKm": 53.1
+            }
+          ],
+          "totalStraightLineKm": 64.3,
+          "longLegsForReview": 1,
+          "hours": [
+            {
+              "id": "p1",
+              "period": "manha",
+              "knownDays": 0,
+              "daysWithOpening": null,
+              "typicalWindowMinutes": null,
+              "maxWindowMinutes": null,
+              "assessment": "unknown"
+            },
+            {
+              "id": "p9",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 3,
+              "typicalWindowMinutes": 0,
+              "maxWindowMinutes": 360,
+              "assessment": "limited_days"
+            },
+            {
+              "id": "p11",
+              "period": "noite",
+              "knownDays": 7,
+              "daysWithOpening": 5,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "legs": [
+            {
+              "from": "p36",
+              "to": "p41",
+              "straightLineKm": 14.1
+            },
+            {
+              "from": "p41",
+              "to": "p10",
+              "straightLineKm": 45.6
+            }
+          ],
+          "totalStraightLineKm": 59.7,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p36",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p41",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p10",
+              "period": "noite",
+              "knownDays": 7,
+              "daysWithOpening": 6,
+              "typicalWindowMinutes": 345,
+              "maxWindowMinutes": 345,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "executionId": "36",
+      "totalMs": 3577,
+      "modelMs": 2483,
+      "tokens": {
+        "completionTokens": 301,
+        "promptTokens": 18052,
+        "totalTokens": 18353
+      },
+      "candidates": 76,
+      "days": 5,
+      "visits": 12,
+      "emptyDays": [],
+      "dailyStraightLineKm": [
+        16.7,
+        3.7,
+        1.8,
+        27.4,
+        14.7
+      ],
+      "noRegisteredOpening": 0,
+      "limitedPeriods": [],
+      "unknownPeriods": 0,
+      "hoursConflicts": 0,
+      "baseline": {
+        "executionId": "33",
+        "totalMs": 3407,
+        "modelMs": 2703,
+        "tokens": {
+          "completionTokens": 366,
+          "promptTokens": 12415,
+          "totalTokens": 12781
+        },
+        "visits": 15,
+        "dailyStraightLineKm": [
+          3.6,
+          10.9,
+          10.9,
+          50.5,
+          4.3
+        ],
+        "limitedPeriods": 2
+      },
+      "modelOrderPreserved": true,
+      "frontendContractValid": true,
+      "groundingVerified": true,
+      "output": {
+        "titulo": "5 dias • Vale Europeu e Grande Florianópolis",
+        "descricao_geral": "Planejamento de 5 dias com 12 paradas. Bases consultadas: Vale Europeu, Grande Florianópolis. Interesses do pedido: praias, esportes, montanhas, gastronomia. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Praia Barra da Lagoa",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (15977 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.573907799999997,
+                "longitude": -48.4239234
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Mirante Praia Mole",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (1755 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.5973163,
+                "longitude": -48.436863300000006
+              },
+              {
+                "ordem": 3,
+                "periodo": "noite",
+                "nome": "Wooden Tap Beer - Floripa Airport",
+                "descricao_curta": "Parada no restaurante. O cadastro informa que aceita cães. O cadastro indica adequação para grupos. Avaliação registrada: 4,8/5 (239 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.6743748,
+                "longitude": -48.546581200000006
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": [
+              {
+                "ordem": 4,
+                "periodo": "manha",
+                "nome": "Trilha Praia do Matadeiro - Lagoinha do Leste",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (926 avaliações).",
+                "duracao_estimada": "4h",
+                "latitude": -27.7576643,
+                "longitude": -48.4960673
+              },
+              {
+                "ordem": 5,
+                "periodo": "tarde",
+                "nome": "Lagoa do Peri",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (8451 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.7263108,
+                "longitude": -48.507363899999994
+              }
+            ]
+          },
+          {
+            "dia": 3,
+            "locais": [
+              {
+                "ordem": 6,
+                "periodo": "manha",
+                "nome": "Trilha do Morro das Aranhas",
+                "descricao_curta": "Visita à área de trilha. O cadastro informa que aceita cães. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (2275 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.4683724,
+                "longitude": -48.376064
+              },
+              {
+                "ordem": 7,
+                "periodo": "tarde",
+                "nome": "Trilha ecológica da RPPN Morro das Aranhas",
+                "descricao_curta": "Visita à área de trilha. Avaliação registrada: 4,9/5 (158 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.4824816,
+                "longitude": -48.384229999999995
+              }
+            ]
+          },
+          {
+            "dia": 4,
+            "locais": [
+              {
+                "ordem": 8,
+                "periodo": "manha",
+                "nome": "Tour Nugali Chocolates - Fábrica",
+                "descricao_curta": "Visita ao museu. O cadastro indica adequação para crianças. Avaliação registrada: 4,9/5 (24128 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.6772705,
+                "longitude": -49.1824405
+              },
+              {
+                "ordem": 9,
+                "periodo": "tarde",
+                "nome": "Biergarten Pomerânia",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,9/5 (4909 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -26.7404325,
+                "longitude": -49.175846
+              },
+              {
+                "ordem": 10,
+                "periodo": "noite",
+                "nome": "Norden Blumenau",
+                "descricao_curta": "Parada no restaurante. Música ao vivo informada no cadastro. O cadastro informa que aceita cães. Avaliação registrada: 4,8/5 (4557 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.8996482,
+                "longitude": -49.0755755
+              }
+            ]
+          },
+          {
+            "dia": 5,
+            "locais": [
+              {
+                "ordem": 11,
+                "periodo": "manha",
+                "nome": "Cachoeira Paulista Adventure Park",
+                "descricao_curta": "Visita à área de trilha. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (2300 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.793701799999997,
+                "longitude": -49.5315115
+              },
+              {
+                "ordem": 12,
+                "periodo": "tarde",
+                "nome": "Cachoeira Da Pedra Furada",
+                "descricao_curta": "Visita ao centro de esportes de aventura. Avaliação registrada: 4,9/5 (271 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -26.9044858,
+                "longitude": -49.451372
+              }
+            ]
+          }
+        ],
+        "fonte": "base_Florianopolis, base_ValeEuropeu"
+      },
+      "diagnostics": [
+        {
+          "day": 1,
+          "legs": [
+            {
+              "from": "p16",
+              "to": "p3",
+              "straightLineKm": 2.9
+            },
+            {
+              "from": "p3",
+              "to": "p71",
+              "straightLineKm": 13.8
+            }
+          ],
+          "totalStraightLineKm": 16.7,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p16",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p3",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p71",
+              "period": "noite",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 300,
+              "maxWindowMinutes": 300,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "legs": [
+            {
+              "from": "p5",
+              "to": "p19",
+              "straightLineKm": 3.7
+            }
+          ],
+          "totalStraightLineKm": 3.7,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p5",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p19",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "legs": [
+            {
+              "from": "p29",
+              "to": "p49",
+              "straightLineKm": 1.8
+            }
+          ],
+          "totalStraightLineKm": 1.8,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p29",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p49",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "legs": [
+            {
+              "from": "p60",
+              "to": "p61",
+              "straightLineKm": 7.1
+            },
+            {
+              "from": "p61",
+              "to": "p62",
+              "straightLineKm": 20.3
+            }
+          ],
+          "totalStraightLineKm": 27.4,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p60",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 180,
+              "maxWindowMinutes": 180,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p61",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 5,
+              "typicalWindowMinutes": 240,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p62",
+              "period": "noite",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "legs": [
+            {
+              "from": "p30",
+              "to": "p44",
+              "straightLineKm": 14.7
+            }
+          ],
+          "totalStraightLineKm": 14.7,
+          "longLegsForReview": 0,
+          "hours": [
+            {
+              "id": "p30",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 180,
+              "maxWindowMinutes": 180,
+              "assessment": "supported_in_known_days"
+            },
+            {
+              "id": "p44",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 300,
+              "maxWindowMinutes": 300,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "executionId": "37",
+      "totalMs": 2660,
+      "modelMs": 2003,
+      "tokens": {
+        "completionTokens": 62,
+        "promptTokens": 12400,
+        "totalTokens": 12462
+      },
+      "candidates": 56,
+      "days": 2,
+      "visits": 2,
+      "emptyDays": [
+        2
+      ],
+      "dailyStraightLineKm": [
+        74.4,
+        0
+      ],
+      "noRegisteredOpening": 0,
+      "limitedPeriods": [
+        {
+          "id": "p1",
+          "period": "manha",
+          "knownDays": 7,
+          "daysWithOpening": 2,
+          "typicalWindowMinutes": 0,
+          "maxWindowMinutes": 180,
+          "assessment": "limited_days"
+        }
+      ],
+      "unknownPeriods": 0,
+      "hoursConflicts": 0,
+      "baseline": null,
+      "modelOrderPreserved": true,
+      "frontendContractValid": true,
+      "groundingVerified": true,
+      "output": {
+        "titulo": "2 dias • Grande Florianópolis",
+        "descricao_geral": "Planejamento de 2 dias com 2 paradas. Bases consultadas: Grande Florianópolis. Interesses do pedido: praias. O pedido também inclui suas preferências em texto livre. Dias sem paradas definidas: 2. As durações são estimativas de permanência.",
+        "dias": [
+          {
+            "dia": 1,
+            "locais": [
+              {
+                "ordem": 1,
+                "periodo": "manha",
+                "nome": "Mirante do Encanto",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (8862 avaliações).",
+                "duracao_estimada": "2h",
+                "latitude": -27.0876797,
+                "longitude": -48.6036115
+              },
+              {
+                "ordem": 2,
+                "periodo": "tarde",
+                "nome": "Praia da Armação",
+                "descricao_curta": "Visita ao atrativo turístico cadastrado. O cadastro indica adequação para crianças. Avaliação registrada: 4,8/5 (9142 avaliações).",
+                "duracao_estimada": "3h",
+                "latitude": -27.750407799999998,
+                "longitude": -48.501763700000005
+              }
+            ]
+          },
+          {
+            "dia": 2,
+            "locais": []
+          }
+        ],
+        "fonte": "base_Florianopolis"
+      },
+      "diagnostics": [
+        {
+          "day": 1,
+          "legs": [
+            {
+              "from": "p1",
+              "to": "p2",
+              "straightLineKm": 74.4
+            }
+          ],
+          "totalStraightLineKm": 74.4,
+          "longLegsForReview": 1,
+          "hours": [
+            {
+              "id": "p1",
+              "period": "manha",
+              "knownDays": 7,
+              "daysWithOpening": 2,
+              "typicalWindowMinutes": 0,
+              "maxWindowMinutes": 180,
+              "assessment": "limited_days"
+            },
+            {
+              "id": "p2",
+              "period": "tarde",
+              "knownDays": 7,
+              "daysWithOpening": 7,
+              "typicalWindowMinutes": 360,
+              "maxWindowMinutes": 360,
+              "assessment": "supported_in_known_days"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "legs": [],
+          "totalStraightLineKm": 0,
+          "longLegsForReview": 0,
+          "hours": []
+        }
+      ]
+    }
+  ]
+}

@@ -14,6 +14,18 @@ export type Database = {
   }
   public: {
     Tables: {
+      generation_wallets: {
+        Row: { user_id: string; balance: number; initial_credits: number; created_at: string }
+        Insert: never
+        Update: never
+        Relationships: []
+      }
+      generation_requests: {
+        Row: { user_id: string; id: string; input_hash: string; status: "reserved" | "completed" | "failed"; created_at: string; expires_at: string; result: Json | null }
+        Insert: never
+        Update: never
+        Relationships: []
+      }
       partners: {
         Row: {
           id: string
@@ -166,6 +178,7 @@ export type Database = {
       }
     }
     Functions: {
+      generation_credit_summary: { Args: Record<PropertyKey, never>; Returns: Json }
       community_author_name: {
         Args: { author_id: string }
         Returns: string | null

@@ -1,0 +1,60 @@
+{
+  "draftVersion": "2cd75c4d-7bfd-4285-8fee-9cd91cfda7d9",
+  "activeVersion": "42de097c-1573-41a0-b5c6-1af5d99b03e1",
+  "activeUnchanged": true,
+  "nodeCount": 16,
+  "unchangedParameters": [
+    {
+      "name": "Webhook",
+      "unchanged": true
+    },
+    {
+      "name": "Respond to Webhook",
+      "unchanged": true
+    },
+    {
+      "name": "OpenRouter Chat Model",
+      "unchanged": true
+    },
+    {
+      "name": "Validar itinerário",
+      "unchanged": true
+    },
+    {
+      "name": "Responder erro de validação",
+      "unchanged": true
+    },
+    {
+      "name": "Selecionar bases",
+      "unchanged": true
+    },
+    {
+      "name": "Consultar bases selecionadas",
+      "unchanged": true
+    },
+    {
+      "name": "Preparar candidatos",
+      "unchanged": true
+    },
+    {
+      "name": "Montar roteiro",
+      "unchanged": true
+    }
+  ],
+  "modelConnections": {
+    "ai_languageModel": [
+      [
+        {
+          "node": "Montar roteiro",
+          "type": "ai_languageModel",
+          "index": 0
+        },
+        {
+          "node": "Corrigir roteiro",
+          "type": "ai_languageModel",
+          "index": 0
+        }
+      ]
+    ]
+  }
+}

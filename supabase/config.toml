@@ -1,1 +1,36 @@
 project_id = "explora-sc"
+
+[auth]
+site_url = "https://explorasc.vercel.app"
+additional_redirect_urls = [
+  "https://explorasc.vercel.app/planejar",
+  "https://explorasc.vercel.app/auth?mode=reset",
+  "http://localhost:5173/planejar",
+  "http://localhost:5173/auth?mode=reset",
+  "http://127.0.0.1:5173/planejar",
+  "http://127.0.0.1:5173/auth?mode=reset",
+]
+
+[auth.email]
+enable_confirmations = true
+
+[auth.email.template.confirmation]
+subject = "Confirme seu e-mail | ExploraSC"
+content_path = "./supabase/templates/confirmation.html"
+
+[auth.email.template.recovery]
+subject = "Crie uma nova senha | ExploraSC"
+content_path = "./supabase/templates/recovery.html"
+
+[auth.email.template.email_change]
+subject = "Confirme seu novo e-mail | ExploraSC"
+content_path = "./supabase/templates/email_change.html"
+
+[auth.email.template.invite]
+subject = "Seu convite para o ExploraSC"
+content_path = "./supabase/templates/invite.html"
+
+[functions.generate-itinerary]
+# Authentication is verified with auth.getUser(token) before any credit/upstream call.
+# Supports current publishable keys as well as legacy JWT API keys.
+verify_jwt = false

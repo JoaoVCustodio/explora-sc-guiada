@@ -40,12 +40,27 @@
 
   html {
     scroll-behavior: smooth;
+    /* Routes/loading/details legitimately change document height. Reserve only
+       the native scrollbar gutter; do not force overflow or override scroll locks. */
+    scrollbar-gutter: stable;
   }
 
   body {
     @apply min-w-0 bg-background font-sans text-foreground antialiased;
     min-height: 100dvh;
     line-height: 1.5;
+  }
+
+  /* Native modal focus containment; the stable root gutter prevents lock shifts. */
+  html:has(.credits-dialog[open]) { overflow: hidden; }
+  .credits-dialog { margin: auto; max-height: calc(100dvh - 2rem); overflow-y: auto; overscroll-behavior: contain; }
+  .credits-dialog::backdrop { background: hsl(202 44% 13% / 0.48); backdrop-filter: blur(5px); }
+  @media (max-width: 639px) {
+    .credits-dialog {
+      margin: auto 0 0;
+      max-height: calc(100dvh - 1rem);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
   }
 
   button,
@@ -140,98 +155,7 @@
   }
 }
 
-.leaflet-container {
-  z-index: 0;
-  background: hsl(var(--muted));
-  font-family: inherit;
-}
-
-.leaflet-control-zoom a {
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  color: hsl(var(--foreground));
-}
-
-.leaflet-control-attribution {
-  font-size: 0.6875rem;
-}
-
-.explorasc-marker-shell {
-  border: 0;
-  background: transparent;
-}
-
-.explorasc-marker {
-  position: relative;
-  display: flex;
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid white;
-  border-radius: 9999px;
-  background: hsl(var(--primary));
-  color: white;
-  box-shadow: 0 6px 16px hsl(202 44% 13% / 0.28);
-  font-size: 0.875rem;
-  font-weight: 800;
-  transition: transform 160ms ease, background-color 160ms ease;
-}
-
-.explorasc-marker::after {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  transform: translateX(-50%);
-  border-top: 8px solid hsl(var(--primary));
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-}
-
-.leaflet-marker-icon.is-active .explorasc-marker {
-  transform: scale(1.18);
-  background: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
-}
-
-.leaflet-marker-icon.is-active .explorasc-marker::after {
-  border-top-color: hsl(var(--secondary));
-}
-
-.map-popup strong {
-  display: block;
-  color: hsl(var(--foreground));
-  font-size: 0.9375rem;
-  line-height: 1.35;
-}
-
-.map-popup p {
-  margin: 0.45rem 0 0;
-  color: hsl(var(--muted-foreground));
-  font-size: 0.8125rem;
-  line-height: 1.5;
-}
-
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  background: hsl(var(--card));
-  color: hsl(var(--card-foreground));
-}
-
-.leaflet-popup-content-wrapper {
-  border-radius: 0.875rem;
-  box-shadow: 0 12px 32px hsl(202 44% 13% / 0.2);
-}
-
 @media (max-width: 640px) {
-  .leaflet-control-attribution {
-    max-width: 72vw;
-    line-height: 1.2;
-  }
 
   .app-backdrop__ridge {
     height: 18%;

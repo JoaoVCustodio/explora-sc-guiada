@@ -1,3 +1,4 @@
+import { ListPagination } from "@/components/ListPagination";
 import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -49,8 +50,8 @@ export const ReviewsSection = ({ itinerary, onChanged }: { itinerary: CommunityS
   }, [itinerary.id, user, isOwner, revision]);
 
   return (
-    <section className="mt-10" aria-labelledby="reviews-title">
-      <h2 id="reviews-title" className="mb-2 text-2xl font-bold">Avaliações</h2>
+    <section className="reviews-section mt-10" aria-labelledby="reviews-title">
+      <h2 id="reviews-title" className="section-title mb-2 text-2xl font-bold">Avaliações</h2>
       <RatingSummary average={itinerary.rating_average} count={itinerary.reviews_count} />
       {isOwner ? <p className="my-5 text-muted-foreground">Você é o autor deste roteiro e não pode avaliá-lo.</p> : ownError ? (
         <div className="my-5"><p role="alert" className="text-destructive">{ownError}</p><Button className="mt-2 min-h-11" variant="outline" onClick={() => setRevision((value) => value + 1)}>Tentar novamente</Button></div>
@@ -63,7 +64,7 @@ export const ReviewsSection = ({ itinerary, onChanged }: { itinerary: CommunityS
         <>
           <ul className="mt-6 space-y-4">
             {reviews.map((review) => (
-              <li key={review.user_id} className="rounded-xl border border-border bg-card p-5">
+              <li key={review.user_id} className="review-entry rounded-xl border border-border bg-card p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <p className="font-semibold">{review.author_name}{review.user_id === user?.id && " (você)"}</p>
                   <span className="flex items-center gap-1.5 text-sm"><Star aria-hidden="true" className="h-4 w-4 fill-primary text-primary" />{review.rating} de 5 estrelas</span>
@@ -73,11 +74,7 @@ export const ReviewsSection = ({ itinerary, onChanged }: { itinerary: CommunityS
               </li>
             ))}
           </ul>
-          <nav aria-label="Páginas de avaliações" className="mt-5 flex flex-wrap items-center gap-3">
-            <Button variant="outline" className="min-h-11" disabled={page === 0} onClick={() => setPage(page - 1)}>Anterior</Button>
-            <span>Página {page + 1}</span>
-            <Button variant="outline" className="min-h-11" disabled={!hasMore} onClick={() => setPage(page + 1)}>Próxima</Button>
-          </nav>
+            <ListPagination page={page} hasMore={hasMore} onPageChange={setPage} label="Páginas de avaliações" />
         </>
       )}
     </section>

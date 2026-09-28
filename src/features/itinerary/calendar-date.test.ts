@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {normalizeItineraryResponse} from './schema.ts';
+import {makeSavedItinerary} from './saved-schema.ts';
+import {itineraryDayLabel} from '../../../supabase/functions/_shared/calendar-date.mjs';
+const payload={titulo:'Viagem',dias:[1,2,3].map(dia=>({dia,locais:[{nome:'Local',descricao_curta:'Cadastro',latitude:-27,longitude:-48,ordem:dia,periodo:'manha',duracao_estimada:'1h'}]}))};
+test('dates survive normalization and saved JSON while legacy outputs remain undated',()=>{
+  const old=normalizeItineraryResponse(payload,3,null);
+  assert.ok(old.days.every(day=>day.date===undefined));
+  const trip=normalizeItineraryResponse(payload,3,'2026-11-16');
+  assert.deepEqual(trip.days.map(day=>day.date),['2026-11-16','2026-11-17','2026-11-18']);
+  assert.equal(itineraryDayLabel(2,trip.days[1].date),'Dia 2 · Terça, 17 nov');
+  assert.deepEqual(normalizeItineraryResponse(trip,3),trip);
+  const saved=makeSavedItinerary('11111111-1111-4111-8111-111111111111','22222222-2222-4222-8222-222222222222',trip,{days:3,regions:['Grande Florianópolis'],interests:[]});
+  assert.deepEqual(normalizeItineraryResponse(saved.itinerary_data,3),trip);
+  const bad=structuredClone(trip);bad.days[1].date='2026-11-19';
+  assert.throws(()=>normalizeItineraryResponse(bad,3));
+  assert.deepEqual(normalizeItineraryResponse(bad,3,'2026-11-16'),trip);
+  assert.deepEqual(normalizeItineraryResponse(bad,3,null),old);
+});

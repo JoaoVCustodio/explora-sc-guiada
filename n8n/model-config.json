@@ -1,0 +1,10 @@
+{
+  "model": "google/gemini-3.1-flash-lite",
+  "publicationStatus": "draft-only: conditional quality gate validated; awaiting publication authorization",
+  "options": {
+    "temperature": 0.2,
+    "maxTokens": 8192,
+    "responseFormat": "json_object",
+    "maxRetries": 0
+  }
+}
