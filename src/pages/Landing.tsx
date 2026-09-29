@@ -108,7 +108,7 @@ export default function Landing() {
       </a>
       <header className="landing-header">
         <Link to="/" className="landing-brand" aria-label="ExploraSC — início">
-          <Compass size={30} aria-hidden="true" />
+          <img src="/brand/explorasc-symbol-dark.svg" width="32" height="32" alt="" />
           <span>
             Explora<span>SC</span>
           </span>
@@ -162,8 +162,9 @@ export default function Landing() {
                 <em>o seu jeito.</em>
               </h1>
               <p className="hero-description">
-                Transforme o que você gosta em um roteiro por Santa Catarina. A
-                IA organiza os dias. Você vive a viagem.
+                Conte o que você gosta e a IA cria um roteiro personalizado por
+                Santa Catarina, organizando atrações, dias, horários e caminhos
+                para você.
               </p>
               <div className="hero-actions">
                 <Link to={start} className="landing-cta">
@@ -525,7 +526,7 @@ export default function Landing() {
       </main>
       <footer className="landing-footer landing-container">
         <Link to="/" className="landing-brand">
-          <Compass size={26} aria-hidden="true" />
+          <img src="/brand/explorasc-symbol.svg" width="28" height="28" alt="" />
           <span>
             Explora<span>SC</span>
           </span>

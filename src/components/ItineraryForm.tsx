@@ -109,7 +109,7 @@ export const ItineraryForm = ({
 
         </fieldset>
         {creditPanel}
-        <Button type="submit" size="lg" disabled={disabled} className="h-12 w-full rounded-xl text-base shadow-md">
+        <Button type="submit" size="lg" disabled={disabled} className="planner-submit h-12 w-full rounded-xl text-base shadow-md">
           <Sparkles className="h-5 w-5" aria-hidden="true" /> {pending ? "Consultar geração" : "Gerar meu roteiro · 1 crédito"}
         </Button>
         <p className="text-center text-xs leading-relaxed text-muted-foreground">

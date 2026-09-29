@@ -4,6 +4,9 @@
 
 @layer base {
   :root {
+    --brand-amber: #e9ad32;
+    --brand-amber-hover: #f3c667;
+    --brand-amber-ink: #8b5b09;
     --background: 195 35% 97%;
     --foreground: 202 44% 13%;
     --card: 0 0% 100%;

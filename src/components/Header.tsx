@@ -53,10 +53,8 @@ export const Header = () => {
       </a>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/planejar" className="flex min-h-11 items-center gap-2.5 rounded-lg text-lg font-bold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <Compass className="h-5 w-5" aria-hidden="true" />
-          </span>
-          <span>Explora<span className="text-primary">SC</span></span>
+          <img src="/brand/explorasc-symbol.svg" width="36" height="36" alt="" className="h-9 w-9 shrink-0 object-contain" />
+          <span>Explora<span className="brand-suffix">SC</span></span>
         </Link>
 
         <nav className="primary-nav" aria-label="Navegação principal">
@@ -65,7 +63,7 @@ export const Header = () => {
           <NavLink to="/comunidade"><Globe className="h-4 w-4" aria-hidden="true" />Comunidade</NavLink>
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
-        <Button type="button" variant="ghost" onClick={() => setCreditsOpen(true)} aria-haspopup="dialog" aria-label={credits ? `${credits.balance} créditos. Obter créditos` : 'Obter créditos'} className="h-11 gap-2 rounded-full border border-primary/15 bg-primary/5 px-3 text-primary hover:bg-primary/10 sm:px-4"><Coins aria-hidden="true" /><span className="tabular-nums">{credits?.balance ?? '—'}</span><span className="hidden sm:inline">{credits?.balance === 1 ? 'crédito' : 'créditos'}</span><Plus className="!h-3.5 !w-3.5 opacity-60" aria-hidden="true" /></Button>
+        <Button type="button" variant="ghost" onClick={() => setCreditsOpen(true)} aria-haspopup="dialog" aria-label={credits ? `${credits.balance} créditos. Obter créditos` : 'Obter créditos'} className="credits-trigger h-11 gap-2 rounded-full border border-primary/15 bg-primary/5 px-3 text-primary hover:bg-primary/10 sm:px-4"><Coins aria-hidden="true" /><span className="tabular-nums">{credits?.balance ?? '—'}</span><span className="hidden sm:inline">{credits?.balance === 1 ? 'crédito' : 'créditos'}</span><Plus className="!h-3.5 !w-3.5 opacity-60" aria-hidden="true" /></Button>
         <CreditsDialog open={creditsOpen} onClose={() => setCreditsOpen(false)} credits={credits} error={error} onRetry={refresh} />
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger asChild>

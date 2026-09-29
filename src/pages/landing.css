@@ -3,6 +3,9 @@
   --lp-green: #147b70;
   --lp-sand: #f6f3eb;
   --lp-muted: #69776b;
+  --lp-amber: var(--brand-amber);
+  --lp-amber-hover: var(--brand-amber-hover);
+  --lp-amber-ink: var(--brand-amber-ink);
   background: var(--lp-sand);
   color: var(--lp-ink);
   overflow: clip;
@@ -16,7 +19,7 @@
 }
 .landing a:focus-visible,
 .landing button:focus-visible {
-  outline: 3px solid #d69c4e;
+  outline: 3px solid var(--lp-amber);
   outline-offset: 5px;
 }
 .landing-container {
@@ -63,8 +66,26 @@
   letter-spacing: -0.7px;
   white-space: nowrap;
 }
+.landing-brand img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.landing-footer .landing-brand img {
+  width: 28px;
+  height: 28px;
+}
 .landing-brand > span > span {
   opacity: 0.6;
+}
+.landing-header .landing-brand > span > span {
+  color: var(--lp-amber);
+  opacity: 1;
+}
+.landing-footer .landing-brand > span > span {
+  color: var(--lp-amber-ink);
+  opacity: 1;
 }
 .landing-nav,
 .landing-header-actions {
@@ -82,7 +103,7 @@
   transition: color 0.2s;
 }
 .landing-nav a:hover {
-  color: #edbd72;
+  color: var(--lp-amber);
 }
 .landing-header-actions {
   gap: 24px;
@@ -98,12 +119,16 @@
   gap: 16px;
   padding: 12px 19px;
   min-height: 44px;
-  border: 1px solid #ffffff50;
+  border: 1px solid var(--lp-amber);
   border-radius: 6px;
   transition: background 0.2s;
 }
 .landing-header-cta:hover {
   background: #ffffff16;
+  border-color: var(--lp-amber);
+}
+.landing-header-cta svg {
+  color: var(--lp-amber);
 }
 .landing-hero {
   position: relative;
@@ -156,7 +181,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #edbd72;
+  background: var(--lp-amber);
 }
 .landing h1,
 .landing h2 {
@@ -173,7 +198,7 @@
   font-weight: 400;
 }
 .hero-copy h1 em {
-  color: #d8e3bd;
+  color: var(--lp-amber-hover);
 }
 .hero-description {
   max-width: 390px;
@@ -194,7 +219,7 @@
   align-items: center;
   justify-content: center;
   gap: 28px;
-  background: #edbd72;
+  background: var(--lp-amber);
   color: #1c3428;
   padding: 16px 23px;
   border-radius: 7px;
@@ -205,7 +230,7 @@
     transform 0.2s;
 }
 .landing-cta:hover {
-  background: #f6cf95;
+  background: var(--lp-amber-hover);
   transform: translateY(-2px);
 }
 .hero-secondary {
@@ -217,7 +242,7 @@
   color: #e1e8dc;
 }
 .hero-secondary:hover {
-  color: #edbd72;
+  color: var(--lp-amber);
 }
 .hero-free {
   display: flex;
@@ -231,6 +256,7 @@
 }
 .hero-free svg {
   flex-shrink: 0;
+  color: var(--lp-amber);
 }
 .hero-product {
   min-width: 0;
@@ -244,6 +270,9 @@
   font-size: 8px;
   letter-spacing: 0.17em;
   margin-bottom: 16px;
+}
+.hero-product-note span:first-child {
+  color: var(--lp-amber);
 }
 .hero-film-media {
   display: block;
@@ -297,7 +326,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #147b70;
+  background: var(--lp-amber);
 }
 .hero-film-screen {
   position: relative;
@@ -433,7 +462,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b6c0ad;
+  background: var(--lp-amber);
 }
 .landing-process {
   padding-block: 100px;
@@ -469,6 +498,7 @@
 .process-step > div > span {
   font-family: Georgia, serif;
   font-size: 24px;
+  color: var(--lp-amber-ink);
 }
 .process-step h3 {
   margin-top: 36px;
@@ -561,7 +591,7 @@
 .demo-overline {
   font-size: 8px;
   letter-spacing: 0.18em;
-  color: #147b70;
+  color: var(--lp-amber-ink);
   font-weight: 700;
 }
 .demo-content > h3 {
@@ -586,8 +616,9 @@
 }
 .demo-day-tabs button[aria-pressed="true"] {
   background: #147b70;
-  border-color: #147b70;
+  border-color: var(--lp-amber);
   color: white;
+  box-shadow: inset 0 -2px var(--lp-amber);
 }
 .demo-day-tabs button:hover:not([aria-pressed="true"]) {
   background: #e9eee2;
@@ -718,7 +749,7 @@
   width: 19px;
   height: 2px;
   border-radius: 0;
-  background: #ba8e4a;
+  background: var(--lp-amber);
 }
 .landing-shared {
   background: #193b31;
@@ -745,7 +776,7 @@
   padding-top: 28px;
 }
 .shared-grid article > svg {
-  color: #c1d3ae;
+  color: var(--lp-amber);
   stroke-width: 1.3;
   width: 28px;
   height: 28px;
@@ -770,7 +801,7 @@
   margin-top: 20px;
   min-height: 44px;
   font-size: 12px;
-  color: #edbd72;
+  color: var(--lp-amber);
 }
 .community-note {
   display: flex;
@@ -779,6 +810,9 @@
   margin-top: 40px;
   font-size: 10px;
   color: #b6c6b2;
+}
+.community-note svg {
+  color: var(--lp-amber);
 }
 .landing-faq {
   display: grid;
@@ -807,6 +841,7 @@
 }
 .faq-item svg.is-open {
   transform: rotate(45deg);
+  color: var(--lp-amber-ink);
 }
 .faq-item p {
   padding: 0 22px 24px 0;
@@ -827,6 +862,9 @@
 }
 .landing-final h2 em {
   color: #4c7159;
+}
+.landing-final .landing-kicker {
+  color: var(--lp-amber-ink);
 }
 .landing-final .landing-cta {
   background: #193b31;
@@ -929,8 +967,9 @@
     font-size: 19px;
     gap: 7px;
   }
-  .landing-brand svg {
+  .landing-brand img {
     width: 25px;
+    height: 25px;
   }
   .landing-nav {
     display: none;
