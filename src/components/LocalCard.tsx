@@ -1,6 +1,7 @@
-import { ArrowUpRight, Clock3, MapPin, MapPinOff, MoonStar, SunMedium, Sunrise } from "lucide-react";
+import { ArrowUpRight, Clock3, MapPin, MapPinOff, MoonStar, Star, SunMedium, Sunrise } from "lucide-react";
 import { CardMedia } from "@/components/CardMedia";
 import { AttractionNavigation } from "@/components/AttractionNavigation";
+import { separateAttractionRating } from "@/components/attraction-rating";
 import { Card } from "@/components/ui/card";
 import type { ItineraryLocation } from "@/features/itinerary/types";
 import { resolveAttractionImage } from "@/features/media/card-images";
@@ -41,6 +42,7 @@ export const LocalCard = ({
 }: LocalCardProps) => {
   const { label: periodLabel, Icon: PeriodIcon } = periodDetails[period];
   const image = resolveAttractionImage({ name, description, imageUrl, categories });
+  const display = separateAttractionRating(description);
 
   return (
     <Card className={cn("place-card h-full overflow-hidden border-border/80 bg-card focus-within:border-primary/50", isActive && "is-active border-primary/60")}>
@@ -69,10 +71,17 @@ export const LocalCard = ({
               <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
               {estimatedDuration}
             </span>
+            {display.rating && (
+              <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-secondary/40 bg-secondary/15 px-3 text-foreground tabular-nums" aria-label={`Nota ${display.rating.average.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} de 5, ${display.rating.count.toLocaleString("pt-BR")} ${display.rating.count === 1 ? "avaliação" : "avaliações"}`}>
+                <Star className="h-3.5 w-3.5 fill-[color:var(--brand-amber)] text-[color:var(--brand-amber-ink)]" aria-hidden="true" />
+                <strong className="font-semibold">{display.rating.average.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}/5</strong>
+                <span aria-hidden="true">· {display.rating.count.toLocaleString("pt-BR")} {display.rating.count === 1 ? "avaliação" : "avaliações"}</span>
+              </span>
+            )}
           </div>
 
-          <div className="place-description mt-4 flex-1 border-l-2 border-primary/15 pl-4">
-            <p className="text-sm leading-6 text-muted-foreground">{description}</p>
+          <div className="place-description mt-4 flex-1">
+            {display.description && <p className="text-sm leading-6 text-muted-foreground">{display.description}</p>}
           </div>
 
           <div className="mt-5 border-t border-border/60 pt-3">

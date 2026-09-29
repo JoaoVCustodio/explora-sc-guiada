@@ -25,7 +25,7 @@ export async function saveItinerary(
 
 export async function listSavedItineraries(userId: string, page: number, signal: AbortSignal) {
   const { data, error } = await supabase.from("itineraries")
-    .select("id,title,days_count,created_at,locations:itinerary_data->locations")
+    .select("id,title,regions,days_count,created_at,locations:itinerary_data->locations")
     .eq("user_id", userId)
     .order("created_at", { ascending: false }).order("id", { ascending: false })
     .range(page * SAVED_PAGE_SIZE, (page + 1) * SAVED_PAGE_SIZE)

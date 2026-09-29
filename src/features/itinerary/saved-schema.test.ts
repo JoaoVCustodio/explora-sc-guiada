@@ -47,9 +47,10 @@ test("salvamento rejeita usuário, dias ou metadados inválidos", () => {
 
 test("resumo conta todos os locais para a listagem", () => {
   const result = savedSummarySchema.parse({
-    id, title: "Viagem salva", days_count: 3, created_at: "2026-09-13T22:00:00+00:00", locations: itinerary.locations,
+    id, title: "Viagem salva", regions: request.regions, days_count: 3, created_at: "2026-09-13T22:00:00+00:00", locations: itinerary.locations,
   });
   assert.equal(result.locationsCount, 2);
   assert.equal(result.days_count, 3);
+  assert.deepEqual(result.regions, request.regions);
   assert.equal("locations" in result, false);
 });

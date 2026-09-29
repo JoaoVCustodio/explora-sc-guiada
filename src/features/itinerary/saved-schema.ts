@@ -8,6 +8,7 @@ export const savedItineraryIdSchema = z.string().uuid();
 export const savedSummarySchema = z.object({
   id: savedItineraryIdSchema,
   title: z.string(),
+  regions: z.array(z.string()),
   days_count: z.number().int().min(1).max(7),
   created_at: z.string().datetime({ offset: true }),
   locations: z.array(z.unknown()).min(1).max(140),

@@ -68,14 +68,15 @@ const MyItineraries = () => {
             <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {items.map((item) => (
                 <li key={item.id} className="collection-card">
-                  <div className="mb-4 flex items-center gap-2 text-xs font-medium text-primary"><Bookmark className="h-4 w-4" aria-hidden="true" />Sua coleção</div>
-                  <h2 className="break-words text-xl font-semibold leading-snug tracking-tight">{item.title}</h2>
-                  <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5"><CalendarDays className="h-4 w-4" aria-hidden="true" />{item.days_count} {item.days_count === 1 ? "dia" : "dias"}</span>
-                    <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" aria-hidden="true" />{item.locationsCount} {item.locationsCount === 1 ? "local" : "locais"}</span>
+                  <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-primary"><Bookmark className="h-4 w-4" aria-hidden="true" />Sua coleção</div>
+                  <h2 className="break-words leading-snug tracking-tight">{item.title}</h2>
+                  <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold">
+                    <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full bg-accent px-3 text-primary"><CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />{item.days_count} {item.days_count === 1 ? "dia" : "dias"}</span>
+                    <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full bg-muted/70 px-3 text-foreground"><MapPin className="h-3.5 w-3.5 text-primary" aria-hidden="true" />{item.locationsCount} {item.locationsCount === 1 ? "local" : "locais"}</span>
                   </div>
-                  <p className="mb-6 mt-3 text-sm text-muted-foreground">Salvo em <time dateTime={item.created_at}>{new Date(item.created_at).toLocaleDateString("pt-BR")}</time></p>
-                  <div className="mt-auto flex flex-wrap gap-3">
+                  {item.regions.length > 0 && <p className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" aria-hidden="true" /><span className="break-words">{item.regions.join(" · ")}</span></p>}
+                  <p className="mt-4 text-xs text-muted-foreground">Salvo em <time className="font-semibold text-foreground" dateTime={item.created_at}>{new Date(item.created_at).toLocaleDateString("pt-BR")}</time></p>
+                  <div className="mt-auto flex flex-wrap gap-3 border-t border-border/60 pt-5">
                     <Button asChild className="min-h-11 rounded-xl"><Link to={`/meus-roteiros/${item.id}`} aria-label={`Abrir roteiro ${item.title}`}>Abrir roteiro<ArrowUpRight aria-hidden="true" /></Link></Button>
                     <DeleteItineraryButton id={item.id} title={item.title} onDeleted={() => setRevision((value) => value + 1)} />
                   </div>

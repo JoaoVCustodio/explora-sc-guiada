@@ -10,7 +10,7 @@ import { DayRouteLinks } from "@/components/DayRouteLinks";
 import { googleMapsAttractionUrl, wazeAttractionUrl } from "@/features/itinerary/navigation-urls";
 import { geolocationPermissionState, locationErrorMessage, watchUserPosition } from "@/features/itinerary/user-location";
 import type { ItineraryDay } from "@/features/itinerary/types";
-import { formatDistance, formatTravelTime, pathTotals, isCoordinate, ESTIMATED_SPEED_KMH } from "@/features/routes/model";
+import { formatDistance, formatTravelTime, pathTotals, isCoordinate } from "@/features/routes/model";
 
 import { useRoadRoutes } from "@/features/routes/useRoadRoutes";
 
@@ -320,7 +320,6 @@ export const MapView = ({ days, activeLocationIndex, selectionRevision, onMarker
     <section className="route-map overflow-hidden rounded-3xl border border-border bg-card shadow-xl shadow-primary/5" aria-labelledby="map-title">
       <div className="flex flex-wrap items-center justify-between gap-4 px-5 pb-4 pt-6 sm:px-7">
         <div><p className="eyebrow">Explore o caminho</p><h2 id="map-title" className="mt-1 flex items-center gap-2 text-2xl font-bold tracking-tight"><Compass className="h-6 w-6 text-primary" aria-hidden="true" /> Sua viagem no mapa</h2></div>
-        <span className="rounded-full border border-primary/15 bg-primary/5 px-3 py-2 text-xs font-semibold text-primary">{approximate ? "Inclui trajetos aproximados" : "Trajetos viários"} · ordem do roteiro</span>
       </div>
       <div className="flex max-w-full gap-2 overflow-x-auto px-5 pb-5 sm:px-7" role="group" aria-label="Filtrar mapa por dia">
         {[null, ...days.map((day) => day.day)].map((day) => <Button key={day ?? "all"} type="button" variant={selectedDay === day ? "default" : "outline"} className="min-h-11 shrink-0 rounded-full px-5" aria-pressed={selectedDay === day} onClick={() => { setSelectedDay(day); setFitRevision((value) => value + 1); }}>{day === null ? "Todos" : `Dia ${day}`}</Button>)}
@@ -338,15 +337,13 @@ export const MapView = ({ days, activeLocationIndex, selectionRevision, onMarker
       {(locationStatus !== "idle" || locationError) && <p className="px-5 pt-3 text-sm text-muted-foreground sm:px-7" role={locationError ? "alert" : "status"}>{locationError ?? (locationStatus === "locating" ? "Buscando sua localização…" : "Localização ativa · você está aqui")}</p>}
       <div className="px-5 py-5 sm:px-7">
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
-          <div><p className="text-sm font-bold">{selectedDay === null ? `${days.length} dias de viagem` : `Dia ${selectedDay}`}</p><p className="text-sm text-muted-foreground">{visible.length} paradas · {mappedCount} no mapa</p></div>
-          <div className="flex items-center gap-3"><Route className="h-5 w-5 text-primary" aria-hidden="true" /><div className="min-w-28 tabular-nums"><p className="text-lg font-bold">{hasEstimate ? formatDistance(totals.distanceMeters, approximate) : "— km"}</p><p className="text-xs text-muted-foreground">{approximate ? "Distância com aproximações" : "Distância viária"}</p></div></div>
-          <div className="min-w-32 tabular-nums"><p className="text-lg font-bold">{hasEstimate ? formatTravelTime(totals.durationSeconds, approximate) : "—"}</p><p className="text-xs text-muted-foreground">Deslocamento estimado</p></div>
+          <div><p className="text-sm font-bold">{selectedDay === null ? `${days.length} dias de viagem` : `Dia ${selectedDay}`}</p><p className="text-sm text-muted-foreground">{visible.length} {visible.length === 1 ? "parada" : "paradas"}</p></div>
+          <div className="flex items-center gap-3"><Route className="h-5 w-5 text-primary" aria-hidden="true" /><div className="min-w-28 tabular-nums"><p className="text-lg font-bold">{hasEstimate ? formatDistance(totals.distanceMeters, approximate) : "— km"}</p><p className="text-xs text-muted-foreground">Distância entre atrações</p></div></div>
+          <div className="min-w-32 tabular-nums"><p className="text-lg font-bold">{hasEstimate ? formatTravelTime(totals.durationSeconds, approximate) : "—"}</p><p className="text-xs text-muted-foreground">Tempo entre atrações</p></div>
         </div>
-        <div className="mt-4 min-h-12 text-sm text-muted-foreground" role="status">
-          {loading ? "Calculando trajetos viários…" : approximate ? `Não foi possível obter todos os trajetos viários. Linhas tracejadas são aproximações a ${ESTIMATED_SPEED_KMH} km/h.` : "Linhas contínuas seguem as vias. Tempo estimado de deslocamento, sem trânsito em tempo real e sem incluir visitas."}
-          <span className="block text-xs">Rotas: OSRM · dados © OpenStreetMap. A ordem dos locais é preservada.</span>
-        </div>
-        {mappedCount < visible.length && <p className="mt-2 text-xs text-muted-foreground">Locais sem coordenadas válidas não aparecem no mapa. Somente os trechos entre pontos consecutivos válidos entram nas linhas e nos totais; não são criados atalhos sobre as lacunas.</p>}
+        <p className="mt-4 text-sm text-muted-foreground">Soma dos deslocamentos entre atrações de cada dia. Não inclui deslocamentos entre dias ou hospedagens.</p>
+        {loading && <p className="mt-2 text-xs text-muted-foreground" role="status">Calculando trajetos…</p>}
+        {mappedCount < visible.length && <p className="mt-2 text-xs text-muted-foreground">Alguns locais não aparecem no mapa por falta de localização.</p>}
         {baseError && <p className="mt-2 text-xs text-muted-foreground">Mapa base indisponível. Os pontos e trajetos calculados continuam disponíveis sobre um fundo neutro.</p>}
       </div>
     </section>

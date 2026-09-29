@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
-    "test": "node --experimental-strip-types --test src/features/auth/recovery-callback.test.ts src/features/itinerary/schema.test.ts src/features/itinerary/calendar-date.test.ts src/features/itinerary/map-utils.test.ts src/features/itinerary/navigation-urls.test.ts src/features/itinerary/user-location.test.ts src/features/itinerary/saved-schema.test.ts src/features/community/schema.test.ts src/features/partners/selection.test.ts src/features/routes/routes.test.ts src/features/credits/pending.test.ts",
+    "test": "node --experimental-strip-types --test src/components/attraction-rating.test.ts src/features/auth/recovery-callback.test.ts src/features/itinerary/schema.test.ts src/features/itinerary/calendar-date.test.ts src/features/itinerary/map-utils.test.ts src/features/itinerary/navigation-urls.test.ts src/features/itinerary/user-location.test.ts src/features/itinerary/saved-schema.test.ts src/features/community/schema.test.ts src/features/partners/selection.test.ts src/features/routes/routes.test.ts src/features/credits/pending.test.ts",
     "test:edge": "npx --yes deno test --allow-env --allow-read --config supabase/functions/generate-itinerary/deno.json supabase/functions/generate-itinerary/index.test.ts",
     "preview": "vite preview",
     "video:typecheck": "tsc --project video/tsconfig.json",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@microsoft/clarity": "^1.0.2",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-label": "^2.1.7",
