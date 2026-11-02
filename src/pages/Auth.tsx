@@ -7,6 +7,7 @@ import { z } from "zod";
 import { Compass, Eye, EyeOff, Loader2, MapPinned, Route, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/contexts/auth-context";
+import { authErrorMessage, reportAuthError } from "@/features/auth/errors";
 import { TourismBackdrop } from "@/components/TourismBackdrop";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,15 +84,20 @@ export default function Auth() {
     if (submitting.current) return;
     submitting.current = true;
     setIsLoadingSignIn(true);
+    signInForm.clearErrors("root");
     try {
       const { error } = await signIn(data.email.trim(), data.password);
       if (error) {
-        toast.error("E-mail ou senha incorretos.");
+        reportAuthError(error, "signin");
+        signInForm.setError("root", { message: authErrorMessage(error, "signin") });
         return;
       }
 
       toast.success("Bem-vindo de volta!");
       navigate(redirectPath, { replace: true });
+    } catch (error) {
+      reportAuthError(error, "signin");
+      signInForm.setError("root", { message: authErrorMessage(error, "signin") });
     } finally {
       submitting.current = false;
       setIsLoadingSignIn(false);
@@ -102,10 +108,12 @@ export default function Auth() {
     if (submitting.current) return;
     submitting.current = true;
     setIsLoadingSignUp(true);
+    signUpForm.clearErrors("root");
     try {
       const { error, session } = await signUp(data.email.trim(), data.password, data.fullName);
       if (error) {
-        toast.error("Não foi possível criar a conta. Confira os dados e tente novamente.");
+        reportAuthError(error, "signup");
+        signUpForm.setError("root", { message: authErrorMessage(error, "signup") });
         return;
       }
 
@@ -118,6 +126,9 @@ export default function Auth() {
 
       toast.success("Conta criada com sucesso!");
       navigate(redirectPath, { replace: true });
+    } catch (error) {
+      reportAuthError(error, "signup");
+      signUpForm.setError("root", { message: authErrorMessage(error, "signup") });
     } finally {
       submitting.current = false;
       setIsLoadingSignUp(false);
@@ -170,6 +181,7 @@ export default function Auth() {
 
               <TabsContent value="signin">
                 <form onSubmit={signInForm.handleSubmit(onSignIn)} className="space-y-5" noValidate>
+                  <FieldError id="signin-error" message={signInForm.formState.errors.root?.message} />
                   <div className="space-y-2">
                     <Label htmlFor="signin-email">E-mail</Label>
                     <Input id="signin-email" type="email" inputMode="email" autoComplete="email" placeholder="voce@exemplo.com" className="h-12" aria-invalid={Boolean(signInForm.formState.errors.email)} aria-describedby={signInForm.formState.errors.email ? "signin-email-error" : undefined} {...signInForm.register("email")} />
@@ -197,6 +209,7 @@ export default function Auth() {
 
               <TabsContent value="signup">
                 <form onSubmit={signUpForm.handleSubmit(onSignUp)} className="space-y-4" noValidate>
+                  <FieldError id="signup-error" message={signUpForm.formState.errors.root?.message} />
                   <div className="space-y-2">
                     <Label htmlFor="signup-name">Nome completo</Label>
                     <Input id="signup-name" type="text" autoComplete="name" className="h-12" aria-invalid={Boolean(signUpForm.formState.errors.fullName)} aria-describedby={signUpForm.formState.errors.fullName ? "signup-name-error" : undefined} {...signUpForm.register("fullName")} />

@@ -8,13 +8,14 @@ import { saveItinerary } from "@/features/itinerary/saved-api";
 import type { Itinerary, ItineraryRequest } from "@/features/itinerary/types";
 
 interface Props {
+  saveId?: string;
   itinerary: Itinerary;
   request: Pick<ItineraryRequest, "days" | "regions" | "interests">;
 }
 
-export const SaveItineraryButton = ({ itinerary, request }: Props) => {
+export const SaveItineraryButton = ({ saveId, itinerary, request }: Props) => {
   const { user } = useAuth();
-  const [id] = useState(() => crypto.randomUUID());
+  const [id] = useState(() => saveId ?? crypto.randomUUID());
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);

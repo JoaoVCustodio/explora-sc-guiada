@@ -11,6 +11,8 @@ interface ItineraryFormProps {
   creditPanel?: ReactNode;
   disabled?: boolean;
   pending?: boolean;
+  draftTitle?: string;
+  onResumeDraft?: () => void;
   days: number;
   startDate?: string;
   onStartDateChange?: (value: string) => void;
@@ -26,7 +28,7 @@ interface ItineraryFormProps {
 }
 
 export const ItineraryForm = ({
-  creditPanel, disabled, pending,
+  creditPanel, disabled, pending, draftTitle, onResumeDraft,
   days,
   startDate = "",
   onStartDateChange,
@@ -56,9 +58,19 @@ export const ItineraryForm = ({
           Monte um roteiro com a sua cara.
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Escolha seus interesses e uma região de Santa Catarina. Nós organizamos os lugares e mostramos tudo no mapa.
+          Escolha as regiões, seus interesses e a quantidade de dias. Cada novo roteiro usa 1 crédito; consultar um rascunho ou roteiro salvo não usa créditos.
         </p>
       </div>
+
+      {draftTitle && onResumeDraft && (
+        <section aria-label="Último roteiro em rascunho" className="mb-5 flex flex-col items-stretch gap-4 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0 flex-1">
+            <h2 className="text-sm font-semibold">Seu último roteiro continua disponível</h2>
+            <p className="mt-1 break-words text-sm text-muted-foreground">{draftTitle}. Volte ao rascunho sem gastar créditos. Ele será substituído quando um novo roteiro for gerado.</p>
+          </div>
+          <Button type="button" variant="outline" className="min-h-11 self-start sm:shrink-0 sm:self-auto" onClick={onResumeDraft}>Voltar ao rascunho</Button>
+        </section>
+      )}
 
       <form onSubmit={handleSubmit} className="planner-form surface-panel space-y-7 p-5 sm:p-7" noValidate>
         {pending && <p role="status" className="text-sm">Você tem uma geração para consultar. Vamos recuperar a solicitação original sem cobrar novamente.</p>}

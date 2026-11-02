@@ -14,7 +14,7 @@ export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <LoadingAnimation />
+        <LoadingAnimation message="Verificando seu acesso..." />
       </div>
     );
   }

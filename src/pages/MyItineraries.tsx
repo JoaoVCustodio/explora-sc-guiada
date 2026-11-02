@@ -48,7 +48,7 @@ const MyItineraries = () => {
           <div>
             <p className="eyebrow">Sua próxima viagem começa aqui</p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Meus roteiros</h1>
-            <p className="mt-2 text-muted-foreground">Seus roteiros salvos, do mais recente para o mais antigo.</p>
+            <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">Aqui ficam os roteiros que você salvou na sua conta, do mais recente para o mais antigo. Abra um roteiro para consultar, publicar ou retirar da comunidade. Para continuar o último rascunho, volte a Planejar.</p>
           </div>
           <Button asChild className="min-h-11"><Link to="/planejar">Gerar novo roteiro</Link></Button>
         </div>

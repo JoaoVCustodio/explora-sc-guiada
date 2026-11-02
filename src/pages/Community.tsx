@@ -38,7 +38,7 @@ const Community = () => {
       <TourismBackdrop /><Header />
       <main id="main-content" className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
         <div className="page-heading mb-8 flex flex-wrap items-center justify-between gap-4">
-          <div><p className="eyebrow">Inspire sua próxima viagem</p><h1 className="mt-2 text-3xl font-bold sm:text-4xl">Comunidade de roteiros</h1><p className="mt-2 text-muted-foreground">Roteiros compartilhados por outros viajantes, do mais recente para o mais antigo.</p></div>
+          <div><p className="eyebrow">Inspire sua próxima viagem</p><h1 className="mt-2 text-3xl font-bold sm:text-4xl">Comunidade de roteiros</h1><p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">Explore roteiros publicados por outros viajantes e abra um para consultar os locais, o mapa e as avaliações. Você pode avaliar roteiros de outras pessoas. Para compartilhar o seu, salve-o e publique em Meus roteiros. Consultar a comunidade não usa créditos.</p></div>
           <Button asChild variant="outline" className="min-h-11"><Link to="/meus-roteiros">Meus roteiros</Link></Button>
         </div>
         {loading ? <LoadingAnimation compact message="Carregando a comunidade..." /> : error ? (

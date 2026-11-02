@@ -12,20 +12,29 @@ import { useAuth } from "@/contexts/auth-context";
 import { useCredits, refreshCredits } from "@/features/credits/useCredits";
 import { CreditsPanel } from "@/components/CreditsPanel";
 import { clearPending, readPending, writePending } from "@/features/credits/pending";
+import { readDraft, writeDraft, type ItineraryDraft } from "@/features/itinerary/draft";
 import { isTripStart } from "../../supabase/functions/_shared/calendar-date.mjs";
 
-const Index = () => {
+const Planner = () => {
   const { user } = useAuth();
   const creditState = useCredits();
-  const [pending, setPending] = useState(() => user ? readPending(user.id) : null);
-  const [preferences, setPreferences] = useState(pending?.input.preferences ?? "");
-  const [days, setDays] = useState(pending?.input.days ?? 3);
-  const [startDate, setStartDate] = useState(pending?.input.startDate ?? "");
-  const [selectedInterests, setSelectedInterests] = useState<string[]>(pending?.input.interests ?? []);
-  const [selectedRegions, setSelectedRegions] = useState<string[]>(pending?.input.regions ?? []);
+  const [initial] = useState(() => ({
+    pending: user ? readPending(user.id) : null,
+    draft: user ? readDraft(user.id) : null,
+  }));
+  const [pending, setPending] = useState(initial.pending);
+  const [draft, setDraft] = useState(initial.draft);
+  const [draftPersisted, setDraftPersisted] = useState(Boolean(initial.draft));
+  const initialInput = initial.pending?.input ?? initial.draft?.input;
+  const [preferences, setPreferences] = useState(initialInput?.preferences ?? "");
+  const [days, setDays] = useState(initialInput?.days ?? 3);
+  const [startDate, setStartDate] = useState(initialInput?.startDate ?? "");
+  const [selectedInterests, setSelectedInterests] = useState<string[]>(initialInput?.interests ?? []);
+  const [selectedRegions, setSelectedRegions] = useState<string[]>(initialInput?.regions ?? []);
   const [isLoading, setIsLoading] = useState(false);
-  const [itinerary, setItinerary] = useState<Itinerary | null>(null);
-  const [generationRequest, setGenerationRequest] = useState<ItineraryRequest | null>(null);
+  const [itinerary, setItinerary] = useState<Itinerary | null>(initial.pending ? null : initial.draft?.itinerary ?? null);
+  const [generationRequest, setGenerationRequest] = useState<ItineraryRequest | null>(initial.draft?.input ?? null);
+  const [generationId, setGenerationId] = useState<string | undefined>(initial.draft?.id);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const requestControllerRef = useRef<AbortController | null>(null);
 
@@ -67,10 +76,23 @@ const Index = () => {
         controller.signal,
         attempt.id,
       );
+      const nextDraft: ItineraryDraft = { ...attempt, itinerary: generatedItinerary };
+      let persisted = false;
+      try {
+        writeDraft(user.id, nextDraft);
+        persisted = true;
+      } catch {
+        toast.warning("O navegador não conseguiu guardar o rascunho. Salve o roteiro na sua conta. A solicitação foi mantida para consulta sem nova cobrança.");
+      }
+      setDraft(nextDraft);
+      setDraftPersisted(persisted);
       setItinerary(generatedItinerary);
       setGenerationRequest(attempt.input);
-      clearPending(user.id, attempt.id);
-      setPending(null);
+      setGenerationId(attempt.id);
+      if (persisted) {
+        clearPending(user.id, attempt.id);
+        setPending(null);
+      }
       toast.success("Roteiro gerado com sucesso.");
     } catch (error) {
       if (error instanceof ItineraryApiError && error.code === "definitive") {
@@ -96,6 +118,14 @@ const Index = () => {
     setErrorMessage(null);
   };
 
+  const resumeDraft = () => {
+    if (!draft) return;
+    setItinerary(draft.itinerary);
+    setGenerationRequest(draft.input);
+    setGenerationId(draft.id);
+    setErrorMessage(null);
+  };
+
   return (
     <div className="product-ui relative min-h-dvh bg-background">
       <TourismBackdrop />
@@ -108,7 +138,8 @@ const Index = () => {
       ) : itinerary ? (
         <div className="relative z-10">
           <ItineraryResults itinerary={itinerary} regions={generationRequest?.regions ?? []} onEditPreferences={editPreferences}
-            actions={generationRequest && <SaveItineraryButton itinerary={itinerary} request={generationRequest} />} />
+            details={<p className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm leading-relaxed text-foreground">{draftPersisted ? "Seu último roteiro fica como rascunho neste navegador. Ao voltar a Planejar, você pode consultá-lo sem gastar outro crédito." : "O navegador não conseguiu guardar o rascunho. Salve o roteiro na sua conta. Se sair, volte a Planejar e consulte a solicitação mantida, sem gastar outro crédito."} Use “Salvar roteiro” para guardá-lo na sua conta e acessá-lo em Meus roteiros.</p>}
+            actions={generationRequest && <SaveItineraryButton key={generationId} saveId={generationId} itinerary={itinerary} request={generationRequest} />} />
         </div>
       ) : (
         <main id="main-content" className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
@@ -116,6 +147,8 @@ const Index = () => {
             creditPanel={<CreditsPanel {...creditState} onRetry={creditState.refresh} />}
             disabled={!pending && (!creditState.credits || creditState.credits.balance === 0 || creditState.credits.pending)}
             pending={Boolean(pending)}
+            draftTitle={!pending ? draft?.itinerary.title : undefined}
+            onResumeDraft={resumeDraft}
             errorMessage={errorMessage}
             preferences={preferences}
             days={days}
@@ -136,6 +169,11 @@ const Index = () => {
       )}
     </div>
   );
+};
+
+const Index = () => {
+  const { user } = useAuth();
+  return <Planner key={user?.id} />;
 };
 
 export default Index;

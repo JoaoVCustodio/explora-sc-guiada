@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { isCalendarDate } from "../../../supabase/functions/_shared/calendar-date.mjs";
-const pendingSchema = z.object({
+export const pendingSchema = z.object({
   id: z.string().uuid(),
   input: z.object({ startDate: z.string().refine(isCalendarDate).optional(), preferences: z.string().max(300), days: z.number().int().min(1).max(7), interests: z.array(z.string()), regions: z.array(z.string()).min(1) }),
 });
