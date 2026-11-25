@@ -11,10 +11,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Bookmark, Coins, Compass, Globe, Loader2, LogOut, Plus } from 'lucide-react';
+import { Bookmark, Coins, Compass, Globe, Loader2, LogOut, Plus, UserRoundPen } from 'lucide-react';
 import { CreditsDialog } from '@/components/CreditsDialog';
 import { toast } from 'sonner';
 import { useCredits } from '@/features/credits/useCredits';
+import { useProfile } from '@/features/profile/useProfile';
+import { publicNameSchema } from '@/features/community/schema';
 
 export const Header = () => {
   const { credits, error, refresh } = useCredits();
@@ -25,10 +27,13 @@ export const Header = () => {
     return () => window.removeEventListener('open-credits', open);
   }, []);
   const { user, signOut } = useAuth();
+  const { fullName } = useProfile();
+  const displayName = fullName?.trim() ? publicNameSchema.parse(fullName) : null;
   const navigate = useNavigate();
   const [isSigningOut, setIsSigningOut] = useState(false);
 
   const getUserInitials = () => {
+    if (displayName) return displayName.charAt(0).toLocaleUpperCase('pt-BR');
     if (!user?.email) return 'U';
     return user.email.charAt(0).toUpperCase();
   };
@@ -79,9 +84,13 @@ export const Header = () => {
             <DropdownMenuLabel className="px-3 py-2.5">
               <div className="flex flex-col space-y-1">
                 <p className="text-sm font-medium leading-none">Minha Conta</p>
+                {displayName && <p className="break-words text-sm font-semibold">{displayName}</p>}
                 <p className="break-all text-xs leading-relaxed text-muted-foreground">{user?.email}</p>
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuItem asChild className="min-h-11 cursor-pointer">
+              <Link to="/minha-conta"><UserRoundPen className="mr-2 h-4 w-4" aria-hidden="true" />Editar nome</Link>
+            </DropdownMenuItem>
             <DropdownMenuItem asChild className="min-h-11 cursor-pointer">
               <Link to="/meus-roteiros"><Bookmark className="mr-2 h-4 w-4" aria-hidden="true" />Meus roteiros</Link>
             </DropdownMenuItem>
