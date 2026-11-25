@@ -11,13 +11,14 @@ interface Props {
   saveId?: string;
   itinerary: Itinerary;
   request: Pick<ItineraryRequest, "days" | "regions" | "interests">;
+  saved: boolean;
+  onSaved: (id: string) => void;
 }
 
-export const SaveItineraryButton = ({ saveId, itinerary, request }: Props) => {
+export const SaveItineraryButton = ({ saveId, itinerary, request, saved, onSaved }: Props) => {
   const { user } = useAuth();
   const [id] = useState(() => saveId ?? crypto.randomUUID());
   const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inFlight = useRef(false);
 
@@ -28,7 +29,7 @@ export const SaveItineraryButton = ({ saveId, itinerary, request }: Props) => {
     setError(null);
     try {
       await saveItinerary(id, user.id, itinerary, request);
-      setSaved(true);
+      onSaved(id);
       toast.success("Roteiro salvo em Meus roteiros.");
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : "Não foi possível salvar. Tente novamente.";

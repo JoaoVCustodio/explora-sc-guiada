@@ -30,3 +30,8 @@ export function writeDraft(userId: string, draft: ItineraryDraft): void {
   // Keep the pending request available for replay if storage fails.
   localStorage.setItem(key(userId), JSON.stringify(parseDraft(draft)));
 }
+
+export function clearDraft(userId: string, requestId: string): void {
+  // A save in another tab must not remove a newer generation's draft.
+  if (readDraft(userId)?.id === requestId) localStorage.removeItem(key(userId));
+}

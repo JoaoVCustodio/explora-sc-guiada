@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { clearPending, readPending, writePending } from "../credits/pending.ts";
-import { readDraft, writeDraft, type ItineraryDraft } from "./draft.ts";
+import { clearDraft, readDraft, writeDraft, type ItineraryDraft } from "./draft.ts";
 import { normalizeItineraryResponse } from "./schema.ts";
 
 const draft = (id = "11111111-1111-4111-8111-111111111111"): ItineraryDraft => ({
@@ -79,4 +79,32 @@ test("rascunhos corrompidos, incompletos ou com quantidade errada de dias não s
 test("armazenamento bloqueado não impede abrir as outras páginas", () => withStorage((_entries, storage) => {
   storage.getItem = () => { throw new Error("SecurityError"); };
   assert.equal(readDraft("owner"), null);
+}));
+
+test("salvamento confirmado remove somente seu rascunho e preserva outras contas e solicitações", () => withStorage(() => {
+  const value = draft();
+  const pending = draft("22222222-2222-4222-8222-222222222222");
+  writeDraft("owner", value);
+  writeDraft("another-user", value);
+  writePending("owner", { id: pending.id, input: pending.input });
+  clearDraft("owner", value.id);
+  assert.equal(readDraft("owner"), null);
+  assert.deepEqual(readDraft("another-user"), value);
+  assert.deepEqual(readPending("owner"), { id: pending.id, input: pending.input });
+}));
+
+test("salvar um roteiro anterior não remove o rascunho de uma geração mais recente", () => withStorage(() => {
+  const previous = draft();
+  const next = draft("22222222-2222-4222-8222-222222222222");
+  writeDraft("owner", next);
+  clearDraft("owner", previous.id);
+  assert.deepEqual(readDraft("owner"), next);
+}));
+
+test("falha ao remover o rascunho pode ser informada sem perder seu conteúdo", () => withStorage((_entries, storage) => {
+  const value = draft();
+  writeDraft("owner", value);
+  storage.removeItem = () => { throw new Error("SecurityError"); };
+  assert.throws(() => clearDraft("owner", value.id));
+  assert.deepEqual(readDraft("owner"), value);
 }));

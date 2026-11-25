@@ -62,6 +62,7 @@ export const ItineraryForm = ({
         </p>
       </div>
 
+      <div className="min-w-0">
       {draftTitle && onResumeDraft && (
         <section aria-label="Último roteiro em rascunho" className="mb-5 flex flex-col items-stretch gap-4 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="min-w-0 flex-1">
@@ -128,6 +129,7 @@ export const ItineraryForm = ({
           O roteiro é uma sugestão. Confirme horários, acessibilidade e condições dos locais antes de viajar.
         </p>
       </form>
+      </div>
     </div>
   );
 };

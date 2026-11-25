@@ -12,7 +12,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { useCredits, refreshCredits } from "@/features/credits/useCredits";
 import { CreditsPanel } from "@/components/CreditsPanel";
 import { clearPending, readPending, writePending } from "@/features/credits/pending";
-import { readDraft, writeDraft, type ItineraryDraft } from "@/features/itinerary/draft";
+import { clearDraft, readDraft, writeDraft, type ItineraryDraft } from "@/features/itinerary/draft";
 import { isTripStart } from "../../supabase/functions/_shared/calendar-date.mjs";
 
 const Planner = () => {
@@ -35,6 +35,7 @@ const Planner = () => {
   const [itinerary, setItinerary] = useState<Itinerary | null>(initial.pending ? null : initial.draft?.itinerary ?? null);
   const [generationRequest, setGenerationRequest] = useState<ItineraryRequest | null>(initial.draft?.input ?? null);
   const [generationId, setGenerationId] = useState<string | undefined>(initial.draft?.id);
+  const [savedGenerationId, setSavedGenerationId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const requestControllerRef = useRef<AbortController | null>(null);
 
@@ -126,6 +127,21 @@ const Planner = () => {
     setErrorMessage(null);
   };
 
+  const handleSaved = (id: string) => {
+    if (!user) return;
+    try {
+      clearDraft(user.id, id);
+    } catch {
+      toast.warning("O roteiro foi salvo na sua conta, mas não foi possível remover a cópia em rascunho deste navegador.");
+    }
+    clearPending(user.id, id);
+    setDraft((current) => current?.id === id ? null : current);
+    setPending((current) => current?.id === id ? null : current);
+    setSavedGenerationId(id);
+  };
+
+  const isSaved = savedGenerationId !== null && savedGenerationId === generationId;
+
   return (
     <div className="product-ui relative min-h-dvh bg-background">
       <TourismBackdrop />
@@ -138,8 +154,8 @@ const Planner = () => {
       ) : itinerary ? (
         <div className="relative z-10">
           <ItineraryResults itinerary={itinerary} regions={generationRequest?.regions ?? []} onEditPreferences={editPreferences}
-            details={<p className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm leading-relaxed text-foreground">{draftPersisted ? "Seu último roteiro fica como rascunho neste navegador. Ao voltar a Planejar, você pode consultá-lo sem gastar outro crédito." : "O navegador não conseguiu guardar o rascunho. Salve o roteiro na sua conta. Se sair, volte a Planejar e consulte a solicitação mantida, sem gastar outro crédito."} Use “Salvar roteiro” para guardá-lo na sua conta e acessá-lo em Meus roteiros.</p>}
-            actions={generationRequest && <SaveItineraryButton key={generationId} saveId={generationId} itinerary={itinerary} request={generationRequest} />} />
+            details={<p className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm leading-relaxed text-foreground">{isSaved ? "Este roteiro já está salvo na sua conta. Você pode consultá-lo em Meus roteiros sem gastar créditos." : <>{draftPersisted ? "Seu último roteiro fica como rascunho neste navegador. Ao voltar a Planejar, você pode consultá-lo sem gastar outro crédito." : "O navegador não conseguiu guardar o rascunho. Salve o roteiro na sua conta. Se sair, volte a Planejar e consulte a solicitação mantida, sem gastar outro crédito."} Use “Salvar roteiro” para guardá-lo na sua conta e acessá-lo em Meus roteiros.</>}</p>}
+            actions={generationRequest && <SaveItineraryButton key={generationId} saveId={generationId} itinerary={itinerary} request={generationRequest} saved={isSaved} onSaved={handleSaved} />} />
         </div>
       ) : (
         <main id="main-content" className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
